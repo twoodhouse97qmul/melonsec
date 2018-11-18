@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 'twoodhouse97.pythonanywhere.com',
-'127.0.0.1',]
+'127.0.0.1',
+'twoodhouse97.pythonanywhere.com',]
 
 
 # Application definition
