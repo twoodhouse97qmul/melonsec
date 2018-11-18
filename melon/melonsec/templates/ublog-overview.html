@@ -1,0 +1,645 @@
+{% extends 'melon-page.html'%}
+{% block page_insert %}
+
+<style>
+    
+    .content-viewer{
+        float:left;
+        width:30%;
+        
+    }
+    
+     .episode-text{
+        float:right;
+        width:70%;
+         margin-top:-30px;
+         max-height:650px;
+    }
+    
+    .episode-contents-item{
+        height:75px;
+        width:69%;
+
+        border-style: solid;
+        border-width: 0 0 2px 0;
+        border-color:black;
+        padding-top:10px;
+    }
+    
+ 
+    
+    .episode-elipses-holer{
+        width:400px;
+        height:50px;
+   
+        position:fixed;
+        margin-top:15px;
+        margin-left:250px;
+        display: none;
+        bottom:40px;
+        
+    }
+    
+    .ep-slipse{
+        margin-left:10px;
+    }
+    
+    .ep-slipse-active{
+        margin-left:10px;
+        font-size:150%;
+        position:relative;
+        color:#0E5DC4;
+    }
+    
+    
+    
+    border-width: 0 0 2px 0;
+        border-style:solid;
+        margin-bottom:30px;
+    }
+    
+    .episode-contents-item:hover{
+        cursor:pointer;
+    }
+    
+    .contents-active{
+        border-color: lawngreen;
+        font-size:150%;
+        font-weight: 800;
+        width:90%;
+         border-width: 0 0 4px 0;
+        height:85px;
+    }
+    
+     .contents-active-text{
+       
+        font-size:130%;
+        font-weight: 800;
+         text-align: left;
+         
+      
+    }
+    
+    .marged-header{
+        margin-bottom:35px;
+    }
+    
+    .link{
+	color: #000000;
+	font-size: 16px;
+	font-weight: 700;
+
+	text-decoration: none;
+    position: relative;
+	z-index: 1;
+	display: inline-flex;
+	
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+
+}
+
+/*
+* These styles creates the underlining of link
+*/
+    .link:hover{
+        text-decoration: none;
+    }
+.link::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #0E5DC4 25%, transparent 40%);
+	
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+	z-index: -1;
+	
+	will-change: width;
+	transform: rotate(-2deg);
+	transform-origin: left bottom
+}
+
+.link:hover::before{
+	width: 0;
+}
+
+/*
+* animation styles
+*/
+
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;
+}
+    
+    .next-page-arrow{
+       
+       
+        float:right;
+        margin-left:10px;
+        font-size:150%;
+        color:#0E5DC4;
+        
+    }
+    
+     .last-page-arrow{
+       
+       
+        float:left;
+        margin-left:-60px;
+        font-size:300%;
+        color:#0E5DC4;
+
+        
+    }
+    
+    
+    .first-exploit-episode-text{
+        
+    }
+    
+    .NY{
+        opacity:0.1;
+    }
+    
+    .content-holding{
+
+        max-height:650px;
+        overflow-y: scroll;
+    }
+
+</style>
+
+
+<div class = "content-viewer">
+    
+    
+    <div class = "episode-contents-item contents-active" id = "ublog-intro"><h4 class = "contents-active-text">1. Introduction</h4></div>
+     <div class = "episode-contents-item" id = "ublog-overview"><h4>2. Ublog Overview</h4></div>
+    <div class = "episode-contents-item" id = "ublog-first"><h4>3. First Exploit.</h4><h6>Exploiting Authentication Control Logic</h6></div>
+     <div class = "episode-contents-item nY"><h4>4. Virtual Defacement</h4><h6>HTML Parameter Pollution</h6></div>
+    <div class = "episode-contents-item NY"><h4>5. Cross-Site Scripting</h4><h6>Exploiting Access Control Logic</h6></div>
+    <div class = "episode-contents-item NY"><h4>6. XS Request Forgery</h4><h6>Exploiting Access Control Logic</h6></div>
+    <div class = "episode-contents-item NY"><h4>7. Parameter Pollution</h4><h6>tet text tet</h6></div>
+
+
+
+</div>
+
+<div class = "episode-text">
+    
+       <div class = "ublog-intro-text text-active">
+
+  <h3>Welcome To The Ublog Website Penetration Testing Tutorials</h3>
+           
+            <div class = "ublog-intro-text-disclaimer page-text-i">
+                 The Web Application Penetration Testing series teaches you how to learn the fundamentals of *white hat* web application hacking. The tutorials cover setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
+              
+           </div>
+            <div class = "ublog-intro-text-disclaimer page-text-i">
+
+<p>
+    
+     
+    
+——  Disclaimer ——
+
+I fully appreciate that a big part of learning is exploring and experimenting and trying out different things, but unfortunately the platform is not capable of being a full out playground, please respect the platform and other users
+
+Some things are just an out right big no-no.
+
+With this is mind the first tutorials based around logic flaws etc and you will be fine.
+
+I will be sure to check this out, you need to show some self initiative, Just like with most actions in life, when you are just setting out learning and practicing your penetration testing skills It’s your own decision to decide what is ethical, and it’s your own responsibility to ensure what you are doing is legal.
+
+I give you full permission, and if you are I always try to respond swiftly.
+
+The cyber industry is expanding mahousively, 
+
+If you are really interested in something then the chances are other people are too, more often than not someone has had this idea too and the resource is out there. 
+
+If thats not the case well then great! let me know and we will see what we can make.
+A list of some good sites for alternative pen testing are below:
+
+If you want some sites to practice scripting etc. 
+
+
+
+</p>
+           </div>
+    
+    </div>
+    
+    <div class = "ublog-overview-text">
+            <h2>Ublog</h2>
+            
+            <h4>What Is The Purpose of The Ublog?</h4>
+         <p>
+        
+            Ublog — where the elite of society go to get away from the grievances that come with using social media alongside commoners. 
+
+About Ublog
+
+Ublog is centered. Instead of paying for advertising space, they give away free products to the members.
+
+Awards are given depending on how many followers a user has across their linked social media accounts.
+
+            
+        </p>
+        
+    </div>
+    
+    <div class = "first-exploit-episode-text">
+        
+       
+        <div class = "first-exploit-episode-text-p1 page-text-f">
+<div class = "slide-title-class">
+  <h1>First Exploit: Flawed Authentication Logic</h1>
+<h4 class = "marged-header">Bypassing Ublog sign up restrictions using HTTP Parameter Pollution</h4>
+    </div>
+<p>
+
+    
+    An important aspect of these tutorials is having access to a blogger account that we can control.<br><br>
+
+Fittingly, the first vulnerability is based around exploiting the applications sign up logic in order to allow us to by-pass the websites security mechanisms, allowing us to create accounts freely without needing to have the 10 000 followers as the site advertises.<br><br>
+    
+Lets open up the createa blogger account page in another tab: <a href="#" class="link" id = "open-blog-sign-up">Click Here</a> <br> <br>
+    
+    Fill out the first page with basic information. If you’re embarrassed by your own name and don’t want to use it then don’t worry, dummy values are fine. <b>Just make sure you remember your username and password.<br><br></b>
+
+
+
+  
+
+Hopefully you’ve progressed nicely to the second stage in creating a UBlog Blogging account.
+
+This is where we are expected to link to an account with 10 000 followers.<br><br>
+
+What do we do? We could mascarade as a Vegan lifestyle blogger and go for the 10 000 followers in an attempt to infiltrate the application? <br><br>
+
+Okay, this is getting out of hand quickly, there MUST be a better way.
+    
+    <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+    
+
+</p>
+            
+    </div>
+        
+        
+        
+        <div class = "first-exploit-episode-text-p2 page-text-f">
+            
+             <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            
+            <p>I appreciate most people following this tutorial either wont want to, or simply won't be bothered to link any personal media ccounts of own.
+                
+                Creating a 'throw-away account' on facebook would take a few minutes most people don't have time for, for that reason you will see a little, under the name melonsec. unfortunately we have no friends.
+            
+            
+            Simply click on the 'link fakebook' button (Show Button)<br><br>
+            
+            saving you some time doing that step, however the account isnt allowed in by the ublog verification system. Lets see what happens when we try to progress by hitting 'verify'<br><br>
+            
+            We're greeted with the annoying message ''. <br><br>
+            
+            We're not going to use any complicated or fancy analysis techniques.<br><br>
+            
+            Lets just take a look at what is going on on the surface. <br><br>
+            
+            The HTTPRequest:
+            
+            ublog/addfacebook/FBID10101011010101
+            
+            
+Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that this has been verified using the third party Facebook verification system.
+
+In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
+            
+             <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
+        
+         <div class = "first-exploit-episode-text-p3 page-text-f">
+               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            
+           <h3> HTTP Parameters. </h3><br><br>
+            
+            quick definition.
+            
+            might recognise them: usually finduser?name=john?age=12. <br><br>
+            
+            these parameters are going, they can use these values when they decide what content to render back to you. In the case above this would be which results to display on the page. <br><br>
+            
+            you'd be very surprised what kind of shortcuts people are willing to take to make things work, I think people are quite commonly under the impression that if nobody is going to thoroghly review the code they are writing that the problem won't come to the surface, there are many ways to make something work, but this doesnt mean you've made it work well.  <br><br>
+     
+        
+            
+            Django can be very secure and you cna build web apps very quickly, ... here the paramaters are handled seperated by the '/'
+            
+            finduser/john/12 <br><br>
+            
+            finduser-john-12 <br><br>
+            
+            So that actually makes it a bit easier for us, we can disregard paraater names and the '?' business.
+            
+        
+            ublog/addfacebook/10101011010101
+            
+            We can see quite clearly that ublog/addfacebook relates to the action we want to take. 
+            
+            10101010 definitely looks like some kind of variable that is related to us personally as we make this request, so that is interesting.
+            
+            An educated guess would be that this value is the ID of my facebook account.
+             
+             Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that this has been verified using the third party Facebook verification system. In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
+             
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
+        
+                <div class = "first-exploit-episode-text-p4 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+                   
+            <h3>HTTP Paramater pollution. </h3> <br><br>
+            
+            share definition.
+            
+        
+            application developers may make functions that are useful purely during development, such as to retrieve database results quicker or to escalate the privalages of an account for some reason. (example) <br><br>
+            
+            For example you could try finduser?name=john?age=12?password=newpassword. <br><br>
+            
+            is probably extremely unlikely,  <br><br>
+            
+            There is some merit to, we are essentially just trying to get a feel for the website and see what behavhour we can make happen. To see how something behaves we need to stimulate and provoke it in every way possible, in high stakes web applciation bounty hunting, original ideas and out of the box thinking can be how you find a vulnerability that others have not. <br><br>
+            
+            generally, we will repeat the the same variable twice, and hope we can induce some unexpected results from the application. <br><br>
+            
+            
+            In the ublog example, the variable we'd really love to manipulate is the value of facebookID. since we have an account, and we can probably find ID's for other accounts that do have more than 10 000 followers.
+            
+                    I've decided to impersonate Vin Diesel, as I thought we shared the most physical likeness out of the top 10 followed people on facebook.
+                    try switching FBID01
+            
+            
+            lets put in -- does the /dummy/
+            
+            so if we put in the avlue of X for dummy.
+            
+            now we can without needing 10 000 followers.
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            you could easily implement a search in the form finduser-john-12 <br><br>
+            
+            
+            
+            
+            
+            regex ().
+            
+            essentially is being processed by some back end database,
+            
+            The Django platform protects against this, in this case its a problem with a custom regular expression (see regex expressions), is an error which 
+            
+          
+
+            
+            
+            
+            
+            Nowerdays, this is where web attack suites come into play.
+            
+            
+            
+            
+        
+So what exactly has happened?<br><br>
+
+We verified
+
+Sent it in an url.
+
+
+
+
+What if we add an extra parameter to the end?
+
+Error:
+
+You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’
+
+Then add second parameter ‘penis’
+
+sameurl/value1/penis/
+
+
+Error(s)
+
+You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’.
+No Account Found for ID = ‘penis’ — please try resynchronising your social media accounts to the blog platform.
+
+Interesting, very interesting…
+
+-  So we still get the error message saying we don’t own that account.
+We also get a new error message saying — did the actually query Facebook to ask for the number of followers for that account?.
+
+The UBlog platform verified the account we are using was ours using the first parameter, and it queried Facebook for the number of followers using the second!
+
+Remember that we are verified to use the 0Facebook account, UBlog accepts that we own this account.
+
+Let go back to the Step 4.
+
+We tried to move forward with the account 0Facebook, and it showed us the polite error message:
+
+‘sorry, not enough followers - go and get some more friends.’
+
+— maybe here put in verified account and ‘penis’
+
+Using the knowledge that Ublog refers to the first penultimate parameter when checking if we own the account, and then uses the final parameter to actually query facebook, Logically we want the first parameter to be the ID of the account we are linked to (Facebook0) and the second account to be the account ID of who we wished we were linked to! (I used blah blah). You can discard whatever value you chose as your penis.
+
+The original URL UBlog expected us to use (when we visited said page), and the one used in step 4 was:
+
+Ublog/linkmainaccount/1422032023223
+
+All thats left for us to do is to amend the ID of margerat thatcher to the end of this path:
+
+becoming:
+
+Ublog/linkmainaccount/1422032023223/1M1A1G1G1I1E1
+
+When we make a request to this URL we are greeted by the page:
+
+Congratulations! You a are officially a member.
+
+And we didn’t even have to leave the house and make more friends! Score.
+
+This would be a very silly developer view, 
+
+I used the Facebook API in a way that was unsafe and not at all as intended by the developers, although you may think most not this stupid you can certainly think again, this is a prevalent cause of web application vulnerabilities. 
+
+(BA HACK link) mention Alexia…. I hope to cover an article of that chain of events.
+
+for now I think this trend will only keep on growing.
+
+
+
+        </div>
+        
+        
+        
+    </div>
+    <div class = "episode-elipses-holer">
+    <h4>
+    <i class="fas fa-circle ep-slipse ep-slipse-active"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i></h4>
+    </div>
+    </div>
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    
+    pageList = document.getElementsByClassName("page-text-i");
+    elipsesList = document.getElementsByClassName("ep-slipse");
+    elipIndex = 0;
+    
+    var contentsFull = true;
+    
+    
+    
+    for(i=1;i<pageList.length;i++){
+        $(pageList[i]).hide();
+    }
+   var pageIndex = 0;
+    var ep1Index = 0;
+    var currentIndex = [pageIndex];
+    
+    $(".first-exploit-episode-text-p2").hide();
+    
+    $(".next-page-arrow").on("click",function(){
+        
+        goToNextPage(ep1Index);
+       
+        
+    });
+    
+      $(".last-page-arrow").on("click",function(){
+        
+        goToLastPage(ep1Index);
+       
+        
+    });
+    
+    function goToNextPage(){
+        
+         $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
+        
+        elipIndex++;
+        $(elipsesList[elipIndex]).addClass("ep-slipse-active");
+        
+         $(pageList[currentIndex[0]]).hide();
+        
+        currentIndex[0]++;
+        $(pageList[currentIndex[0]]).show();
+        
+    }
+    
+     function goToLastPage(){
+         $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
+        
+        elipIndex--;
+        $(elipsesList[elipIndex]).addClass("ep-slipse-active");
+        
+         $(pageList[currentIndex[0]]).hide();
+        
+        currentIndex[0]--;
+        $(pageList[currentIndex[0]]).show();
+         
+    }
+   
+    
+    $(".first-exploit-episode-text").hide();
+      $(".ublog-overview-text").hide();
+    
+
+    
+    
+    $(".episode-contents-item").on("click",function(){
+        
+        $(".contents-active").removeClass("contents-active");
+        $(".contents-active-text").removeClass("contents-active-text");
+    $(this).addClass('contents-active');
+        $(this).find("h4").addClass('contents-active-text');
+        
+        
+        if($(this).attr('id') == 'ublog-first'){
+           
+             makeActiveText($(".first-exploit-episode-text"));
+              pageList = document.getElementsByClassName("page-text-f");
+            currentIndex[0] = ep1Index;
+             for(i=0;i<pageList.length;i++){
+        $(pageList[i]).hide();
+                 
+    }
+             $(pageList[ep1Index]).show();
+           $(".episode-elipses-holer").css("display","block"); 
+            
+        }
+        
+        if($(this).attr('id') == 'ublog-intro'){
+            
+            makeActiveText($(".ublog-intro-text"));
+            $(".episode-elipses-holer").css("display","none");
+           
+            
+            
+        }
+        
+        if($(this).attr('id') == 'ublog-overview'){
+           makeActiveText($(".ublog-overview-text"));
+            $(".episode-elipses-holer").css("display","none");
+        }
+        
+        
+       
+    });
+    
+    
+    $("#open-blog-sign-up").on("click",function(){
+        var url = "/ublog_vuln_1_link";
+ window.open(url, '_blank');
+    });
+    
+    function makeActiveText(make_active){ 
+         $(".text-active").hide();
+             $(".text-active").removeClass("text-active");
+        make_active.fadeIn();
+        make_active.addClass("text-active");
+        
+    }
+    
+    
+    
+    
+    
+    
+</script>
+
+{% endblock %}
+

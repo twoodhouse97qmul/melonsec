@@ -1,0 +1,182 @@
+{% extends 'twwdNavBase.html' %}
+
+ {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+
+
+{% block page_content %}
+
+<style>
+    
+    #name-input{
+       width:250px;
+    }
+    
+    .input-field{
+        margin: 0 auto;
+        border-radius:2px;
+        margin-bottom:10px;
+        border-style:solid;
+        border-color:#37383b;
+        border-width:1px;
+        color:black;
+        line-height: 40px;
+    }
+    
+
+    
+    #message-input{
+        height:300px;
+        width:90%;
+    }
+    
+    
+    #contact-form{
+       
+        width:95%;
+        margin:0 auto;
+    }
+    
+    #email-input{
+         width:250px;
+    }
+    
+    .input-holder{
+        margin:0 auto;
+    
+        width: 250px;
+    }
+    
+     .message-input-holder{
+        margin:0 auto;
+    
+        width: 80%;
+    }
+    
+    .contact-input-space{
+        text-align: center;
+    }
+    
+    .contact-explain{
+        background-color: aqua;
+        height:200px;
+    }
+    
+    .contact-about{
+        text-align: center;
+    }
+    
+    .js-emaillink{
+         color:white;  
+    }
+    
+    .js-emaillink:hover{
+      color:white; 
+        font-style: normal;
+    }
+    
+    .js-emailcopybtn{
+        margin-top:8px;
+    }
+   
+    
+    
+ 
+    
+    
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-weight: 600;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-weight: 600;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   font-weight: 600;
+}
+
+    
+
+</style>
+
+<div class="container backing-container">
+  <div class="row">
+    <div class="col-sm-4 about-col" id = "about-col-1">
+      <div class = "about-text-div contact-about">
+          <h4>Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text textText text text  </h4>
+          <h5>Feel free to state if you'd prefer to be contacted via email or by phone.</h5> 
+          <h3>
+              <i class="fas fa-mobile" aria-hidden="true"></i> 07484658528 </h3><h4>
+          <i class="fas fa-envelope" aria-hidden="true"></i> <span class="js-emaillink" >twoodhousewebdesign@gmail.com </span><br>
+<button class="js-emailcopybtn btn btn-primary">Copy Email</button>
+          
+          </h4>
+        
+        </div>
+    </div>
+    <div class="col-sm-8 about-col" id = "about-col-2">
+    <div class = "about-text-div contact-input-space">
+        
+        <h3>Online Contact Form<br></h3>
+  
+        <form id = "contact-form">
+            <div class = "input-holder"><input class = "input-field" type = "text" placeholder= " Name or Company Name" id="name-input" ><br></div>
+             <div class = "input-holder">
+            <input class = "input-field" id = "email-input" type = "email" placeholder= " Email "><br></div>
+             <div class = "message-input-holder">
+            <textArea class = "input-field" id = "message-input" type = "text" placeholder= " Enter Message..."></textArea><br></div>
+            
+            
+        
+        <button type="submit" class = "btn btn-primary">Send Message</button>
+        </form>
+    </div>
+    </div>
+   
+  </div>
+</div>
+
+
+
+<script>
+    
+   
+    copyText();
+
+    
+    function copyText() {
+        
+  var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
+copyEmailBtn.addEventListener('click', function(event) {  
+  // Select the email link anchor text  
+  var emailLink = document.querySelector('.js-emaillink');  
+  var range = document.createRange();  
+  range.selectNode(emailLink);  
+  window.getSelection().addRange(range);  
+    
+  try {  
+    // Now that we've selected the anchor text, execute the copy command  
+    var successful = document.execCommand('copy');  
+    var msg = successful ? 'successful' : 'unsuccessful';  
+    console.log('Copy email command was ' + msg);  
+  } catch(err) {  
+    console.log('Oops, unable to copy');  
+  }  
+    
+  // Remove the selections - NOTE: Should use   
+  // removeRange(range) when it is supported  
+  window.getSelection().removeAllRanges();  
+});
+        
+        
+}
+
+
+
+</script>
+
+{% endblock %}
+

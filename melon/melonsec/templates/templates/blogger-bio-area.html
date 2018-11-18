@@ -1,0 +1,130 @@
+{% extends 'templates/ublog-base.html' %}
+
+{% block blogger-bio %}
+
+
+<style>
+    
+    .bio-area{
+        width:300px;
+        background-color:aliceblue;
+        margin:0 auto;
+        text-align:center;
+        
+    }
+    
+    
+    .change-bio-but{
+        margin-top:50px;
+       
+    }
+    #change-bio-conf-but{
+         margin-top:50px;
+        
+    }
+    
+     .con-in{
+        display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+  box-shadow: 1px 6px 26px 2px rgba(0, 0, 0, 0.15);
+         max-height:200px;
+        max-width:250px;
+         
+    }
+
+    
+    .con-in:focus{
+        outline: none;
+        border-bottom-width: 3px;  
+  border-color: #53CACE;
+    }
+    
+</style>
+
+  <div class = "bio-area" id = "af2">
+                            <h4><br> About Me <br><br> </h4>
+                            
+                            <div class =  "change-bio-box">
+                            <textarea class = "con-in" id = "bio-text-field">Change your bio...</textarea>
+                            <button class = "btn btn-primary change-bio-conf-but">Update Biography</button>
+                                
+                            </div>
+                            
+                            <div class ="bio-text-area"> 
+                            
+                                <span class ='bio-text'><p> {{ biography_text }}</p></span>
+                                <button class = "btn btn-primary change-bio-but">Change Your Bio</button>
+                                
+                            </div>
+      
+      
+     
+      
+                            
+                            
+                            
+</div> <!-- end of activity feed -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+     alert(21);
+    $(".change-bio-box").hide();
+    alert(22);
+    
+      
+    $(".change-bio-but").on("click",function(){
+          $(".bio-text-area").fadeOut();
+         
+          $(".change-bio-box").fadeIn();
+    });
+     
+    
+    $(".change-bio-conf-but").on("click",function(){
+       
+        $(".change-bio-box").fadeOut();
+          $(".bio-text-area").fadeIn();
+         var valy = $("#bio-text-field").val();
+        changeBiography(valy);
+        
+          
+    });
+  
+    
+    
+    function changeBiography(newBio){
+        
+        $(".bio-text").html("<p>"+newBio+"</p>");
+        newBioAjaxCall(newBio);
+    }
+    
+    function newBioAjaxCall(changedBio){
+         
+        alert(changedBio);
+        
+          var ajaxOptions = {
+              type: 'POST',
+              url:'changebio',
+              data:{
+                 newbio:changedBio,
+              },
+              success : function () {
+              alert("success");
+              }
+            }
+
+            $.ajax(ajaxOptions);
+        
+    }
+    
+    
+</script>
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends 'melon-slider.html'%}
+{% block above_slider %}
+
+<style>
+
+    .right-choices{
+        float:right;
+        margin-right:10px;;
+        width:50px;
+        height:75px;
+      
+        
+    }
+</style>
+
+<div class = "right-choices">
+    <h1>
+        <i class="fas fa-grip-horizontal righty"></i></h1>
+   
+</div>
+<h2> &nbsp; &nbsp;Tutorials </h2>
+
+
+{% endblock %}
+
+{% block slide_1_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<span href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">MelonSec Tutorials</span>
+               <span class="news-date__txt"></span>
+        
+          </div>
+          
+
+          <p>
+            
+         	
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/ninja.png' %}" alt="news">
+          </div>
+        </span>
+
+</div>
+
+{% endblock %}
+
+
+{% block slide_3_block %}
+
+ <div class="news-slider__item swiper-slide web-pen-slide">
+
+<a href="/tutorials/ublog" class="news__item" id = "abcdffu">
+    
+        
+    <div class = "lefty">
+        
+        
+        
+         <div class="news-date fixed-wid-1">
+            <span class="news-date__title">Web Penetration Testing </span>
+               <span class="news-date__txt">Tutorials</span>
+        
+          </div>
+        
+          <div class="news__img fixed-wid-1">
+              {% load static %}
+            <img src="{% static 'photos/ninja.png' %}" alt="news">
+          </div>
+        
+         <div class = "tutorial-ratings">
+        <h6 >Difficulty: <span style = "color:orange;">medium</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">short and quick</span></h6>
+        </div>
+            
+    
+    </div>
+         
+    
+    
+    
+   
+          <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+
+          <p   class = "justy news__txt righty fixed-wid">
+            The Web Application Penetration Testing series teaches you how to learn the fundamentals of *white hat* web application hacking. The tutorials cover setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
+              
+         	
+          </p>
+    
+     <div class ="cleario"></div>
+
+         
+         
+          
+
+       
+
+         
+        </a>
+     
+</div>
+{% endblock %}
+
+{% block slide_2_block %}
+
+
+      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+
+
+<a href="/unavailable/home" class="news__item" id = "abcdff">
+    
+    
+    <div class = "lefty">
+        
+         <div class="news-date fixed-wid-1">
+            <span class="news-date__title">How Not To Get Hacked</span>
+            <span class="news-date__txt"> (when you are a computer moron) </span>
+          </div>
+        
+       
+        
+         <div class="news__img fixed-wid-1">
+              {% load static %}
+            <img src="{% static 'photos/old-guy-computer.jpg' %}" alt="news">
+          </div>
+        
+      
+        <div class = "tutorial-ratings">
+        <h6 >Difficulty: <span style = "color:green;">easy</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">mixed</span></h6>
+        </div>
+            
+    
+    </div>
+         
+    
+    
+    
+   
+        
+
+            <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+
+          <p class = "news__txt righty fixed-wid justy">
+            How do you know if you have a virus?<br>What are the most dangerous things you need to look out for when you browse the web? <br> <span class = "smill">This series answers all of these questions and teaches you how to easily keep you devices safe and secure as well as covering of all the multiple times my computer illiterate girlfriend has succumbed to cyber crime, and how she could have easily prevented it.
+         </span> </p>
+    
+     <div class ="cleario"></div>
+
+         
+         
+        </a>
+
+</div>
+{% endblock %}

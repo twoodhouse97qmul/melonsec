@@ -1,0 +1,745 @@
+
+{% extends 'twwdbase.html' %}
+
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+
+<style>
+
+    
+     .cover-div{
+        background-color: #e3ab20;
+        width:100%;
+        height:100%;
+        position:fixed;
+        z-index:999;
+    }
+
+    
+    
+#canvas{ background-image:url("{% static 'newback.jpg' %}");
+        background-size:cover;
+        margin: 0 auto;
+    
+    border:solid;
+    border-width:2px;
+  border-color:#e3ab20;
+    border-left:0;
+    border-top:0;
+    border-right:0;
+    }
+    
+    
+    
+    .logo-div{
+        width:400px;
+        height:400px;
+        background-image:url("{% static 'melonLogo.png' %}");
+        background-size:cover;
+        margin: 0 auto;
+    
+        
+    }
+    
+    .logo-holder{
+        width:100%;
+        position:fixed;
+        padding-top:170px;
+    }
+    
+    .nav-icon:hover{
+        color:#FAFAFA;
+        font-size:110%;
+   
+    }
+    
+     .nav-icon{
+       
+        position:relative;
+        margin-top: -5px;
+    }
+    
+ 
+    
+    
+    
+    
+    .home-page-icon{
+        width:50px;
+        height:50px;
+        position:fixed;
+        color: white;
+         
+        text-align: center;
+        font-size:150%;
+
+
+    }
+    
+    .home-page-icon:hover{
+        width:70px;
+        height:70px;
+        color:#727272;
+        
+        margin:0;
+       
+    }
+   
+    
+    .hoverText350:hover{
+        font-size: 300%;
+    }
+    
+    
+    
+    .bottom-icon{
+        bottom:0;
+        margin-bottom:30px;
+    }
+    .bottom-icon:hover{
+       
+        margin-bottom:25px;
+    }
+
+    .top-icon{
+        top:0;
+        margin-top:30px;
+    }
+    .top-icon:hover{
+       
+        margin-top:20px;
+    }
+    
+
+    
+    .left-icon{
+        left:0;
+        margin-left:30px;
+        
+    }
+    
+    .right-icon{
+        right:0;
+        margin-right:30px;
+    }
+     .left-icon:hover{
+        left:0;
+        margin-left:20px;
+        
+    }
+    .right-icon:hover{
+        right:0;
+        margin-right:25px;
+    }
+    
+    
+
+@-webkit-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@-moz-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@keyframes ani-mouse {
+	100% {
+	opacity: 1;
+	top: 29%;
+	}
+	65% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	0% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+ .scroll-btn {
+	display: block;
+    width: 20%;
+    left:40%;
+     right:40%;
+     position:fixed;
+  
+	text-align: center;
+     bottom:0;
+   
+     
+}
+.scroll-btn > * {
+	display: inline-block;
+	line-height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #7f8c8d;
+	color: #ffffff;
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+	color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 55px;
+	margin: 0 auto 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid white;
+	border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+	position: absolute;
+	display: block;
+	top: 29%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: white;
+	border-radius: 50%;
+	-webkit-animation: ani-mouse 2.5s linear infinite;
+	-moz-animation: ani-mouse 2.5s linear infinite;
+	animation: ani-mouse 2.5s linear infinite;
+
+    }
+    
+    .home-pager{
+        width:100%;
+        height:1000px;
+        
+        position:fixed;
+        top:0;
+        z-index;1;
+    }
+    
+    .can-Diss{
+        height:1600px;
+    }
+    
+    .page-cover{
+       position:relative;
+        z-index:700;
+        height:100%;
+    }
+    
+        .navbar2{
+        background-image:url("{% static 'newback.jpg' %}");
+        background-size:cover;
+        border-color:#e3ab20;
+        width:100%;
+        position:fixed;
+        z-index:1000;
+        border-left:0;
+        border-right:0;
+        border-top:0;
+        border-radius:0;
+        height:60px;
+        
+   
+    }
+    
+    #MT{
+        color:#e3ab20;
+    }
+    
+    
+  
+    
+    
+    
+    
+</style>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+   
+
+
+
+  <!--navbar - currently regular bootstra stlye.. -->
+        <nav class="navbar navbar-default navbar2">
+            
+           
+            
+              
+            
+            <div class="container-fluid">
+                
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded"false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    
+                </div>
+                
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/ubloggeneric/bsignup">
+                                <h4>Home  <i class="fa fa-home" aria-hidden="true"></i></h4>
+                                
+                               
+                                <span class="sr-only">
+                                    (current)
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                               <h4>Trending
+                                   <i class="fa fa-flag-checkered" aria-hidden="true"></i></h4>
+                            </a>
+                        </li>
+                        
+                       
+                        
+                        <li>
+                              
+                            <a href="/news">
+                                <h4>
+                                
+                                    Tutorials
+                                    <i class="fa fa-people-carry" aria-hidden="true"></i>
+                                   </h4>
+                            </a>
+                        </li>
+                        
+                         <li class = "nav-icon">
+                            <a href="#">
+                                <h4>
+                               
+                                    <i class="fa fa-camera" aria-hidden="true"></i> 
+                                 Projects</h4>
+                                
+                            </a>
+                        </li>
+                        
+                        <li class = "nav-icon">
+                            <a href="#">
+                                <h4>
+                               
+                                    <i class="fa fa-camera" aria-hidden="true"></i> 
+                                 Archive</h4>
+                                
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                
+                    
+                    
+                    
+                    
+                    <!-- Right Hand Side Of Navbar: -->
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <h3 id = "MT"> Melon Sec</h3>
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+             
+        </nav>
+
+
+
+
+<div class = "page-cover">
+    <div class = "logo-holder">
+        
+    
+    <div class = "logo-div">
+        
+        
+        
+        
+        </div>
+    </div>
+
+ <a href = "/about">
+<div class = "home-page-icon right-icon top-icon hoverText350">
+   
+<i class="fas fa-home" aria-hidden="true"></i>
+ 
+</div>
+       </a>
+
+
+
+<div class = "home-page-icon left-icon top-icon hoverText350">
+<i class="fas fa-bars" aria-hidden="true"></i>
+
+</div>
+
+<a href = "/past">
+<div class = "home-page-icon left-icon bottom-icon hoverText350">
+<i class="fas fa-archway" aria-hidden="true"></i>
+
+</div>
+</a>
+
+<div class = "home-page-icon right-icon bottom-icon hoverText350">
+<i class="fas fa-envelope" aria-hidden="true"></i>
+
+</div>
+
+
+<div class = "can-Diss">
+<canvas id="canvas" class = "yy"></canvas>
+    </div>
+
+  <span class="scroll-btn bottom-icon">
+	
+		<span class="mouse">
+			<span>
+			</span>
+            
+		</span>
+      <p5>scroll down</p5>
+	
+
+
+</span>
+</div>
+
+<div class = "home-pager">
+    
+    <div class = "sub-nav">
+        
+        
+    
+    
+    </div>
+    
+  
+      {% block fp-con %}
+        {% endblock %}
+
+    
+    
+    
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+	THREE.ShapeUtils.triangulateShape = (function () {
+	        var pnlTriangulator = new PNLTRI.Triangulator();
+	        return function triangulateShape(contour, holes) {
+	            return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+	        };
+	    })();
+</script>
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/TextGeometry.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/FontUtils.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/pnltri.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/droid_sans_bold.typeface.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+
+  
+  {% load static %}
+    <script  src="{% static 'js/index2.js' %}"></script>
+
+<script>
+    
+    $(".navbar").hide();
+    
+    
+    var logoWidth = 30;
+    var logoHeight = 30;
+    
+
+    
+    
+    	window.requestAnimFrame = function()
+	{
+		return (
+			window.requestAnimationFrame       || 
+			window.webkitRequestAnimationFrame || 
+			window.mozRequestAnimationFrame    || 
+			window.oRequestAnimationFrame      || 
+			window.msRequestAnimationFrame     || 
+			function( callback){
+				window.setTimeout(callback, 1000 / 60);
+			}
+		);
+	}();      
+
+    var canvas = document.getElementById('canvas'); 
+    
+    var context = canvas.getContext('2d');
+    
+var W = window.innerWidth, H = window.innerHeight;
+	canvas.width = W;
+	canvas.height = H;
+
+	var particle_count = 200,
+		particles = [],
+		couleurs   = ["#3e0e39", "#b6002c", "#e7d843","#4abf72"];
+    function Particle()
+    {
+
+        this.radius = Math.round((Math.random()*3));
+        this.x = Math.floor((Math.random() * canvas.width) + this.radius); 
+        this.y =  Math.floor((Math.random() * canvas.height) + this.radius); 
+        this.color = couleurs[Math.round(Math.random()*couleurs.length)];
+        this.speedx = Math.round((Math.random()*60)+0)/100;
+        this.speedy = Math.round((Math.random()*60)+0)/100;
+
+        switch (Math.round(Math.random()*couleurs.length))
+        {
+            case 1:
+            this.speedx *= 1;
+            this.speedy *= 1;
+            break;
+            case 2:
+            this.speedx *= -1;
+            this.speedy *= 1;
+            break;
+            case 3:
+            this.speedx *= 1;
+            this.speedy *= -1;
+            break;
+            case 4:
+            this.speedx *= -1;
+            this.speedy *= -1;
+            break;
+        }
+            
+        this.move = function()
+        {
+            
+            context.beginPath();
+            context.globalCompositeOperation = 'source-over';
+            context.fillStyle   = this.color;
+            context.globalAlpha = 1;
+            context.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
+            context.fill();
+            context.closePath();
+
+            this.x = this.x + this.speedx;
+            this.y = this.y + this.speedy;
+            
+            if(this.x <= 0+this.radius)
+            {
+                
+                this.speedx *= -1;
+            }
+            if(this.x >= canvas.width-this.radius)
+            {
+                this.speedx *= -1;
+            }
+            if(this.y <= 0+this.radius)
+            {
+                this.speedy *= -1;
+            }
+            if(this.y >= canvas.height-this.radius)
+            {
+                this.speedy *= -1;
+            }
+            
+           
+           
+         
+           
+
+            for (var j = 0; j < particle_count; j++)
+            {
+                var particleActuelle = particles[j],
+                    yd = particleActuelle.y - this.y,
+                    xd = particleActuelle.x - this.x,
+                    d  = Math.sqrt(xd * xd + yd * yd);
+                
+                
+
+                if ( d < 190 )
+                {
+                    context.beginPath();
+                    context.globalAlpha = (200 - d) / (200 - 0);
+                    context.globalCompositeOperation = 'destination-over';
+                    context.lineWidth = 1;
+                    context.moveTo(this.x, this.y);
+                    context.lineTo(particleActuelle.x, particleActuelle.y);
+                    context.strokeStyle = this.color;
+                    context.lineCap = "round";
+                    context.stroke();
+                    context.closePath();
+                }
+            }
+        };
+    };
+    for (var i = 0; i < particle_count; i++)
+    {
+        var particle = new Particle();
+        particles.push(particle);
+    }
+
+
+    function animate()
+    {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < particle_count; i++)
+        {
+            particles[i].move();
+        }
+        requestAnimFrame(animate);
+    }
+    
+    
+
+   
+   //animate(); 
+ 
+    
+
+
+    
+    $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 900) {
+       dissappearIcons();
+   }
+        
+         if($(window).scrollTop() + $(window).height() > $(document).height() - 600) {
+        $(".logo-holder").fadeOut();
+   }
+        
+   
+         if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+       dissappearTopIcons();
+   }
+        
+           if($(window).scrollTop() + $(window).height() > $(document).height() - 60) {
+              $(".page-cover").html("");
+   }
+});
+    
+    
+    function dissappearIcons(){
+        
+        //remove icons
+         $(".bottom-icon").fadeOut();
+        
+        
+        //remove logo
+        
+      
+        
+    }
+    
+        
+    function dissappearTopIcons(){
+        
+        $(".navbar").show();
+        
+        //remove logo
+        
+        $(".top-icon").fadeOut();
+        
+   
+        
+    }
+    
+
+
+
+
+
+</script>
+
+{% endblock %}

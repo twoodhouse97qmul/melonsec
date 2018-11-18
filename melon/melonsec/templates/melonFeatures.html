@@ -1,0 +1,149 @@
+{% extends 'melon-slider.html' %}
+
+
+{% block slide_1_block %}
+
+<style>
+
+    .biggerTT{
+        font-size:300%;
+        text-align: center;
+    }
+    
+    #abcdffu:hover{
+        font-style: normal;
+        text-decoration: none;
+        
+    }
+    
+</style>
+
+<div class="news-slider__item swiper-slide">
+<a href="#" class="news__item" id = "abcdff">
+          <div class="news-date">
+            <span class="news-date__title">Mitnick SYN_Flood Atack</span>
+            <span class="news-date__txt">Malware Features: Historical Exploit</span>
+          </div>
+          <div class="news__title">
+            An in depth look...
+          </div>
+
+          <p class="news__txt">
+            Tom shows how to perform a man in the middle attack on HID readers using a Raspberry Pi and open source software.
+          </p>
+
+         
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/rfid.jpg' %}" alt="news">
+          </div>
+        </a>
+    
+</div>
+{% endblock %}
+
+
+
+{% block slide_2_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Boza Bizatch by Quantum</span>
+               <span class="news-date__txt">Malware Features: Historical Exploit</span>
+        
+          </div>
+          
+
+          <p>
+            
+              
+         
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/boza.jpg' %}" alt="news">
+          </div>
+        </a>
+</div>
+{% endblock %}
+
+{% block slide_3_block %}
+
+<div class="news-slider__item swiper-slide">
+
+<a href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Operation Aurora</span>
+               <span class="news-date__txt">Get up to date with what's going down in the cyber community</span>
+        
+          </div>
+          
+
+          <p>
+          
+              
+         
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/ninja.png' %}" alt="news">
+          </div>
+        </a>
+</div>
+
+{% endblock %}
+
+{% block slide_4_block %}
+
+
+      <div class="news-slider__item swiper-slide slide-4">
+
+<a href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Cascade</span>
+               
+        
+          </div>
+          
+
+          <p>
+          
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/cascade.png' %}" alt="news">
+          </div>
+        </a>
+</div>
+
+{% endblock %}
+{% block slide_6_block %}
+<div class="news-slider__item swiper-slide">
+    <a href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">What actually went down during the sony hack?</span>
+               
+        
+          </div>
+          
+
+          <p>
+          
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/sony-hack.jpg' %}" alt="news">
+          </div>
+        </a>
+    
+   
+</div>
+ {% endblock %}

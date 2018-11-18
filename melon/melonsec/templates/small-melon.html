@@ -1,0 +1,190 @@
+{% extends 'water-melon.html' %}
+{% block small-watermelon %}
+
+<style>
+
+
+.melon-hint {
+  color: #555;
+ 
+  font-weight: 600;
+  padding: 7px;
+}
+
+.melon-container2{
+  border-radius: 50%;
+  border: 0px solid transparent;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  position:absolute;
+  top: 36.22222px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition-property: background-color, border, top;
+  transition-duration: .4s;
+    margin-top:325px;
+    margin-left:150px;
+  
+}
+.melon-container2:hover {
+  background-color: #ea5866;
+  border: 11.22222px solid #6ED685;
+  top: 25px;
+}
+.melon-container2:hover .melon-inner2 {
+  -webkit-transform: scale(3.5) translate3d(-14%, -13%, 0) rotateX(75deg) rotateY(77deg) rotateZ(55deg);
+          transform: scale(3.5) translate3d(-14%, -13%, 0) rotateX(75deg) rotateY(77deg) rotateZ(55deg);
+}
+.melon-container2:hover .melon-seed2 {
+  opacity: 0.2;
+}
+.melon-container2:hover .melon-name2 {
+  -webkit-transform: translate3D(20%, 660%, 0) rotateZ(-12deg);
+          transform: translate3D(20%, 660%, 0) rotateZ(-12deg);
+}
+
+.melon-inner2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotateX(55deg) rotateZ(45deg);
+          transform: translate3d(-50%, -50%, 0) rotateX(55deg) rotateZ(45deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  transition-duration: .4s;
+  opacity: 1;
+}
+
+.melon-top2 {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+.melon-top2:after, .melon-top2:before {
+  position: absolute;
+  content: '';
+  background-color: #6ed685;
+  height: 100px;
+  width: 50px;
+}
+.melon-top2:after {
+  -webkit-transform: translate3D(50%, -25%, 0) rotate(90deg);
+          transform: translate3D(50%, -25%, 0) rotate(90deg);
+}
+
+.melon-sides2:after, .melon-sides2:before {
+  position: absolute;
+  content: '';
+  height: 100px;
+  width: 50px;
+}
+.melon-sides2:after {
+  background-color: #a3e092;
+  -webkit-transform: translate3D(150%, -25%, 0) rotateZ(90deg) rotateX(90deg);
+          transform: translate3D(150%, -25%, 0) rotateZ(90deg) rotateX(90deg);
+}
+.melon-sides2:before {
+  background-color: #62bd71;
+  -webkit-transform: translate3D(0%, 50%, 0) rotateX(90deg);
+          transform: translate3D(0%, 50%, 0) rotateX(90deg);
+}
+
+div[class^="melon-inner-"] {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+}
+
+.melon-inner-left2 {
+  background-color: #f16576;
+  -webkit-transform: translate3D(50%, 25%, 0) rotateZ(90deg) rotateX(90deg);
+          transform: translate3D(50%, 25%, 0) rotateZ(90deg) rotateX(90deg);
+}
+
+.melon-inner-right2 {
+  background-color: #ea5866;
+  -webkit-transform: translate3D(100%, 0%, 0) rotateX(90deg);
+          transform: translate3D(100%, 0%, 0) rotateX(90deg);
+}
+
+.melon-seed2 {
+  height: 12px;
+  position: relative;
+  transition-property: opacity;
+  transition-duration: .4s;
+}
+.melon-seed2:first-child {
+  margin-top: 6.5px;
+}
+.melon-seed2:after, .melon-seed2:before {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 2px;
+  background-color: #414042;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+.melon-seed2:after {
+  -webkit-transform: translate3D(400%, -50%, 0) rotateZ(90deg);
+          transform: translate3D(400%, -50%, 0) rotateZ(90deg);
+}
+.melon-seed2:before {
+  -webkit-transform: translate3D(-300%, -50%, 0) rotateZ(90deg);
+          transform: translate3D(-300%, -50%, 0) rotateZ(90deg);
+}
+
+.melon-name2 {
+  position: absolute;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  font-size: 26.66667px;
+  -webkit-transform: translate3D(-100%, 1200%, 0) rotateZ(-90deg);
+          transform: translate3D(-100%, 1200%, 0) rotateZ(-90deg);
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: .4s;
+}
+
+
+</style>
+
+
+
+<div class="melon-container2">
+  <div class="melon-inner2">
+    <div class="melon-top2"></div>
+    <div class="melon-sides2"></div>
+    <div class="melon-inner-left2">
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+    </div>
+    <div class="melon-inner-right2">
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+      <div class="melon-seed2"></div>
+    </div>
+  </div>
+  <div class="melon-name"></div>
+</div>
+  
+
+{% endblock %}

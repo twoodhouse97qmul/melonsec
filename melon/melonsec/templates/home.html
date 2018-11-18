@@ -1,0 +1,640 @@
+{% extends 'portalbase.html' %}
+
+
+{% block content %}
+
+<style>
+    
+    .titleBlock {
+        text-align: center;
+        width:100%;
+        height:30px;
+        position:absolute;
+        z-index:100;
+
+     
+    }
+    
+    
+   
+    
+    .textDiv{
+        text-align: center;
+    }
+    
+    .picCont{
+        margin: 0 auto;
+        width:900px;
+      
+        margin-top:0;
+
+    }
+    
+    #finalPicsHolder{
+        width:1200px;
+     
+         margin: 0 auto;
+    }
+    
+    .page-back{
+        width:100%;
+        height:100%;
+        background-color: #FAF9F9;
+        padding-top:70px;
+   
+    }
+    
+    #p1{
+       
+    }
+    
+    #p2{
+      
+    }
+    
+    .leftArrowDiv{
+        margin-top:250px;
+        float:left;
+        width:40px;
+        height:50px;
+        margin-left:60px;
+        
+    }
+    
+     .rightArrowDiv{
+        margin-top:250px;
+        float:right;
+        margin-right:60px;
+        
+    }
+    
+    .thisWidth{
+        width:800px;
+        margin: 0 auto;
+    }
+    
+    .biggerText{
+        font-size: 450%;
+    }
+    
+   
+    
+    {% load static %}
+    #frontText{
+        
+        width: 100%;
+        background-image:url("{% static 'greenBackShort.jpg' %}");
+        background-size:cover;
+        margin: 0 auto;
+        padding:15px;
+        margin-bottom: 40px;
+        padding-top:60px;
+       
+    }
+    
+    
+    .greenBacked{
+         width: 100%;
+        background-image:url("{% static 'picnicback.jpg' %}");
+        background-size:cover;
+        margin: 0 auto;
+        padding:15px;
+        margin-bottom: 40px;
+       
+    }
+    
+    .navStrip{
+        margin-left:30px;
+        width:100px;
+        height:600px;
+        position:fixed;
+        margin-top:100px;
+        font-size:400%;
+    }
+  
+    
+  
+    
+    .headText{
+     font-size: 4eM;;
+    }
+    
+    * {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 600px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+    
+
+}
+    
+    .rightText{
+        text-align: left;
+    }
+
+    
+    .whiteText{
+        color:white;
+    }
+.img-comp-img img {
+  display: block;
+  
+  vertical-align: middle;
+
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+</style>
+
+<div class = "navStrip">
+    <i class="fas fa-circle" aria-hidden="true"></i><br><i class="fa fa-camera" aria-hidden="true"></i><br><i class="far fa-circle" aria-hidden="true"></i><br><i class="fa fa-camera" aria-hidden="true"></i><br><i class="far fa-circle" aria-hidden="true"></i><br><i class="fa fa-camera" aria-hidden="true"></i><br><i class="far fa-circle" aria-hidden="true"></i><br><i class="fas fa-images" aria-hidden="true"></i></div>
+
+<div class = "page-back">
+    
+    
+
+ 
+    <div class = "textDiv" id = "frontText">
+        
+        <h2> About Us </h2>
+        
+        <h4 class = "rightText whiteText thisWidth">  <br>
+The Sheringham Portal Project is a non-profit initiative that has been founded with the intention of creating a phone application that will allow users to interact with the vibrant history of our town. <br> <br>
+
+Our goal is to create a 360* virtual tour of 'old' Sheringham using archived photos from the 1940's and 50's. <br> <br>
+
+There will be many opportunities for local people to get involved, we will also be working closely with local businesses in the hope of encouraging postitive tourism. <br> <br>
+            
+            please scroll down to learn what we are all about, take the time to enjoy the interactive photographs we have included!
+        
+        
+        
+        </h4>
+        
+      
+        
+    
+    </div>
+
+    
+    
+    
+    
+
+
+
+<div class = "picCont">
+
+   
+<div class="img-comp-container" id ="compCont1">
+    
+    <div class = "titleBlock">
+
+    
+    <h5 class = "picHead">use the slider to discover how Sheringham High Street has changed over time.</h5>
+        
+    </div>
+    
+    
+    
+
+     {% load static %}
+  <div class="img-comp-img" id = "p1">
+    <img src="{% static 'boatStation.jpg' %}" width="900" height="600">
+     
+  </div>
+    
+  <div class="img-comp-img img-comp-overlay" id = "p2">
+    <img src="{% static 'boatStationOLD.jpg' %}" width="900" height="600"> 
+   
+      
+  </div>
+</div>
+    
+    </div>
+    
+    <div class = "textDiv greenBacked" id = "goalsText">
+        
+        <h2> Our Goals </h2>
+        
+        <h4 class =  "whiteText"> <br><br><br>  
+        1) Use innovative methods to preserve the unique history of our coastal town.<br>
+        2) Boost positive tourism and bring a modern exciting service to Sheringham. <br>
+        3) Encourage local youths to be proud of their roots and to engage with their history.</h4>
+        
+    
+      
+        <h4 class = "rightText whiteText thisWidth"> <br> <br>
+        
+    
+ <br><br> Sheringham has such a proud and vibrant history, however in such a fast evolving world our traditions and values are sadly at risk of being forgotten, I strongly believe their are many others who realise how much of a shame this would be. <br><br>
+            
+    
+        We want to utilise technology in a positive way, in order to bring people together rather than creating divides. <br><br>
+        
+      
+        
+
+Our mission is to use the latest artificial Intelligence technologies in order to create a snapshot in time of Sheringham, allowing the past and future to come together in perfect harmony. </h4>
+
+
+
+
+
+
+
+    
+    </div>
+    
+    <div class = "picCont">
+    
+    <div class="img-comp-container" id = "compCont2">
+    
+    <div class = "titleBlock">
+
+    
+    <h5 class = "picHead">use the slider to discover how Sheringham High Street has changed over time.</h5>
+        
+    </div>
+    
+    
+    
+
+     {% load static %}
+  <div class="img-comp-img" id = "p1">
+    <img src="{% static 'beestNEW.jpg' %}" width="900" height="600">
+     
+  </div>
+    
+  <div class="img-comp-img img-comp-overlay" id = "p2">
+    <img src="{% static 'beeston.jpg' %}" width="900" height="600">
+      
+  </div>
+</div> 
+        
+        </div>
+    
+    
+      <div class = "textDiv greenBacked" id = "involvedText">
+        
+        <h2> Get Involved</h2>
+          
+          
+          We hope to create some live scenes during 1940's weekend this September.
+          
+          If you are participating in 1940's weekend and are interested in helping 
+          
+          we hope to create some live scenes that will be added to the experience.
+          
+          please get in contact with us by giving us an email: 
+          
+          In the future there will also be the option for augmented/virtual reality to be used witht he system, this would involve to fully immersify the user in 1940's Sheringham. This would require a cheap set of goggles, we think there could be benifit to establishments to have a couple of units, as when people cameto borrow them from us they may stay
+          
+          
+          sheringhamportal@gmail.com
+        
+       
+
+
+
+
+
+
+
+    
+    </div>
+    
+    
+    <div class = "picCont">
+
+   
+<div class="img-comp-container" id ="compCont3">
+    
+    <div class = "titleBlock">
+
+    
+    <h5 class = "picHead">use the slider to discover how Sheringham High Street has changed over time.</h5>
+        
+    </div>
+    
+    
+    
+
+     {% load static %}
+  <div class="img-comp-img" id = "p1">
+   <img src="{% static 'stationNew.jpg' %}" width="900" height="600">
+     
+  </div>
+    
+  <div class="img-comp-img img-comp-overlay" id = "p2">
+    <img src="{% static 'stationroad.jpg' %}" width="900" height="600"> 
+  </div>
+</div>
+    
+    </div>
+    
+    
+        
+      <div class = "textDiv greenBacked" id = "sendPhotosText">
+        
+        <h2> Send Us Your Photos </h2>
+        
+       
+
+         Is to share the vibrant community spirit that has always been present in Sheringham.
+          
+         With respect to this, we think that their is a lot of added benefit if the photos come from members of the community, as this will most truthfully reflect the everyday lives of people in Sheringham during the 1940's or 50's.
+          
+          If you have any photos that are special to you that you would like to be part of the project, even if you only have a single photo, don't hesitate to send it to us!
+         
+         Check back here soon as we will soon implement a 'photo drag and drop' area here which will make it simpler to send your photos to us.
+          
+          
+          sheringhamportalphotos@gmail.com
+
+
+    
+    </div>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+   
+    <div id = "finalPicsHolder">
+        
+          <div class = "leftArrowDiv" id = "leftArrow">
+         <h1 class = "biggerText" ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></h1>
+         </div>
+         
+         <div class = "rightArrowDiv" id = "rightArrow"><h1 class = "biggerText">
+         <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></h1></div>
+    
+    
+     <div class = "picCont" id = "finalPicContainer">
+         
+       
+
+   
+<div class="img-comp-container" id ="compCont5">
+    
+    <div class = "titleBlock">
+
+    
+    <h5 class = "picHead">use the slider to discover how Sheringham High Street has changed over time.</h5>
+        
+    </div>
+    
+    
+    
+
+     {% load static %}
+  <div class="img-comp-img" id = "p1">
+      <img class = "modernSlides" src="{% static 'greedyEnt.jpg' %}" width="900" height="600">
+    <img class = "modernSlides" src="{% static 'startslope.jpg' %}" width="900" height="600">
+  <img class = "modernSlides" src="{% static 'burlnew.jpg' %}" width="900" height="600">
+   <img class = "modernSlides" src="{% static 'boatStation.jpg' %}" width="900" height="600">
+    <img class = "modernSlides" src="{% static 'stationNew.jpg' %}" width="900" height="600">
+      <img class = "modernSlides" src="{% static 'beachslope2.jpg' %}" width="900" height="600">
+     
+  </div>
+    
+  <div class="img-comp-img img-comp-overlay" id = "p2">
+      <img class = "historicalSlides" src="{% static 'beacjentold.jpg' %}" width="900" height="600"> 
+      <img class = "historicalSlides" src="{% static 'endslope.jpg' %}" width="900" height="600"> 
+    <img class = "historicalSlides" src="{% static 'burlold.jpg' %}" width="900" height="600"> 
+    <img class = "historicalSlides" src="{% static 'boatStationOLD.jpg' %}" width="900" height="600"> 
+    <img class = "historicalSlides" src="{% static 'stationroad.jpg' %}" width="900" height="600">
+       <img class = "historicalSlides" src="{% static 'beachslopeold.jpg' %}" width="900" height="600">
+  </div>
+</div>
+    
+    </div>
+        
+        </div>
+    
+{% block aPForm %}
+
+
+{% endblock %}
+
+    
+    
+  
+    
+
+ 
+    
+</div>
+
+<script src="{% static 'js/vendor/jquery.ui.widget.js' %}"></script>
+  <script src="{% static 'js/jquery.iframe-transport.js' %}"></script>
+  <script src="{% static 'js/jquery.fileupload.js' %}"></script>
+
+
+
+<script>
+
+    
+    
+            var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+   
+    showDivs2(slideIndex2 += n);
+}
+
+function showDivs2(n) {
+  
+    var i2;
+    var x2 = document.getElementsByClassName("historicalSlides");
+     
+    if (n > x2.length) {slideIndex2 = 1} 
+    if (n < 1) {slideIndex2 = x2.length} ;
+    for (i2 = 0; i2 < x2.length; i2++) {
+        x2[i2].style.display = "none"; 
+    }
+    x2[slideIndex2-1].style.display = "block"; 
+     
+    
+}
+    
+    
+    
+    
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("modernSlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+    
+    
+    document.getElementById('leftArrow').onclick = function(){ plusDivs(-1); plusDivs2(-1);    };
+    document.getElementById('rightArrow').onclick = function(){ plusDivs(1); plusDivs2(1);     };
+    
+
+    
+    
+    
+    
+
+window.onresize = function(event) {
+
+resizeDiv();
+}
+
+function resizeDiv() {
+    
+   
+var vph = window.innerHeight;
+document.getElementById('frontText').style.height = vph+"px";
+document.getElementById('compCont1').style.height = vph+"px";
+    document.getElementById('compCont2').style.height = vph+"px";
+    document.getElementById('compCont3').style.height = vph+"px";
+  
+    document.getElementById('compCont5').style.height = vph+"px";
+document.getElementById('goalsText').style.height = vph+"px";
+    document.getElementById('involvedText').style.height = vph+"px";
+    document.getElementById('sendPhotosText').style.height = vph+"px";
+      
+    
+
+    
+    
+    /* do goals text*/
+   
+}
+    
+    resizeDiv();
+    
+   
+    
+    function initComparisons() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /*get the width and height of the img element*/
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+    img.style.width = (w / 2) + "px";
+    /*create slider:*/
+      
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /*insert slider*/
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    slider.style.paddingTop = "10px";
+      slider.style.paddingLeft = "12px";
+    slider.innerHTML = '<i class="fa fa-arrows-alt-h" aria-hidden="true"></i>';
+    /*execute a function when the mouse button is pressed:*/
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+    slider.addEventListener("touchstart", slideReady);
+     /*and released (for touch screens:*/
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+      pos = getCursorPos(e)
+      /*prevent the slider from being positioned outside the image:*/
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+      slide(pos);
+    }
+      
+      
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /*get the x positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+
+    initComparisons()
+    
+
+</script>
+
+
+
+
+
+{% endblock %}

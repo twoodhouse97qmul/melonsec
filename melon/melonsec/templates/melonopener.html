@@ -1,0 +1,530 @@
+{% extends 'melon-slider.html' %}
+
+
+{% block slide_1_block %}
+
+<style>
+
+    .biggerTT{
+        font-size:300%;
+        text-align: center;
+    }
+    
+    #abcdffu:hover{
+        font-style: normal;
+        text-decoration: none;
+        
+    }
+    
+    
+    .smill{
+        font-size:90%;
+    }
+    
+   
+    
+    
+/*
+* These styles for text decoration. The demo will be work without it
+*/
+
+.link{
+	color: #000000;
+	font-size: 16px;
+	font-weight: 700;
+
+	text-decoration: none;
+    position: relative;
+	z-index: 1;
+	display: inline-flex;
+	
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+
+}
+
+/*
+* These styles creates the underlining of link
+*/
+    .link:hover{
+        text-decoration: none;
+    }
+.link::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #fed330 25%, transparent 40%);
+	
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+	z-index: -1;
+	
+	will-change: width;
+	transform: rotate(-2deg);
+	transform-origin: left bottom
+}
+
+.link:hover::before{
+	width: 0;
+}
+
+/*
+* animation styles
+*/
+
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;
+}
+    
+    .justy{
+        text-align: justify;
+    }
+    
+     .ani-frame{
+            width:105%;
+        height:105%;
+        position:relative;
+        
+        border:none;
+        
+        
+        }
+    
+     .content-holding{
+        max-height:400px;
+        overflow-y: scroll;
+        background-color: blue;
+    }
+    
+   
+
+    
+</style>
+
+
+<div class="news-slider__item swiper-slide slide-1">
+
+<a href="#" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Welcome To MelonSec</span>
+               
+        
+          </div>
+          
+
+          <p class = "justy">
+           
+
+
+
+Home to a modest array of casual tutorials, official projects, belated news and numerous articles related to anything cyber. Soon to be home of the MelonSec Cyber API.<br><br>
+              
+              hopefully there is something here for everyone, I can promise you enthusiasm, you can expect weird, and we can all hope for mildly interesting. <br><br>
+              I hope you manage to enjoy the site.
+              
+                
+              
+
+
+
+          </p>
+    
+      <div class="news__img">
+              {% load static %}
+            <iframe src = "/floating" class = "ani-frame"></iframe>
+          </div>
+
+       
+        </a>
+</div>
+{% endblock %}
+
+
+
+{% block slide_2_block %}
+
+ <div class="news-slider__item swiper-slide web-pen-slide">
+
+<a href="/tutorials/ublog" class="news__item" id = "abcdffu">
+    
+        
+    <div class = "lefty">
+        
+        
+        
+         <div class="news-date fixed-wid-1">
+            <span class="news-date__title">Web Penetration Testing </span>
+               <span class="news-date__txt">Tutorials</span>
+        
+          </div>
+        
+          <div class="news__img fixed-wid-1">
+              {% load static %}
+            <img src="{% static 'photos/ninja.png' %}" alt="news">
+          </div>
+        <div class = "tutorial-ratings">
+        <h6 ><b>Difficulty: </b> <span style = "color:orange;">medium</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">short and quick</span></h6>
+        </div>
+            
+         
+    
+    </div>
+    
+    
+    
+    
+    
+   
+          <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+
+          <p   class = "justy news__txt righty fixed-wid">
+            The Web Application Penetration Testing series teaches you how to learn the fundamentals of *white hat* web application hacking. The tutorials cover setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
+              
+         	
+          </p>
+    
+     <div class ="cleario"></div>
+
+         
+         
+          
+
+       
+
+         
+        </a>
+     
+</div>
+{% endblock %}
+
+{% block slide_3_block_gone %}
+
+<div class="news-slider__item swiper-slide tutorials-slide">
+
+<a href="/tutorials" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Tutorials</span>
+               <span class="news-date__txt">Get up to date with what's going down in the cyber community</span>
+        
+          </div>
+          
+
+          
+    
+     
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/tutorial.jpg' %}" alt="news">
+          </div>
+        </a>
+</div>
+
+{% endblock %}
+
+{% block slide_3_block %}
+
+
+      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+
+
+<a href="/unavailable/home" class="news__item" id = "abcdff">
+    
+    
+    <div class = "lefty">
+        
+         <div class="news-date fixed-wid-1">
+            <span class="news-date__title">Over The Wire Walkthrough</span>
+            <span class="news-date__txt"> Solutions to my favourite online wargames. </span>
+          </div>
+        
+       
+        
+         <div class="news__img fixed-wid-1">
+              {% load static %}
+            <img src="{% static 'photos/old-guy-computer.jpg' %}" alt="news">
+          </div>
+        
+      
+        <div class = "tutorial-ratings">
+        <h6 ><b>Difficulty: </b><span style = "color:green;">easy</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">mixed</span></h6>
+        </div>
+            
+    
+    </div>
+         
+    
+    
+    
+   
+        
+
+            <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+
+          <p class = "news__txt righty fixed-wid justy">
+            Over the wire hosts a range of.. When I did these puzzles the first time around I was pretty unimpressed with, with vast, and not many for the harder levels. Most just showed solutions and ABC, But it's really important to understand what you are doing if you are playing the games for the purpose of learning.</p>
+    
+     <div class ="cleario"></div>
+
+         
+         
+        </a>
+
+</div>
+{% endblock %}
+
+{% block slide_4_block %}
+
+
+      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+
+
+<a href="/unavailable/home" class="news__item" id = "abcdff">
+    
+    
+    <div class = "lefty">
+        
+         <div class="news-date fixed-wid-1">
+            <span class="news-date__title">How Not To Get Hacked</span>
+            <span class="news-date__txt"> (when you are a computer moron) </span>
+          </div>
+        
+       
+        
+         <div class="news__img fixed-wid-1">
+              {% load static %}
+            <img src="{% static 'photos/old-guy-computer.jpg' %}" alt="news">
+          </div>
+        
+      
+        <div class = "tutorial-ratings">
+        <h6 ><b>Difficulty: </b><span style = "color:green;">easy</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">mixed</span></h6>
+        </div>
+            
+    
+    </div>
+         
+    
+    
+    
+   
+        
+
+            <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+
+          <p class = "news__txt righty fixed-wid justy">
+            How do you know if you have a virus?<br>What are the most dangerous things you need to look out for when you browse the web? <br> <span class = "smill">This series answers all of these questions and teaches you how to easily keep you devices safe and secure as well as covering of all the multiple times my computer illiterate girlfriend has succumbed to cyber crime, and how she could have easily prevented it.
+         </span> </p>
+    
+     <div class ="cleario"></div>
+
+         
+         
+        </a>
+
+</div>
+{% endblock %}
+
+{% block slide_5_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Features and Articles</span>
+               
+        
+          </div>
+          
+
+           <p class = "justy">
+        Explore our colelction of..
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'morris.jpg' %}" alt="news">
+          </div>
+        </a>
+
+</div>
+{% endblock %}
+
+{% block slide_6_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Boza Bizatch by Quantum</span>
+               <span class="news-date__txt">Malware Features: Historical Exploit</span>
+        
+          </div>
+          
+
+          <p>
+            
+              
+         
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/boza.jpg' %}" alt="news">
+          </div>
+        </a>
+
+</div>
+{% endblock %}
+
+{% block slide_7_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Breaking News</span>
+               
+        
+          </div>
+          
+
+          <p class = "justy">
+        
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/malware.jpg' %}" alt="news">
+          </div>
+        </a>
+</div>
+
+{% endblock %}
+
+{% block slide_8_block_NY %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Breaking: British Airways Hacked.</span>
+               
+        
+          </div>
+          
+
+          <p class = "justy">
+        Explore our collection of..
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/old-guy-computer.jpg' %}" alt="news">
+          </div>
+        </a>
+</div>
+
+{% endblock %}
+
+{% block slide_9_block %}
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">MelonSec API</span>
+               <span class="news-date__txt">Comprehensive Coverage of global Cyber Security Trends </span>
+        
+          </div>
+          
+
+          <p>
+          
+              
+         
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/ninja.png' %}" alt="news">
+          </div>
+        </a>
+     
+</div>
+
+
+{% endblock %}
+
+{% block slide_10_block %}
+
+
+ <div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdffu">
+          <div class="news-date">
+            <span class="news-date__title">Projects</span>
+               
+        
+          </div>
+          
+
+          <p>
+        
+
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/cyber-theft.jpg' %}" alt="news">
+          </div>
+        </a>
+     
+</div>
+
+
+{% endblock %}
+
+{% block slide_11_block %}
+
+
+
+{% endblock %}
+
+
+{% block last_slide %}
+
+<div class="news-slider__item swiper-slide">
+
+<a href="/unavailable/home" class="news__item" id = "abcdff">
+          <div class="news-date">
+            <span class="news-date__title">Hacking RFID Access Controls</span>
+            <span class="news-date__txt">Projects: Physical Access Security</span>
+          </div>
+          <div class="news__title">
+            Part 3 - The Duke
+          </div>
+
+           <p class = "justy news__txt">
+            Tom shows how to perform a man in the middle attack on HID readers using a Raspberry Pi and open source software.
+          </p>
+
+         
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'photos/rfid.jpg' %}" alt="news">
+          </div>
+        </a>
+    
+</div>
+
+{% endblock %}

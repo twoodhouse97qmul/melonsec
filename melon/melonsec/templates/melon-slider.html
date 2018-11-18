@@ -1,0 +1,180 @@
+{% extends 'melon-back-base.html'%}
+
+
+{% block melon_slider %}
+
+
+
+<style>
+    
+    .slide-1{
+        min-height:600px;
+    }
+    
+    .how-not-to-slide{
+        min-width:800px;
+    }
+    
+   
+    
+    .above-slider{
+        position:absolute;
+        width:100%;
+        height:65px;
+        z-index:999999999999;
+        background-color: #0E5DC4;
+        margin-top:9px;
+        border-style:solid;
+
+        border-width: 0 0 2px 0;
+        border-color:black;
+        display:none;
+
+    }
+    
+    .web-pen-slide{
+        min-width:800px;
+            
+    }
+    
+     .lefty{
+        float:left;
+        
+    }
+    
+    .righty{
+        float:right;
+    }
+    
+    .cleario{
+        clear: both;
+    }
+    
+    
+    .fixed-wid{
+        width:350px;
+       
+       
+    }
+    
+    .tutorial-ratings{
+        width:250px;
+        margin: 0 auto;
+    }
+    
+    
+    .right-title{
+         margin-top:40px;
+         padding-right:10px;
+    }
+     .fixed-wid-1{
+        width:325px;
+    }
+    
+
+   
+</style>
+<div class = "above-slider">
+{% block above_slider %}
+
+{% endblock %}
+    </div>
+  <div class="item-bg io"></div>
+
+  <div class="news-slider">
+    <div class="news-slider__wrp swiper-wrapper">
+        
+         
+        
+        
+    
+
+      
+         {% block slide_1_block %}
+        {% endblock %}
+    
+        
+        {% block slide_2_block %}
+        {% endblock %}
+        
+        
+        {% block slide_3_block %}
+        {% endblock %}
+
+
+     
+
+  
+
+         {% block slide_4_block %}
+        {% endblock %}
+     
+
+     
+         {% block slide_5_block %}
+        {% endblock %}
+   
+        
+    
+         {% block slide_6_block %}
+        {% endblock %}
+     
+        
+    
+         {% block slide_7_block %}
+        {% endblock %}
+    
+        
+     
+         {% block slide_8_block %}
+        {% endblock %}
+  
+        
+         {% block slide_9_block %}
+        {% endblock %}
+        
+         {% block slide_10_block %}
+        {% endblock %}
+        
+        
+         {% block slide_11_block %}
+        {% endblock %}
+        
+        
+     
+         {% block last_slide %}
+        {% endblock %}
+    
+        
+    
+        
+     
+        
+         
+        
+        
+    </div>
+      
+        <div class="news-slider__arrows mid-arrows">
+        <button class="news-slider__arrow news-slider-prev toppy">
+          <span class="icon-font">
+            <svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg>
+          </span>
+        </button>
+        <button class="news-slider__arrow news-slider-next toppy">
+          <span class="icon-font">
+            <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+          </span>
+        </button>
+      </div>
+
+    <div class="news-slider__ctr">
+
+    
+
+      <div class="news-slider__pagination"></div>
+
+    </div>
+
+  </div>
+{% endblock %}

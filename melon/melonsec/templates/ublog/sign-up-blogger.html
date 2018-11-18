@@ -1,0 +1,351 @@
+{% extends 'templates/ublog-base.html' %}
+
+
+{% block blog-sign-up-block %}
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
+
+
+
+<style>
+body {
+  background-color: #1abc9c;
+  font: 1em Helvetica;
+    
+}
+
+#containerl {
+  width: 560px;
+  margin: 25px auto;
+    background-color: white;
+    border-radius:5px;
+    height:450px;
+  
+}
+
+.whysign {
+  float: right;
+  background-color: white;
+  width: 250px;
+  height: 347px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.signup {
+  float: left;
+  width: 300px;
+  padding: 30px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+h1 {
+  color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+p {
+  color: rgba(0,0,0,.6);
+  font-size: 1.2em;
+  margin: 50px 0 50px 0;
+}
+
+span {
+  font-size: .75em;
+  background-color: white;
+  padding: 2px 5px;
+  color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  margin: 5px;
+}
+
+span:hover {
+  color: #53CACE;
+}
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+    
+    .cleario{
+        clear:both;
+    }
+    
+    .sign-up-phase-2{
+        display:none;
+        
+    }
+    
+    .social-choose-area{
+        width:90%;
+        margin:0 auto;
+        height:200px;
+       
+        padding-top:20px;
+        
+    }
+    
+ 
+    
+ 
+    
+    .dual-facebook-holder{
+        float:right;
+       
+        width:344px;
+        height:200px;
+        
+    }
+    .fakebook-holder{
+        float:left;
+       
+        width:160px;
+        height:200px;
+        margin-left:12px;
+        
+    }
+    .facebook-holder{
+        float:right;
+       
+        width:160px;
+        height:200px;
+        
+    }
+    
+     .insta-holder{
+        float:left;
+
+        width:160px;
+        height:200px;
+        
+    }
+    
+   .button-div{
+       width:122px;
+      
+        margin:0 auto;
+       margin-top:50px;
+     
+    }
+    
+    .social-icon{
+        width:120px;
+        height:120px;
+        border-radius:60px;
+        background-color: blue;
+        margin:0 auto;
+        margin-top:10px;
+         box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.35);
+       
+    }
+    
+    .social-icon:hover{
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.7);
+         width:124px;
+        height:124px;
+        border-radius:62px;
+        cursor:grab;
+        margin-top:8px;
+    }
+    
+    .social-add-holder{
+        border-radius:10px;
+        text-align: center;
+    }
+    
+    .link-foll-text{
+        font-size:80%;
+    }
+    
+    .link-sm-title{
+        text-align: center;
+        margin-top:10px;
+         margin-bottom:20px;
+    }
+    
+    .sign-up-icon{
+        margin-top:15px;
+        font-size: 500%;
+       
+        
+    }
+
+     .fb-sign-up-icon{
+        color:white;
+    }
+    
+    .red-tt{
+        color:red;
+        font-size:75%;
+        margin-left:50px;
+        margin-right:50px;
+        margin-top:75px;
+    }
+
+
+
+
+</style>
+
+
+
+<div id='containerl'>
+    <div class = "sign-up-phase-2">
+          
+        <div class = "social-choose-area">
+          <h4 class = "link-sm-title">Click on an icon to link your social media accounts</h4>
+          
+            <div class = "insta-holder social-add-holder">
+                <div class = "social-icon insta-icon">
+                    <i class="fab fa-instagram sign-up-icon fb-sign-up-icon"></i>
+                </div>
+                <p class = "link-foll-text">Linked Followers: 0</p>
+            </div>
+            <div class = 'dual-facebook-holder'>
+                <div class = 'facebook-holder social-add-holder'>
+                      <div class = "social-icon facebook-icon  fb-ic-fake">
+                          <i class="fab fa-twitter sign-up-icon fb-sign-up-icon"></i>
+                </div>
+                    <p class = "link-foll-text link-foll-text-fake">Linked Followers: 0</p>
+            </div>
+                <div class = 'fakebook-holder social-add-holder'>
+                      <div class = "social-icon fakebook-icon">
+                          <i class="fab fa-twitter sign-up-icon fb-sign-up-icon fb-su-fake"></i>
+                </div>
+                    <p class = "link-foll-text">Linked Followers: 0</p>
+            </div>
+            </div>
+             <div class = "cleario"></div>
+        </div>
+          <h6 class = "red-tt">You need AT LEAST 10 000 followers linked to your social media accounts in order to sign up to the ublog platform.</h6>
+        <div class = "button-div">
+        <button class = "btn btn-primary" id = "blog-make-account-conf">Create Account</button>
+        </div>
+  
+</div>
+    
+    
+    <div class = "sign-up-phase-1">
+  <div class='signup'>
+     <form>
+       <input type='text' placeholder='First:'  />
+       <input type='text' placeholder='Last:'  />
+       <input type='text' placeholder='Username:'  />
+       <input type='text' placeholder='Password:'  />
+       
+     </form>
+      <button class = "btn btn-primary" id = "blog-su-conf">Next</button>
+  </div>
+  <div class='whysign'>
+    <h1>Sign Up</h1>
+    <p>Learning to code is not magic. It is as simply as opening your browser! See in real time the changes you make to HTMl, CSS, JavaScript, HAML, and more!</p>
+    
+  </div>
+    <div class = "cleario"></div>
+</div>
+    
+    
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  
+
+    <script  src="js/index.js"></script>
+    
+    <script>
+               
+        //should go: IF phase-1 not done: else do the opposite.
+      $(".sign-up-phase-2").hide();
+        
+         
+    $('#blog-su-conf').on("click", function(){
+      
+         $(".sign-up-phase-1").fadeOut();
+        $(".sign-up-phase-2").fadeIn();
+        
+    });
+        
+     $('#blog-make-account-conf').on("click", function(){
+        
+         
+             window.location.href = "/addSocial/addFacebook/facebookid_764525461328/";
+        
+    });
+        
+        $(".fb-ic-fake").on("click",function(){
+            
+            
+            $(".fb-ic-fake").html("<i class='fas fa-cog sign-up-icon fb-sign-up-icon fa-spin' style = 'color:black;'></i>");
+            
+            timert = setTimeout(function(){
+                $(".fb-ic-fake").html("<i class='fas fa-check sign-up-icon fb-sign-up-icon' style = 'color:green;'></i>");
+                
+                $(".link-foll-text-fake").html("Linked Followers: 1");
+            },1500);
+                            
+
+                            });
+        
+        
+
+ 
+
+</script>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

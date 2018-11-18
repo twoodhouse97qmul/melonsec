@@ -1,0 +1,26 @@
+  {%  extends 'melonSliderBase.html' %}
+        {% block sliders %}
+          
+      <div class="news-slider__item swiper-slide">
+        <a href="#" class="news__item">
+          <div class="news-date">
+            <span class="news-date__title">Would The Morris Worm Work Today?</span>
+            <span class="news-date__txt">Debate Week</span>
+          </div>
+          <div class="news__title">
+          
+          </div>
+
+          <p class="news__txt">
+         James And Mary talk about what affect the morris Worm would have if it has been released in 2018.
+          </p>
+
+          <div class="news__img">
+              {% load static %}
+            <img src="{% static 'morris.jpg' %}" alt="news">
+          </div>
+        </a>
+      </div>
+      
+      
+        {% endblock %}

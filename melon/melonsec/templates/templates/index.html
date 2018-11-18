@@ -1,0 +1,254 @@
+
+
+
+<!-- Website Front Page -->
+<!-- The Page Is Composed of a header bar as well as links to the business and blogger pages -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- The head contains the regular settings, the bootstrap style sheet links as well as links to the fa glyphicons and the general css script for the page. -->
+    <head>
+        
+        
+        <!-- MUST COME FIRST -->
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        {% load static %}
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PreLogIn.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+                    <title>UBlog</title>
+
+                    <!-- STYLE SHEETS -->
+                    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+                        <link href="css/font-awesome.min.css" rel="stylesheet"> <!-- fa glyphicons -->
+                            <link href="css/PreLogIn.css" rel="stylesheet"> <!-- general style sheet.s -->
+
+                                <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                                <!--[if lt IE 9]>
+                                 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                                 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                                 <![endif]-->
+
+                                <style>
+
+
+                                    .centered-div{
+                                        float:left;
+                                    }
+
+                                .fixx{
+                                    margin-top:0;
+                                    padding-top:0;
+                                    position:fixed;
+                                    z-index:6;
+                                }
+
+
+                                .divv1024{
+                                    min-width:1024px;
+                                    width:95%;
+                                    min-height:550px;
+                                    height:750px;
+                                    margin:0 auto;
+                                }
+
+
+                                .tenP{
+                                    font-size:40%;
+                                }
+
+                                .fifteenP{
+                                    font-size:60%;
+                                }
+
+                                #ubfp{
+                                    height:800px;
+
+                                }
+
+                                .twentyP{
+                                    font-size:70%;
+                                }
+
+                                .twentyfiveP{
+                                    font-size:105%;
+                                }
+                                .thirtyP{
+                                    font-size:160%;
+                                }
+
+                                .no-g{
+                                    margin:0;
+                                    padding:0;
+                                }
+
+                                #ubfp-bottom-bar{
+
+                                    background-color:black;
+                                    height:100px;
+                                    position:fixed;
+   left:0px;
+   bottom:0px;
+
+   width:100%;
+
+
+                                }
+
+                                * html #ubfp-bottom-bar {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+                                .ublogNav{
+                                  position:fixed;
+                                  background-color:#89A35C;
+                                  width:100%;
+                                  margin-top:-5px;
+                                  height:65px;
+                                  border-radius:0;
+                                  z-index:200;
+
+                                }
+
+                                .nav-opt{
+                                  height:60px;
+                                  width:120px;
+                                  padding-top:6px;
+                                  font-size:120%;
+                                }
+
+                                #open-arrow{
+                                  float:right;
+                                  height:60px;
+                                  width:30px;
+                                  background-color: yellow;
+                                }
+
+                                #logo-holder{
+                                  width:100%;
+
+                                  height:65px;
+                                  position:fixed;
+                                  z-index:100;
+                                }
+
+
+                                    </style>
+                                </head>
+
+    <body>
+
+      <!-- logo: -->
+        <a href = "ublog.html">
+            <div id = "logo-holder">
+                <div class = "grublogo">
+                </div>
+            </div>
+        </a>
+
+        <div class = "clearer"></div>
+        <!--navbar - currently regular bootstra stlye.. -->
+        <nav class="navbar navbar-default ublogNav">
+
+            <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded"false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+                </div>
+
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                  <!-- Left Hand Side Of Navbar: -->
+                  <ul class="nav navbar-nav navbar-left">
+
+
+
+                    <li class="dropdown nav-opt">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+
+                            Sign Up
+
+
+                        <ul class="dropdown-menu">
+                            <li><a href="SignUpBlogger.html">Sign Up As A Blogger</a></li>
+                            <li><a href="BusinessSU.html">Sign Up As A Business</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Terms And Conditions</a></li>
+                        </ul>
+                    </li>
+
+
+                      <li class = "nav-opt">
+
+                          <a href="login.html">
+
+                              Log In
+                          </a>
+
+
+
+                      </li>
+
+
+
+
+
+                  </ul>
+
+                    <!-- Right Hand Side Of Navbar: -->
+                    <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+
+
+                        <li><a class = "spain-circle" href="blogcountry.html"></a> </li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+
+
+        <!--   -->
+
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+        </script>
+
+
+
+
+    </body>
+</html>

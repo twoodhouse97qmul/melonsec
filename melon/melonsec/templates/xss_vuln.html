@@ -1,0 +1,66 @@
+   {% extends 'twwdbase.html'%}
+{% block first-in %}
+
+<style>
+    .inject-div{
+        height:400px;
+        width:300px;
+        background-color: red;
+    }
+
+</style>
+
+<div class = "bio-space">
+
+    <textarea id = "bio-t-f">write your bio here</textarea>
+    
+    <button class = "btn-primary btn" id = "bio-butt">delete this status</button>
+
+
+</div>
+
+<div class = "inject-div">
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+          alert(5);    
+    
+   
+    $('#bio-butt').on("click", function(){
+        var text_value = document.getElementById("bio-t-f").value;
+        
+      
+        insertMalicious(text_value);
+        
+    });
+    
+
+    
+    function maliciousBioErrorAlert(text){
+        alert("you don't have permission to delete that bio "+text);
+    }
+    
+    var inui = "<button class = 'btn-primary btn' id = 'bio-butt' onclick='alert(10);'>delete this status</button>";
+    
+    insertMalicious(inui);
+    
+    function insertMalicious(inny){
+        $(".inject-div").html('hi'+ inny);   
+    }
+    
+    
+    
+    
+
+    
+
+
+</script>
+
+{% endblock %}

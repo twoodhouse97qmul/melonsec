@@ -1,0 +1,186 @@
+{% extends 'melonopener.html' %}
+{% block watermelon %}
+
+<style>
+
+
+.melon-hint {
+  color: #555;
+ 
+  font-weight: 600;
+  padding: 15px;
+}
+
+.melon-container {
+  border-radius: 50%;
+  border: 0px solid transparent;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  left: 50%;
+  top: 72.22222px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  transition-property: background-color, border, top;
+  transition-duration: .4s;
+}
+.melon-container:hover {
+  background-color: #ea5866;
+  border: 22.22222px solid #6ED685;
+  top: 50px;
+}
+.melon-container:hover .melon-inner {
+  -webkit-transform: scale(3.5) translate3d(-14%, -13%, 0) rotateX(75deg) rotateY(77deg) rotateZ(55deg);
+          transform: scale(3.5) translate3d(-14%, -13%, 0) rotateX(75deg) rotateY(77deg) rotateZ(55deg);
+}
+.melon-container:hover .melon-seed {
+  opacity: 0.2;
+}
+.melon-container:hover .melon-name {
+  -webkit-transform: translate3D(20%, 660%, 0) rotateZ(-12deg);
+          transform: translate3D(20%, 660%, 0) rotateZ(-12deg);
+}
+
+.melon-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotateX(55deg) rotateZ(45deg);
+          transform: translate3d(-50%, -50%, 0) rotateX(55deg) rotateZ(45deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  transition-duration: .4s;
+  opacity: 1;
+}
+
+.melon-top {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+.melon-top:after, .melon-top:before {
+  position: absolute;
+  content: '';
+  background-color: #6ed685;
+  height: 200px;
+  width: 100px;
+}
+.melon-top:after {
+  -webkit-transform: translate3D(50%, -25%, 0) rotate(90deg);
+          transform: translate3D(50%, -25%, 0) rotate(90deg);
+}
+
+.melon-sides:after, .melon-sides:before {
+  position: absolute;
+  content: '';
+  height: 200px;
+  width: 100px;
+}
+.melon-sides:after {
+  background-color: #a3e092;
+  -webkit-transform: translate3D(150%, -25%, 0) rotateZ(90deg) rotateX(90deg);
+          transform: translate3D(150%, -25%, 0) rotateZ(90deg) rotateX(90deg);
+}
+.melon-sides:before {
+  background-color: #62bd71;
+  -webkit-transform: translate3D(0%, 50%, 0) rotateX(90deg);
+          transform: translate3D(0%, 50%, 0) rotateX(90deg);
+}
+
+div[class^="melon-inner-"] {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+}
+
+.melon-inner-left {
+  background-color: #f16576;
+  -webkit-transform: translate3D(50%, 25%, 0) rotateZ(90deg) rotateX(90deg);
+          transform: translate3D(50%, 25%, 0) rotateZ(90deg) rotateX(90deg);
+}
+
+.melon-inner-right {
+  background-color: #ea5866;
+  -webkit-transform: translate3D(100%, 0%, 0) rotateX(90deg);
+          transform: translate3D(100%, 0%, 0) rotateX(90deg);
+}
+
+.melon-seed {
+  height: 25px;
+  position: relative;
+  transition-property: opacity;
+  transition-duration: .4s;
+}
+.melon-seed:first-child {
+  margin-top: 12.5px;
+}
+.melon-seed:after, .melon-seed:before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 4px;
+  background-color: #414042;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+.melon-seed:after {
+  -webkit-transform: translate3D(400%, -50%, 0) rotateZ(90deg);
+          transform: translate3D(400%, -50%, 0) rotateZ(90deg);
+}
+.melon-seed:before {
+  -webkit-transform: translate3D(-300%, -50%, 0) rotateZ(90deg);
+          transform: translate3D(-300%, -50%, 0) rotateZ(90deg);
+}
+
+.melon-name {
+  position: absolute;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  font-size: 26.66667px;
+  -webkit-transform: translate3D(-100%, 1200%, 0) rotateZ(-90deg);
+          transform: translate3D(-100%, 1200%, 0) rotateZ(-90deg);
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: .4s;
+}
+
+
+</style>
+
+<div class="melon-container">
+  <div class="melon-inner">
+    <div class="melon-top"></div>
+    <div class="melon-sides"></div>
+    <div class="melon-inner-left">
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+    </div>
+    <div class="melon-inner-right">
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+      <div class="melon-seed"></div>
+    </div>
+  </div>
+  <div class="melon-name"></div>
+</div>
+  
+
+{% endblock %}

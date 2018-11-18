@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+                                
+                                <style>
+                                    .fixx{
+                                        margin-top:0;
+                                        padding-top:0;
+                                        position:fixed;
+                                        z-index:6;
+                                    }
+                                
+                                .country-holder-n{
+                                    width:424px;
+                                    margin:0;
+                                    
+                                }
+                                
+                                #spain-chosen{
+                                    margin: 0 auto;
+                                    position:relative;
+                                    margin-top:-5px;
+                                    
+                                    background-image:url("css/photos/spanc.jpg");
+                                    border-radius:40px;
+                                    height:100px;
+                                    width:100px;
+                                    background-size:cover;
+                                    background-color:red;
+                                }
+                                
+                                
+                                
+                                
+                                .centered-div{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    text-align:center;
+                                    
+                                    left:50%;
+                                    right:50%;
+                                    width:100px;
+                                }
+                                
+                                
+                                #countries-5-6{
+                                    
+                                }
+                                
+                                .country-picker{
+                                    margin-bottom:30px;
+                                    height:140px;
+                                    width:140px;
+                                    margin: 0 auto;
+                                    margin-left:40px;
+                                    margin-right:41px;
+                                    
+                                    
+                                }
+                                
+                                .hspll{
+                                    width:50%;
+                                    
+                                    margin-bottom:30px;
+                                }
+                                
+                                #testid{
+                                    
+                                }
+                                .np-arrow{
+                                    margin-top:15px;
+                                    font-size:175%;
+                                    color:#777777;
+                                    
+                                }
+                                
+                                
+                                /* back panel which changes colour when option is selected  */
+                                
+                                    </style>
+                                </head>
+    <body>
+   
+        
+        
+        <div class="front-page3">
+            <div id = "country-form">
+                
+                
+                <h3>Now we need some information to customise the location of the offers we give you.</h3>
+                <h5>Don't worry, we will never share your specific location with <b>ANYONE.</b></br></h5>
+                <h3> Please Choose Your Country: </br></br></h3>
+                
+                
+                
+                <div class = "country-choice-space">
+                    
+                    
+                    <div class = "country-holder-n rightie" id = "countries-1-2">
+                        <a href="enteradress.html">
+                            <div class = "rightie hspll" id = "testid">
+                                
+                                <div class = "country-picker this-border" id = "country-1">
+                                    <div id="skor-circle">
+                                    </div>
+                                    <h4> South Korea </h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="enteradress.html">
+                            <div class = "leftie hspll">
+                                <div class = "country-picker this-border" id = "country-2">
+                                    <div id="us-circle">
+                                    </div>
+                                    <h4> US. </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class = "country-holder-n leftie" id = "countries-3-4">
+                        <a href="/ubloggeneric/bladdress">
+                            <div class = "rightie hspll" id = "testid">
+                                <div class = "country-picker this-border" id = "country-3">
+                                    
+                                    <div id="britain-circle">
+                                    </div>
+                                    <h4> Great Britain </h4>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </a>
+                        
+                        
+                        <a href="enteradress.html">
+                            <div class = "leftie hspll" id = "spain-holder">
+                                <div class = "country-picker this-border" id = "country-4">
+                                    <div id="spain-circle">
+                                    </div>
+                                    <h4> Espanyol </h4>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    <div class = "clearer">
+                    </div>
+                    
+                    <div class = "country-holder-n rightie" id = "countries-5-6">
+                        
+                        <h4> Can't find your country? </br> choose it from the list.</h4>
+                                                
+                        <a href="#">
+                            <div class = "np-arrow">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class = "country-holder-n leftie" id = "countries-7-8">
+                        <a href="enteradress.html">
+                            <div class = "rightie hspll" id = "testid">
+                                <div class = "country-picker this-border" id = "country-5">
+                                    <div id="braz-circle">
+                                    </div>
+                                    <h4> Brazil </h4>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="enteradress.html">
+                            <div class = "leftie hspll" id = "testid">
+                                <div class = "country-picker this-border" id = "country-6">
+                                    <div id="russia-circle">
+                                    </div>
+                                    <h4> Russia </h4>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script>
+         
+            var $passInput = $('#spain-holder');
+            
+            $passInput.on('mouseover',countryHover);
+            
+            function countryHover(){
+                
+                var holder = document.getElementById('spain-holder');
+                
+                
+                holder.innerHTML = '<div class = "country-picker this-border" id = "spain-square"><div id="spain-chosen"></div><h4> Espanyol </h4></div>';
+                document.getElementById('spain-square').style.backgroundColor = "black";
+                
+            }
+        
+        
+        
+        
+            $("#sign-up-but").css("width",$(window).width()*0.14);
+            $(".front-page3").css("height",$(window).height());
+            
+            
+            
+            
+            </script>
+        
+        <script>
+            function initMap() {
+                var myLatLng = {lat: 52.950033, lng: 1.085370};
+                
+                // Create a map object and specify the DOM element for display.
+                var map = new google.maps.Map(document.getElementById('map'), {
+                                              center: myLatLng,
+                                              scrollwheel: false,
+                                              zoom: 14
+                                              });
+                                              
+                                              // Create a marker and set its position.
+                                              var marker = new google.maps.Marker({
+                                                                                  map: map,
+                                                                                  position: myLatLng,
+                                                                                  title: 'Hello World!'
+                                                                                  });
+            }
+        
+        google.maps.event.addDomListener(window, 'load' , initialize);
+            </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATM0GPJ7BOQpfUhKzrb7LmbV1YzITQEck&callback=initMap">
+            </script>
+        
+        
+        
+        
+ 
+
+ {% endblock %}

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+                                <style>
+                                    
+                                    .ar{
+                                        font-size:600%;
+                                        margin-top:30px;
+                                        color:#974141;
+                                    }
+                                
+                                .linputs{
+                                    
+                                }
+                                
+                                .res{
+                                    padding-top:3px;
+                                    height:30px;
+                                    width:25px;
+                                    font-size:120%;
+                                    float:right;
+                                    
+                                    
+                                }
+                                
+                                
+                                .sign-up-input-color{
+                                    background-color:black;
+                                    width:45%;
+                                    height:100%;
+                                    position:absolute;
+                                    z-index:0;
+                                }
+                                
+                                .ortext{
+                                    color:#FF8000;
+                                    
+                                }
+                                
+                                .grc{
+                                    color:#088A29;
+                                }
+                                
+                                .grtext{
+                                    color:#00FF00;
+                                    font-size:150%;
+                                }
+                                
+                                .blog-sign-up-but{
+                                    
+                                    background-color:#afe091;
+                                    border-color:#a8a6a6;
+                                    padding-top:3px;
+                                    border-style:solid;
+                                    border-width:1px;
+                                    border-radius:4px;
+                                    margin: 0 auto;
+                                    margin-bottom:14px;
+                                    height:45px;
+                                    width:210px;
+                                    margin-top:10px;
+                                    
+                                }
+                                
+                                .sign-up-page{
+                                    width:100%;
+                                    position:fixed;
+                                    
+                                }
+                                
+                                .or{
+                                    width:350px;
+                                    margin: 0 auto;
+                                    
+                                }
+                                
+                                .hrrr{
+                                    width:150px;
+                                }
+                                
+                                .lor{
+                                    width:150px;
+                                    float:left;
+                                    
+                                }
+                                
+                                .widther{
+                                    width:220px;
+                                    
+                                    margin:0 auto;
+                                }
+                                
+                                .ror{
+                                    width:200px;
+                                    float:right;
+                                    
+                                }
+                                    
+                                    #continueDiv{
+                                        float:right;
+                                        height:50px;
+                                        width:70px;
+                                        font-size:600%;
+                                        padding-right:100px;
+                                        padding-top:50px;
+                                        
+                                    }
+                                
+                                
+                                .sign-up-advert-color{
+                                    position:absolute;
+                                    margin-left:45%;
+                                    width:55%;
+                                    background-color:#eff5ff;
+                                    height:100%;
+                                }
+                                
+                                .sign-up-1024{
+                                    
+                                    width:1024px;
+                                    height:100%;
+                                    margin:0 auto;
+                                    z-index:2;
+                                    position:relative;
+                                    
+                                    
+                                }
+                                
+                                .ext-su-button2{
+                                    
+                                    padding-top:0px;
+                                    border-radius:4px;
+                                    width:240px;
+                                    height:50px;
+                                    margin: 0 auto;
+                                    
+                                    
+                                    
+                                    
+                                }
+                                #fb-su-button2{
+                                    background-color:#2b90ef;
+                                    margin-top:30px;
+                                    margin-bottom:14px;
+                                }
+                                #google-su-button2{
+                                    background-color:#db4a36;
+                                    margin-bottom:0px;
+                                }
+                                
+                                
+                                
+                                /* start with 1250 */
+                                
+                                .sign-up-advert{
+                                    width:574px;
+                                    height:100%;
+                                    background-color:#eff5ff;
+                                    text-align:center;
+                                    padding-top:50px;
+                                }
+                                
+                                .linkTextSide{
+                                    
+                                    width:195px;
+                                    margin-top:2px;
+                                    text-align:center;
+                                }
+                                
+                                .sign-up-input{
+                                    padding-top:70px;
+                                    background-color:black;
+                                    width:450px;
+                                    height:100%;
+                                    color:white;
+                                    text-align:center;
+                                }
+                                
+                                
+                                .plainText{
+                                    margin-top:14px;
+                                    text-decoration: none;
+                                    color:white;
+                                    
+                                    
+                                }
+                                
+                                .plainText:hover{
+                                    text-decoration: none;
+                                    
+                                    
+                                    
+                                    
+                                }
+                                
+                                .plainText:visited{
+                                    text-decoration: none;
+                                    color:white;
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                                
+                                
+                                @media screen and (max-width: 1200px) {
+                                    .sign-up-advert{
+                                        width: 450px;
+                                    }
+                                    .sign-up-input{
+                                        width: 574px;
+                                        background-color:black;
+                                    }
+                                    
+                                    .sign-up-input-color{
+                                        width:400px;
+                                    }
+                                    
+                                    .sign-up-1024{
+                                        width:1024px;
+                                    }
+                                    
+                                    
+                                }
+                                
+                                #progressionA{
+                                    color:#974141;
+                                }
+                                
+                                .man-ins{
+                                    
+                                    width:300px;
+                                    height:200px;
+                                    margin: 0 auto;
+                                }
+                                
+                                .sm-butt-logo{
+                                    width:40px;
+                                    height:48px;
+                                    
+                                    margin-left:1px;
+                                    font-size:200%;
+                                    padding-top:3px;
+                                    
+                                    
+                                }
+                                
+                                #gsT{
+                                    color:#C3BEBE;
+                                    font-size:300%;
+                                }
+                                
+                                
+                                
+                                .smbla{
+                                    position:relative;
+                                    
+                                }
+                                
+                                .wnav{
+                                    background-color:white;
+                                    border:none;
+                                    
+                                }
+                                
+                                #log-in-blue{
+                                    background-color:#417C97;
+                                    border:0;
+                                    border-top:10px;
+                                    border-style:solid;
+                                    border-color:#4B4197;
+                                    margin-top:100px;
+                                    width:650px;
+                                    height:600px;
+                                    border-radius:8px;
+                                    float:left;
+                                    text-align:center;
+                                    position:relative;
+                                    margin-left:-100px;
+                                    padding-left:100px;
+                                }
+                                
+                                .tallred{
+                                    width:80px;
+                                    height:900px;
+                                    background-color:red;
+                                    margin-left:900px;
+                                }
+                                
+                                #wtc{
+                                    color:#C3BEBE;
+                                }
+                                
+                                .lgreyy{
+                                    color:#C3BEBE;
+                                }
+                                
+                                #eaTitle{
+                                    color:#C3BEBE;
+                                    font-size:300%;
+                                    margin-bottom:50px;
+                                }
+                                
+                                .country-pick-section{
+                                    
+                                    width:480px;
+                                    height:320px;
+                                    margin:0 auto;
+                                    margin-top:100px;
+                                }
+                                
+                                .country-drop-down-square{
+                                    width:160px;
+                                    height:160px;
+                                    
+                                    text-align:center;
+                                    padding-top:10px;
+                                }
+                                
+                                .country-square{
+                                    width:160px;
+                                    height:160px;
+                                  
+                                    
+                                }
+                                
+                                
+                                
+                                .country-pic{
+                                    position:absolute;
+                                    z-index:6;
+                                    width:160px;
+                                    height:160px;
+                                }
+                                
+                                .country-pic:hover{
+                                    width:180px;
+                                    height:180px;
+                                    margin-left:-10px;
+                                    margin-top:-10px;
+                                    z-index:5;
+                                }
+                                
+                                .cdds-overlay{
+                                    position:absolute;
+                                    z-index:10;
+                                   
+                                    width:160px;
+                                }
+                                
+                                
+                                
+                                #countryS1{
+                                    background-image:url("/ubloggeneric/static/photos/spainblu2.jpg");
+                                    background-size:cover;
+                                }
+                                
+                                #countryS2{
+                                    background-image:url("/ubloggeneric/static/gbblu.jpg");
+                                    background-size:cover;
+                                }
+                                #countryS3{
+                                    background-image:url("/ubloggeneric/static/skblue.jpg");
+                                    background-size:cover;
+                                }
+                                #countryS3:hover{
+                                    position:absolute;
+                                    z-index:11;
+                                }
+                                
+                                
+                                
+                                #countryS4{
+                                    background-image:url("css/photos/brazblu.jpg");
+                                    background-size:cover;
+                                    width:170px;
+                                    height:170px;
+                                    position:absolute;
+                                    margin-left:-10px;
+                                }
+                                
+                                #countryS5{
+                                    position:absolute;
+                                    margin-top:10px;
+                                    background-image:url("css/photos/usblu.jpg");
+                                    background-size:cover;
+                                }
+                                #countryS5:hover{
+                                    margin-top:-10px;
+                                }
+                                
+                                .left-country-col{
+                                   
+                                    
+                                }
+                                
+                                .fixx{
+                                    margin-top:0;
+                                    padding-top:0;
+                                    position:fixed;
+                                    z-index:6;
+                                }
+                                
+                                #map-and-arrow{
+                                    
+                                    width:715px;
+                                    padding-left:30px;
+                                    padding-right:50px;
+                                }
+                                .centered-div{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    text-align:center;
+                                    
+                                    left:50%;
+                                    right:50%;
+                                    width:100px;
+                                }
+                                
+                                #mapa{
+                                    width:400px;
+                                    height:400px;
+                                }
+                                
+                                .half-opacity{
+                                    opacity:0.15;
+                                }
+                                
+                                .ortext{
+                                    color:#FF8000;
+                                    
+                                }
+                                
+                                .ar{
+                                    font-size:600%;
+                                    margin-top:150px;
+                                    color:#974141;
+                                }
+                                
+                                .grc{
+                                    color:#088A29;
+                                }
+                                
+                                .grtext{
+                                    color:#00FF00;
+                                    font-size:150%;
+                                }
+                                
+                                .searchButton{
+                                    width:100px;
+                                    border-radius:10px;
+                                    margin-bottom:10px;
+                                }
+                                
+                                #postcodelookup{
+                                    margin-top:20px;
+                                    
+                                }
+                                
+                                .searchField{
+                                    margin-bottom:15px;
+                                }
+                                
+                                .address-input{
+                                    width:200px;
+                                }
+                                
+                                
+                                #full-a-text-fields{
+                                    float:left;
+                                    width:200px;
+                                    
+                                    opacity:0.2;
+                                }
+                                
+                                .af{
+                                    
+                                    margin: 0 auto;
+                                    margin-bottom:30px;
+                                    width:200px;
+                                    height:30px;
+                                    border-radius:4px;
+                                    border-width:0;
+                                    float:left;
+                                    
+                                }
+                                
+                                .mapspinner{
+                                    text-align:center;
+                                    font-size:1000%;
+                                    margin-top:130px;
+                                }
+                                
+                                #mapload{
+                                    position:absolute;
+                                    background-color:#eff5ff;
+                                    z-index:20;
+                                    width:465px;
+                                    height:460px;
+                                }
+                                
+                                #abcdefg{
+                                    display:none;
+                                }
+                                
+                                .address-group{
+                                    width:400px;
+                                    text-align:center;
+                                    margin:0 auto;
+                                   
+                                }
+                                
+                                .man-input-field{
+                                    width:230px;
+                                    height:50px;
+                                    
+                                    text-align:left;
+                                }
+                                
+                                
+                                
+
+
+                                
+                                
+                                
+                                    </style>
+                                </head>
+    <body>
+        
+     
+        <div id = "log-in-blue">
+            
+            <div id = "country-group">
+            
+            <h2 id ="gsT">Choose Your Country:</br></h2>
+            
+            <div class = "country-pick-section">
+                <div class = "left-country-col lefty">
+                    <div class = "country-square lefty" >
+                        <div class = "country-pic" id = "countryS1">
+                        </div>
+                    </div>
+                    <div class = "country-square righty">
+                        <div class = "country-pic" id = "countryS2">
+                        </div>
+                    </div>
+                    
+                    <div class = "clearer">
+                    </div>
+                    
+                    <div class = "country-square lefty">
+                        <div class = "country-pic" id = "countryS3">
+                        </div>
+                    </div>
+                    <div class = "country-square righty">
+                        <div class = "country-pic" id = "countryS4">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class = "right-country-col righty">
+                    <div class = "country-square">
+                        <div class = "country-pic" id = "countryS5">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class = "clearer">
+                    </div>
+                    
+                    <div class = "country-drop-down-square" id = "qwe">
+                        <div class = "cdds-overlay" id = "wsx">
+                        <h3>Can't Find Your Country?</h3>
+                        <select name="country" class = "address-input" >
+                            <option value="fiat">Choose Your Country</option>
+                            <option value="spain">Espanyol</option>
+                            <option value="englan">England</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class = "address-group" id="abcdefg">
+                
+                <h1 id = "eaTitle">Enter Your Address:</h1>
+                
+                <div id="postcodelookup">
+                    
+                    <input id="searchField" class="searchField" type="text" placeholder = "Post Code"/>
+                    <span class = "ortext" id = "c1">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span></br>
+                    
+                    <input id="searchButton" class="searchButton this-border" type="button" value="Find Address" />
+                    
+                    <div id="selectDropdownDiv" style="display:none">
+                        <h5> Find your address in the options below:</h5>
+                        <select id="addressListSelect" class = "address-input"></select>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- incorrect
+                 <div class = "input-holder">
+                 <input name="pcode" class = "address-input" placeholder = "Post Code"/><span class = "grtext">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>
+                 </div>
+                 
+                 -->
+                
+                <!-- correct
+                 <div class = "input-holder">
+                 <input name="pcode" class = "address-input" placeholder = "Post Code"/><span class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span>
+                 </div>
+                 
+                 -->
+                <!--
+                 
+                 <div class = "half-opacity">
+                 
+                 <h5> Find your address in the options below:</h5>
+                 
+                 <select name="givenAddress" class = "address-input">
+                 <option value="spain">Choose Your Address..</option>
+                 <option value="saab">Suggestion 1</option>
+                 </select>
+                 
+                 </div>
+                 
+                 -->
+                
+                <a href= "#" class = "lgreyy"><span id = "efm"><h6 class = "lgreyy">Enter full address manually</h6></span></a> 
+                
+                
+                
+                <div id = "full-a-text-fields">
+                    
+                    
+                    <form action="#" method="post">
+                        <fieldset>
+                            
+                            <div class = "man-input-field">
+                            <input id = "noIn" class = "af" name="PremiseInputField" type="text" placeholder = "Building Number/Name"/>
+                            <span id = "t1">
+                                <span  class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i>
+                                </span>
+                            </span>
+                            </div>
+                            
+                            <div id = "namD" class = "man-input-field">
+                                <input class = "af" id="StreetInputField" name="StreetInputField" type="text" placeholder = "Street Name"/>
+                                <span id = "fbn-il2">
+                                    <span id = "t2" class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span>
+                                </span>
+                            </div>
+                            
+                            <div class = "man-input-field">
+                                <input id = "ciD" class = "af" id="TownInputField" name="TownInputField" type="text" placeholder = "City"/>
+                                <span id = "fbn-il3">
+                                    <span id = "t3" class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span>
+                                </span>
+                            </div>
+                            
+                            
+                            <div class = "man-input-field">
+                                <input class = "af" id="CountyInputField" name="CountyInputField" type="text" placeholder = "County"/>
+                                <span id = "fbn-il4">
+                                    <span id = "t4" class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span>
+                                </span>
+                            </div>
+                            
+                            <div class = "man-input-field">
+                                <input id = "poD" class = "af" id="PostcodeInputField" name="PostcodeInputField" type="text" placeholder = "Postcode"/>
+                                <span id = "fbn-il4">
+                                    <span id = "t5" class = "ortext">&nbsp;&nbsp;<i class="fa fa-circle" aria-hidden="true"></i></span>
+                                </span>
+                            </div>
+                            
+                            
+                           
+                        </fieldset>
+                    </form>
+                </div>
+        
+            <div id = "continueDiv" href = "/ubloggeneric/verifyb">
+                 <div id = "locArrow" >
+                                                                          
+                <i class="fa fa-arrow-circle-right" id = "progressionLoc" ></i>
+                            
+           </div>
+            </div>
+                
+                
+                
+            </div> <!-- end address input div -->
+            
+            
+            
+            
+            
+            
+        </div>
+        
+       
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        
+ {% endblock %}

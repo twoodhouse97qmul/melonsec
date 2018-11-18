@@ -1,0 +1,32 @@
+   {% extends 'melon-back-base.html'%}
+{% block melon_page %}
+
+<style>
+
+    .content-holding{
+        border-radius: 10px;
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
+        background-color: white;
+         position:fixed;
+        width:86%;
+        right:7%;
+        left:7%;
+        min-height:300px;
+       z-index:950;
+        margin-top:110px;
+        padding:75px;
+        text-align: justify;
+       
+        
+        
+    }
+    
+</style>
+
+<div class = "content-holding">
+    {% block page_insert %}
+    {% endblock %}
+    
+</div>
+
+{% endblock %}

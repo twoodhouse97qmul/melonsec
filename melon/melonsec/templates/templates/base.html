@@ -1,0 +1,835 @@
+
+
+
+<!-- Website Front Page -->
+<!-- The Page Is Composed of a header bar as well as links to the business and blogger pages -->
+
+<!DOCTYPE html>
+<html lang="en">
+     
+    {% load static %}
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PreLogIn.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prelog.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bsignup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- The head contains the regular settings, the bootstrap style sheet links as well as links to the fa glyphicons and the general css script for the page. -->
+    <head>
+        <!-- MUST COME FIRST -->
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    
+                    
+                    <title>UBlog</title>
+                    
+                    <!-- STYLE SHEETS -->
+                        <!-- fa glyphicons -->
+                           
+  
+                                
+                                <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                                <!--[if lt IE 9]>
+                                 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                                 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                                 <![endif]-->
+                                
+                                <style>
+                                 
+                                
+                                
+                                    </style>
+                                </head>
+    
+    <body>
+        
+        
+       
+        
+        <a href = "ublog.html">
+            <div class = "centered-div fixx ublogo-holder">
+                <div class = "centered-div fixx ublogo">
+                </div></div>
+        </a>
+        <div class = "clearer"></div>
+        <!--navbar - currently regular bootstra stlye.. -->
+        <nav class="navbar navbar-default pre-LI-navbar">
+            
+            <div class="container-fluid">
+                
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded"false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    
+                </div>
+                
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/ubloggeneric/bsignup">
+                                Bloggers
+                                <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                                <span class="sr-only">
+                                    (current)
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                Business
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    <!-- Right Hand Side Of Navbar: -->
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                Log In
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                Sign Up
+                                <span class="caret"></span></a>
+                            
+                            <ul class="dropdown-menu">
+                                <li><a href="BloggerSignUp.html">Sign Up As A Blogger</a></li>
+                                <li><a href="BusinessSU.html">Sign Up As A Business</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Terms And Conditions</a></li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li><a class = "spain-circle" href="#"></a> </li>
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+      {% block content %}
+      {% endblock %}
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        
+        <script>
+            
+            
+            
+            $(".front-page").css("width",$(window).width());
+            $(".front-page").css("height",$(window).height()*0.9);
+            
+            
+            
+            
+            
+            
+        </script>
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script>
+    
+            $(".sign-up-page").css("height",$(window).height());
+            
+            
+            var naD;
+            var emD;
+            var unD;
+            var paD;
+            
+            
+            //setup before functions
+            var typingTimer;
+            var typingTimer2;
+            var typingTimer3;
+            var typingTimer4; //timer identifier
+            var doneTypingInterval = 800;  //time in ms, 5 second for example
+            var $unInput = $('#unIn');
+            var $nameInput = $('#naIn');
+            var $emailInput = $('#emIn');
+            var $passInput = $('#paIn');
+            
+            $unInput.on('keydown',uInStart);
+            $nameInput.on('keydown',nInStart);
+            $passInput.on('keydown',pInStart);
+            $emailInput.on('keydown',eInStart);
+            
+            $unInput.on('keyup',reset);
+            $nameInput.on('keyup',reset);
+            $passInput.on('keyup',reset);
+            $emailInput.on('keyup',reset);
+            
+            
+            function reset(){
+                
+                
+            }
+            var noD;
+            var naD;
+            var ciD;
+            var pcD;
+            //setup before functions
+            var typingTimer5;
+            var typingTimer6;
+            var typingTimer7;
+            var typingTimer8; //timer identifier
+            var doneTypingInterval = 800;  //time in ms, 5 second for example
+            var $noInput = $('#noIn');
+            var $nameInput2 = $('#namIn');
+            var $cityInput = $('#ciIn');
+            var $postInput = $('#poIn');
+            
+            $noInput.on('keydown',uInStart2);
+            $nameInput2.on('keydown',nInStart2);
+            $cityInput.on('keydown',ciInStart);
+            $postInput.on('keydown',poInStart);
+            
+            $unInput2.on('keyup',reset);
+            $nameInput2.on('keyup',reset);
+            $passInput2.on('keyup',reset);
+            $emailInput2.on('keyup',reset);
+            
+            
+            
+        
+        
+        
+        //function runs when user starts writing in the username text field:
+        function uInStart(){
+            
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(uInStopped, doneTypingInterval);
+            
+        }
+        
+        function nInStart(){
+            
+            clearTimeout(typingTimer2);
+            typingTimer2 = setTimeout(nInStopped, doneTypingInterval);
+            
+        }
+        function pInStart(){
+            
+            clearTimeout(typingTimer3);
+            typingTimer3 = setTimeout(pInStopped, doneTypingInterval);
+        }
+        function eInStart(){
+            
+            clearTimeout(typingTimer4);
+            typingTimer4 = setTimeout(eInStopped, doneTypingInterval);
+        }
+        
+            //function runs when user starts writing in the username text field:
+        function uInStart2(){
+            
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(uInStopped2, doneTypingInterval);
+            
+        }
+        
+        function nInStart2(){
+            
+            clearTimeout(typingTimer2);
+            typingTimer2 = setTimeout(nInStopped2, doneTypingInterval);
+            
+        }
+        function poInStart(){
+            
+            clearTimeout(typingTimer3);
+            typingTimer3 = setTimeout(poInStopped, doneTypingInterval);
+        }
+        function cInStart(){
+            
+            clearTimeout(typingTimer4);
+            typingTimer4 = setTimeout(ciInStopped, doneTypingInterval);
+        }
+            
+        function uInStopped(){
+            
+            var acceptable = checkUsername(unIn.value);
+            
+            if(acceptable){
+                
+                insertTick(document.getElementById("unres"));
+                
+            } else {
+                
+            }
+            
+        }
+        
+        function nInStopped(){
+            
+            var acceptable = checkName(unIn.value);
+            
+            if(acceptable){
+                
+                insertTick(document.getElementById("nares"));
+                
+            } else {
+                
+            }
+            
+        }
+        
+        function pInStopped(){
+            
+            var acceptable = checkPassword(unIn.value);
+            
+            if(acceptable){
+                
+                insertTick(document.getElementById("pares"));
+                
+            } else {
+                
+            }
+            
+        }
+        
+        function eInStopped(){
+            
+            var acceptable = checkEmail(unIn.value);
+            
+            if(acceptable){
+                
+                insertTick(document.getElementById("emres"));
+                
+            } else {
+                
+            }
+            
+        }
+            
+         function uInStopped2(){
+            
+          
+                insertTick2(document.getElementById("t1"));
+                
+           
+            
+        }
+        
+        function nInStopped2(){
+            
+           
+                insertTick(document.getElementById("t2"));
+                
+         
+            
+        }
+        
+        function poInStopped(){
+            
+            
+                insertTick(document.getElementById("t3"));
+                
+           
+        }
+        
+        function ciInStopped(){
+            
+           
+                
+                insertTick(document.getElementById("t4"));
+                
+            
+            
+        }
+        
+        
+        
+        
+        function checkUsername(text){
+            unD = true;
+            return true;
+            
+        }
+        function checkPassword(text){
+            paD = true;
+            return true;
+        }
+        function checkName(text){
+            naD = true;
+            return true;
+        }
+        function checkEmail(text){
+            emD = true;
+            return true;
+        }
+            
+            
+        
+        function insertTick(block){
+            
+            block.style.color = "#40FF00";
+            block.style.fontSize = "135%";
+            block.innerHTML = '<i class="fa fa-check righty" aria-hidden="true"></i>';
+          
+            checkFinish();
+
+        }
+            
+        function checkFinish(){
+     
+            if(paD&&unD&&emD&&naD){
+                allowProgression();
+            }
+        }
+            
+      function insertTick2(block){
+            
+            block.style.color = "#40FF00";
+            block.style.fontSize = "135%";
+            block.innerHTML = '<i class="fa fa-check righty" aria-hidden="true"></i>';
+            checkFinish();
+        }
+        
+      
+        
+        function allowProgression(){
+            
+            insertArrowLink();
+            turnArrowGreen();
+        }
+            
+         function checkFinish2(){
+            
+            if(noD&&naD&&ciD&&pcD){
+                allowProgression2();
+            }
+        }
+        
+        function allowProgression2(){
+            
+            insertArrowLink();
+            turnArrowGreen2();
+        }
+        
+        
+        function insertArrowLink(){
+            
+        }
+        
+        function turnArrowGreen(){
+            
+            document.getElementById('prArrow').innerHTML = '<a href = "/ubloggeneric/blcountry"><i class="fa fa-arrow-circle-right" id = "progressionA"></i></a>';
+            document.getElementById('progressionA').style.color = "#40FF00";
+            
+        }
+            
+             function turnLocArrowGreen2(){
+            document.getElementById('locArrow').innerHTML = '<a href = "/ubloggeneric/blcountry"><i class="fa fa-arrow-circle-right" id = "progressionLoc"></i></a>';
+            document.getElementById('progressionLoc').style.color = "#40FF00";
+            
+        }
+        
+        $('#fb-su-button2').on('mouseover',growfLogo);
+        $('#fb-su-button2').on('mouseleave',shrinkfLogo);
+        $('#google-su-button2').on('mouseover',growgLogo);
+        $('#google-su-button2').on('mouseleave',shrinkgLogo);
+        
+        
+        function growfLogo(){
+            document.getElementById("fbLogo").style.fontSize = "125%";
+            document.getElementById("fbLogo").style.color = "black";
+            document.getElementById("fbText").style.fontSize = "125%";
+            document.getElementById("fbText").style.color = "black";
+            document.getElementById("smbla").style.marginTop = "-2px";
+        }
+        
+        function shrinkfLogo(){
+            document.getElementById("fbLogo").style.fontSize = "100%";
+            document.getElementById("fbLogo").style.color = "white";
+            document.getElementById("fbText").style.fontSize = "100%";
+            document.getElementById("fbText").style.color = "white";
+            document.getElementById("smbla").style.marginTop = "1px";
+            
+        }
+        
+        function growgLogo(){
+            
+            document.getElementById("gLogo").style.fontSize = "125%";
+            document.getElementById("gLogo").style.color = "black";
+            document.getElementById("gText").style.fontSize = "125%";
+            document.getElementById("gText").style.color = "black";
+            document.getElementById("smblb").style.marginTop = "-2px";
+            
+        }
+        
+        function shrinkgLogo(){
+            document.getElementById("gLogo").style.fontSize = "100%";
+            document.getElementById("gLogo").style.color = "white";
+            document.getElementById("gText").style.fontSize = "100%";
+            document.getElementById("gText").style.color = "white";
+            document.getElementById("smblb").style.marginTop = "1px";
+            
+        }
+        
+        
+        
+            </script>
+        
+          <script>
+            
+           
+            
+            var $c1 = $('#countryS1');
+            var $c2 = $('#countryS2');
+            var $c3 = $('#countryS3');
+            var $c4 = $('#countryS4');
+            var $c5 = $('#countryS5');
+         
+            
+            $c1.on('click',countryChosen);
+            $c2.on('click',countryChosen);
+            $c3.on('click',countryChosen);
+            $c4.on('click',countryChosen);
+            $c5.on('click',countryChosen);
+            
+           
+            function countryChosen(){
+                
+                loadAddressDiv();
+            }
+    
+            function loadAddressDiv(){
+            document.getElementById("abcdefg").style.display = "block";
+            document.getElementById("country-group").style.display = "none";
+           
+            }
+      
+      
+            </script>
+        <!--
+         //function uInStopped(){
+         
+         /*var acceptable = checkEmail(unIn.value);
+         
+         if(acceptable){
+         alert('acc');
+         //insertTick(document.getElementById("unres"));
+         
+         } else {
+         
+         }
+         
+         }
+         
+         /*
+         function checkEmail(text){
+         return true;
+         }
+         
+         */
+         /*
+         
+         
+         //on keyup, start the countdown
+         $unInput.on('keydown', function () {
+         clearTimeout(typingTimer);
+         
+         });
+         
+         
+         
+         
+         
+         function insertTick(block){
+         alert(111);
+         //block.style.color = "green";
+         //block.innerHTML = '<i class="fa fa-check righty" aria-hidden="true"></i>';
+         }
+         
+         
+         */ /**/
+         
+         -->
+        
+        <script>
+            
+            function initMap() {
+                var myLatLng = {lat: 52.950033, lng: 1.085370};
+                
+                // Create a map object and specify the DOM element for display.
+                var map = new google.maps.Map(document.getElementById('mapa'), {
+                                              center: myLatLng,
+                                              scrollwheel: false,
+                                              zoom: 14
+                                              });
+                                              
+                                              // Create a marker and set its position.
+                                              var marker = new google.maps.Marker({
+                                                                                  map: map,
+                                                                                  position: myLatLng,
+                                                                                  title: 'Hello World!'
+                                                                                  });
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  setTimeout(function () {
+                                                                                             switchToMap();
+                                                                                             }, 700);
+                                                                                             
+            }// end initialise map function.
+        
+        function switchToMap(){
+            document.getElementById("mapload").style.zIndex = '0';
+        }
+        
+        google.maps.event.addDomListener(window, 'load' , initialize);
+            </script>
+        
+        
+        <!-- SCRIPT FOR GIVING ADDRESS HINTS -->
+        <script type="text/javascript">
+            
+            
+            
+            
+            document.getElementById("efm").onclick = function() {
+                setTextFieldsToDisplayResults2();
+            }
+        
+        
+        var searchKey = 'PCWZK-CMZ2J-99QS8-XT6SS';
+        var identifier = '22 Main St, Boston MA';
+        
+        var addressData;
+        
+        $(function () {
+          
+          $('#searchButton').on('click',lookupAddress);
+          
+          
+          // Adds the function that sets the other address fields when an address is selected from the drop down
+          $('#addressListSelect').change(function () {
+                                         fillTextFieldsWithChosenInfo();
+                                         setTextFieldsToDisplayResults();
+                                         
+                                         
+                                         
+                                         });
+          
+          
+          
+          // Alters the Enter Key Behaviour on the Postcode field to lookup a postcode
+          $('#searchField').keypress(function (e) {
+                                     if (e.which == 13) {
+                                     lookupAddress();
+                                     return false;
+                                     }
+                                     });
+          
+          if ( searchKey != 'ENTER_YOUR_KEY_HERE' ){
+          $('#no_search_key_message').hide();
+          }
+          });
+          
+          // Address Lookup function
+          function lookupAddress() {
+              
+              
+              
+              var serviceURL = 'http://ws.postcoder.com/pcw/'+searchKey+'/address/UK';
+              
+              var addressListDropdown = $('#addressListSelect');
+              
+              var lookupValue = encodeURIComponent($('#searchField').val());
+              
+              if (lookupValue == '') {
+                  return;
+              }
+              
+              // Build the RESTful URL
+              var ajaxURL = serviceURL + '/' + lookupValue + '?identifier=' + identifier;
+              
+              
+              // Make the actual JSON request
+              $.getJSON(ajaxURL, function (data) {
+                        
+                        addressData = data; // data is the return from the query supplied to the "success" function we're now inside.
+                        
+                        if (data.length > 0) { // If there's actually any results then show the result box
+                        $('#selectDropdownDiv').show();
+                        
+                        // Clear the current dropdown
+                        addressListDropdown.find('option').remove();
+                        addressListDropdown[0].options.add(new Option('Select an Address:','-1'));
+                        
+                        $.each(data, function (index, value) {
+                               // Iterating through returned Addresses
+                               addressListDropdown[0].options.add(new Option(value.summaryline,index));
+                               })
+                        }
+                        
+                        }).fail(function (jqxhr, textStatus, error){
+                                alert("error");
+                                if (typeof(console) != "undefined"){
+                                console.error("getJSON failed, status: " + textStatus + ", error: "+error);
+                                }
+                                });
+          }
+        
+            </script>
+        
+        <script>
+            
+            
+            // This function puts the various pieces of an address return onto the address form, change the targets to match your form
+            function fillTextFieldsWithChosenInfo()
+            {
+                var selectedIndex = $('#addressListSelect :selected').val();
+                
+                if (selectedIndex < 0){
+                    return;
+                }
+                
+                var selectedAddress = addressData[selectedIndex];
+                
+                
+                // This block can of course be changed/optimised to whatever is required
+                $('#OrganisationInputField').val(selectedAddress["organisation"]);
+                $('#noIn').val(selectedAddress["premise"]);
+                $('#StreetInputField').val(selectedAddress["street"]);
+                $('#TownInputField').val(selectedAddress["posttown"]);
+                $('#CountyInputField').val(selectedAddress["county"]);
+                $('#PostcodeInputField').val(selectedAddress["postcode"]);
+                
+                allwentokay();
+                
+                var buildName = selectedAddress["premise"];
+                var streetName = selectedAddress["street"];
+                var pc = selectedAddress["postcode"];
+                var spc = ' ';
+                
+                
+                
+                
+                var bn2 = buildName.concat(spc);
+                var bth = bn2.concat(streetName);
+                var bth2 = bth.concat(spc);
+                var all = bth2.concat(pc);
+                
+                updateMap(all);
+                
+            }
+        
+        function allwentokay(){
+            alert("awo");
+            document.getElementById('fbn-il').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+            document.getElementById('c1').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+            document.getElementById('c2').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+            document.getElementById('c3').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+            document.getElementById('c4').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+            document.getElementById('c5').innerHTML = '<span class= "grc">&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></span>';
+        }
+        
+        function setTextFieldsToDisplayResults(){
+            
+            document.getElementById("full-a-text-fields").style.opacity = "1";
+            $(':input').removeAttr('placeholder');
+        }
+        
+        function setTextFieldsToDisplayResults2(){
+            
+            document.getElementById("full-a-text-fields").style.opacity = "1";
+            
+        }
+        
+        function updateMap(givenAdd){
+            
+            
+            
+            var location  = givenAdd;
+            var apiKey  = 'AIzaSyA_6Zms80x_e7QKqeEtcNkhKiNd7jRnTr8';
+            
+            
+            axios.get('https://maps.googleapis.com/maps/api/geocode/json?',{
+                      
+                      params:{
+                      address:location,
+                      key:apiKey,
+                      }
+                      }).then( function(response){
+                              
+                              
+                              //format address
+                              
+                              var formattedAddress = response.data.results[0].formatted_address;
+                              var lat = response.data.results[0].geometry.location.lat;
+                              var longi = response.data.results[0].geometry.location.lng;
+                              
+                              
+                              
+                              
+                              var myLatLng = {lat: lat, lng: longi};
+                              addMapMarker(myLatLng);
+                              
+                              
+                              }).catch(function(error){
+                                       
+                                       });
+                                       
+        }
+        
+        function addMapMarker(latLng){
+            
+            
+            
+            // Create a map object and specify the DOM element for display.
+            var map2 = new google.maps.Map(document.getElementById('mapa'), {
+                                           center: latLng,
+                                           scrollwheel: false,
+                                           zoom: 14
+                                           });
+                                           
+                                           // Create a marker and set its position.
+                                           var marker2 = new google.maps.Marker({position: latLng});
+                                           
+                                           marker2.setMap(map2);
+                                           
+        }// end initialise map function.
+        
+        
+            </script>
+        
+       
+   
+         
+     
+        
+        
+    </body>
+</html>

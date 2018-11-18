@@ -1,0 +1,108 @@
+{% extends 'melon-page.html'%}
+{% block page_insert %}
+
+  <h1>Exploiting Access Control Logic</h1>
+<h2>Bypassing Ublog sign up restrictions using HTTP Parameter Pollution</h2>
+<p>
+
+    
+    An important aspect of these tutorials is having access to a blogger account that we can control.
+
+Fittingly, the first vulnerability is based around exploiting the applications sign up logic in order to allow us to by-pass the sign up restrictions, allowing us to create accounts freely without needing to have the 10 000 followers as the site advertises.
+
+
+
+If you’re embarrassed by your own name and don’t want to use it then don’t worry, dummy values are fine.
+
+Hopefully you’ve progressed nicely to the second stage of creating a UBlog Blogging account.
+
+This is where we are expected to link to an account with 10 000 followers…………….
+
+/////CRAP. I NEED THIS ACCOUNT! Well… I ‘want’ this account but I’m a millennial so potato potato.
+
+What do we do? Give Up? Join Vine? Start a Vegan lifestyle blog? 
+
+Okay, this is getting out of hand quickly, there MUST be a better way.
+
+
+
+So what exactly has happened?
+
+We verified
+
+Sent it in an url.
+
+
+Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that the has been verified using the third party Facebook verification system.
+
+In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
+
+(The site is built using Django) and there (HTTP Parameter pollution link — later make my own page).
+
+What if we add an extra parameter to the end?
+
+Error:
+
+You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’
+
+Then add second parameter ‘penis’
+
+sameurl/value1/penis/
+
+
+Error(s)
+
+You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’.
+No Account Found for ID = ‘penis’ — please try resynchronising your social media accounts to the blog platform.
+
+Interesting, very interesting…
+
+-  So we still get the error message saying we don’t own that account.
+We also get a new error message saying — did the actually query Facebook to ask for the number of followers for that account?.
+
+The UBlog platform verified the account we are using was ours using the first parameter, and it queried Facebook for the number of followers using the second!
+
+Remember that we are verified to use the 0Facebook account, UBlog accepts that we own this account.
+
+Let go back to the Step 4.
+
+We tried to move forward with the account 0Facebook, and it showed us the polite error message:
+
+‘sorry, not enough followers - go and get some more friends.’
+
+— maybe here put in verified account and ‘penis’
+
+Using the knowledge that Ublog refers to the first penultimate parameter when checking if we own the account, and then uses the final parameter to actually query facebook, Logically we want the first parameter to be the ID of the account we are linked to (Facebook0) and the second account to be the account ID of who we wished we were linked to! (I used blah blah). You can discard whatever value you chose as your penis.
+
+The original URL UBlog expected us to use (when we visited said page), and the one used in step 4 was:
+
+Ublog/linkmainaccount/1422032023223
+
+All thats left for us to do is to amend the ID of margerat thatcher to the end of this path:
+
+becoming:
+
+Ublog/linkmainaccount/1422032023223/1M1A1G1G1I1E1
+
+When we make a request to this URL we are greeted by the page:
+
+Congratulations! You a are officially a member.
+
+And we didn’t even have to leave the house and make more friends! Score.
+
+This would be a very silly developer view, 
+
+I used the Facebook API in a way that was unsafe and not at all as intended by the developers, although you may think most not this stupid you can certainly think again, this is a prevalent cause of web application vulnerabilities. 
+
+(BA HACK link) mention Alexia…. I hope to cover an article of that chain of events.
+
+for now I think this trend will only keep on growing.
+
+
+
+
+
+
+</p>
+
+{% endblock %}
