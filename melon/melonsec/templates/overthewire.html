@@ -1,0 +1,821 @@
+{% extends 'melon-page.html'%}
+{% block page_insert %}
+
+<style>
+    
+    .content-viewer{
+        float:left;
+        width:30%;
+        
+    }
+    
+    .content-viewer-a{
+        float:left;
+        width:75%;
+    }
+    
+     .episode-text{
+        float:right;
+        width:70%;
+         margin-top:-30px;
+         max-height:650px;
+    }
+    .slide-title-class-b{
+        position:relative;
+        margin-top:-40px;
+    }
+    
+    .episode-contents-item{
+        height:75px;
+        width:69%;
+
+        border-style: solid;
+        border-width: 0 0 2px 0;
+        border-color:black;
+        padding-top:10px;
+    }
+    
+    .italy{
+        font-style: italic;
+    }
+    
+ 
+    
+    .episode-elipses-holer{
+        width:400px;
+        height:50px;
+   
+        position:fixed;
+        margin-top:15px;
+        margin-left:250px;
+        display: none;
+        bottom:40px;
+        
+    }
+    
+    .ep-slipse{
+        margin-left:10px;
+    }
+    
+    .ep-slipse-active{
+        margin-left:10px;
+        font-size:150%;
+        position:relative;
+        color:#0E5DC4;
+    }
+    
+    
+    
+    border-width: 0 0 2px 0;
+        border-style:solid;
+        margin-bottom:30px;
+    }
+    
+    .episode-contents-item:hover{
+        cursor:pointer;
+    }
+    
+    
+    .ssh-frame{
+        width:520px;
+        height:315px;
+        overflow: hidden;
+    }
+    
+    .contents-active{
+        border-color: lawngreen;
+        font-size:150%;
+        font-weight: 800;
+        width:90%;
+         border-width: 0 0 4px 0;
+        height:85px;
+    }
+    
+     .contents-active-text{
+       
+        font-size:130%;
+        font-weight: 800;
+         text-align: left;
+         
+      
+    }
+    
+    .marged-header{
+        margin-bottom:35px;
+    }
+    
+    .link{
+	color: #000000;
+	font-size: 16px;
+	font-weight: 700;
+
+	text-decoration: none;
+    position: relative;
+	z-index: 1;
+	display: inline-flex;
+	
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+
+}
+
+/*
+* These styles creates the underlining of link
+*/
+    .link:hover{
+        text-decoration: none;
+    }
+.link::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #0E5DC4 25%, transparent 40%);
+	
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+	z-index: -1;
+	
+	will-change: width;
+	transform: rotate(-2deg);
+	transform-origin: left bottom
+}
+
+.link:hover::before{
+	width: 0;
+}
+
+/*
+* animation styles
+*/
+
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;
+}
+    
+    .next-page-arrow{
+       
+       
+        float:right;
+        margin-left:10px;
+        font-size:150%;
+        color:#0E5DC4;
+        
+        min-width:20px;
+        min-height: 20px;
+        
+    }
+    
+     .last-page-arrow{
+       
+       
+        float:left;
+        margin-left:-60px;
+        font-size:300%;
+        color:#0E5DC4;
+      
+          min-width:20px;
+        min-height: 20px;
+
+        
+    }
+    
+    
+    .first-exploit-episode-text{
+        
+    }
+    
+    .NY{
+        opacity:0.1;
+    }
+    
+    .content-holding{
+
+        max-height:650px;
+        overflow-y: scroll;
+    }
+    
+    .level-goal-hold{
+        background-color:lightgray;
+        width:80%;
+        border-style:solid;
+        border-width:0px;
+        border-left-width:5px;
+        border-color:black;
+        border-radius:5px;
+        padding:8px;
+        padding-left:9px;
+    }
+
+</style>
+
+
+<div class = "content-viewer">
+    
+    <div class = "content-viewer-a">
+    
+    
+    <div class = "episode-contents-item contents-active" id = "ublog-intro"><h4 class = "contents-active-text">0. Introduction</h4></div>
+    <div class = "episode-contents-item" id = "ublog-first"><h4>1. Bandit</h4></div>
+     <div class = "episode-contents-item nY"><h4>2. Narnia</h4></div>
+    <div class = "episode-contents-item NY"><h4>3. Leviathan</h4></div>
+    <div class = "episode-contents-item NY"><h4>4. Natas</h4></div>
+    <div class = "episode-contents-item NY"><h4>5. Krypton</h4><h6></h6></div>
+        <div class = "episode-contents-item NY"><h4>6. Utumno</h4></div>
+
+    </div>
+    
+     <div class = "content-viewer-b">
+    </div>
+
+</div>
+
+<div class = "episode-text">
+    
+       <div class = "ublog-intro-text text-active">
+
+  
+
+
+
+<div class = "all-level-display">
+    <div class = "colly1"></div>
+    <div class = "colly2"></div>
+    <div class = "colly3"></div>
+</div>
+
+           
+            <div class = "ublog-intro-text-disclaimer page-text-i">
+                
+           </div>
+            <div class = "ublog-intro-text-disclaimer page-text-i">
+
+<p>
+    
+     
+    
+——  Disclaimer ——
+
+I fully appreciate that a big part of learning is exploring and experimenting and trying out different things, but unfortunately the platform is not capable of being a full out playground, please respect the platform and other users
+
+Some things are just an out right big no-no.
+
+With this is mind the first tutorials based around logic flaws etc and you will be fine.
+
+No aspect of these or future UBlog tutorials will require breaking the law to complete, but you need to show some self initiative, Just like with most actions in life, when you are just setting out learning and practicing your penetration testing skills It’s your own decision to decide what is ethical, and it’s your own responsibility to ensure what you are doing is legal.
+
+I give you full permission, and if you are really annoyed you wanted to practice some skills that this site doesnt allow then let em know and I always try to respond swiftly.
+
+The cyber industry is expanding mahousively, If you are really interested in something then the chances are other people are too, more often than not someone has had this idea too and the resource is out there. 
+
+If thats not the case well then great! let me know and we will see what we can make.
+    
+A list of some good sites for alternative pen testing are below:
+
+If you want some sites to practice scripting etc:
+
+
+
+</p>
+           </div>
+    
+    </div>
+    
+    <div class = "ublog-overview-text">
+            <h2>Ublog</h2>
+            
+            <h4>What Is The Purpose of The Ublog?</h4>
+         <p>
+             
+             Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.
+             
+             Theoretical attacks are much easeir to pictute when given a real world example - this is the exact, rather than generic examples exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
+             
+               </p>
+        
+         
+            <h4>What Is The Ublog Application?</h4>
+         <p>
+             
+            Ublog — where the elite of society go to get away from the grievances that come with using social media alongside commoners. 
+
+Ublog is centered around covert social media advertising. Instead of paying for advertising space, companies come to Ublog to give away free products to members who will share them with their social media audience.
+
+Awards are given depending on how many followers a user has across their social media accounts.
+             
+             Business Accounts also exist where companies can create offers, as well as interact with social media influencers.
+             
+        </p>
+        
+    </div>
+    
+    <div class = "first-exploit-episode-text">
+         
+        <div class = "first-exploit-episode-text-p1 page-text-f">
+<div class = "slide-title-class">
+ <h1>Bandit</h1>
+
+    </div>
+    
+    Bandit is the introductory game in the Over the Wire Series. You can find the landing page to the Bandit game by clicking <a href = "#">here</a>.
+
+
+
+<h4 style = "text-align: center;">Game Overview</h4>
+
+Bandit covers the fundamentals needed to tackle the other games in the over the wire series.<br><br>
+
+Command line/terminal basics.<br>
+Creating an SSH connection.<br>
+Common commands that are relevant to security.<br><br><br>
+            
+            As well as ensuring you have the relevant prequisite knowledge, any run of the mill problesm such as connecting to the over the wire servers should come up during this level. This means that once you power through Bandit you should be set to have fun playing all the other games,
+
+
+ <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+
+    
+   
+
+    
+
+
+            
+    </div>
+        
+        
+        
+        <div class = "first-exploit-episode-text-p2 page-text-f">
+            
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            
+            
+<h1>Connecting to Level 0.</h1>
+            
+            Browsing the first level on the Over The Wire site, we are presented with the following level descriptor:<br><br>
+
+            <div class = "level-goal-hold">
+                
+                
+                <b>Level Goal:</b><br><br>
+
+
+The goal of this level is for you to log into the game using SSH. The host to which you need to connect is <b>bandit.labs.overthewire.org</b>, on port <b>2220</b>. <br><br>The username is <b>bandit0</b> and the password is <b>bandit0</b>.<br><br> Once logged in, go to the Level 1 page to find out how to beat Level 1. 
+                </div><br><br>
+            
+            The first level is pretty straight forward, our two main objectives will be: <br><br>
+            
+            <b>1.</b> Getting familiar with the command line.<br><br>
+            
+            <b>2.</b> Initiating a SSH connection.
+            
+            
+            
+            
+            
+             <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
+        
+         <div class = "first-exploit-episode-text-p3 page-text-f">
+               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            
+          <h3> Bash Shell - Terminal - Command Line</h3>
+            
+             
+             In laymans terms, a <b>shell</b> means any program that is used to send commands to the operating system. A shell provides a means to interact with the kernel, and the 'lower levels' of the operating system. <br><br>
+            
+If a software engineer wants to write a programme that requires the ability to interact with the underlying operating system (that would be all of them), for example to read/write from a file, or to play sound through the speakers, that is where a <b>shell</b> comes in handy. The author does not need to write the code from scratch, in fact in pretty much all OS's this is prohibitted, as these functions need to be standardised. The limited functions of the underlying operating system are all accessible through <b>commands</b>, which can be sent from a shell.<br><br>
+             
+           
+            The <b>Bash</b> Shell is a <b>Unix</b> shell and command language written by Brian Fox.
+             
+             The <b>terminal</b> is the programme that provides the interface to the bash shell, allowing the user to interactively send commands directly to the OS.
+             
+             When we do this, we are interacting with the <b>Command Line</b>.<br><br>
+             
+If you want to understand how a general computer application functions, you are usually going to need to understand how it is interacting with the OS, that is the fundamental reason as to why it is important to have the necessary knowledge of UNIX commands, to know <span class = "italy">what</span> you can ask from your OS and <span class = "italy">how</span> you can ask it.<br><br>
+
+If you are here because you want to be a penetration tester - then it is absolutely 100% necessary to be comfortable with the command line of your chosen OS.<br><br>
+
+<b>Don't worry</b>, the whole point of the bandit game is to get you comfortable using the command line. Right now generally you can think of the terminal programme as an extremely 'raw' and stripped back interface into the heart of your computer.<br><br>
+
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+             
+            
+        </div>
+        
+                <div class = "first-exploit-episode-text-p4 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+                   
+           <h3>SSH - Secure Shell.</h3>
+                    
+                    Since we will be playing the wargames remotely - much like in real life where the target computer is likely to be a remote system - we are going to need to have the ability to run a bash shell on the target computer (in this case the over the wire servers).<br><br>
+
+To do this, we will be utilising the power of SSH.<br><br>
+
+definition....
+                    
+
+every command we type into our terminal will be sent to the connected server. as if we were physically sitting at the machine and running a shell (a command line/terminal session) <br><br>
+                    You can learn about SSH in more depth here.<br><br>
+                    
+                    We are going to learn by doing and dive right in, lets create an SHH connection to the over the wire servers.<br><br>
+                    
+              
+
+
+  <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+
+        </div>
+        
+         <div class = "first-exploit-episode-text-p4 page-text-f imppy">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+                   
+           <h3>Making the First SHH Connection As Bandit0</h3>
+                    
+            <div style = "float: left; ">
+                
+                   
+                         {% load static %}
+                <div class="iframe-dest"> </div>
+           
+
+                    
+                    
+                     
+
+</div>
+             <div style = "float: right; width:210px;"><br><br><br>
+                 <b>Host:</b> bandit.labs.overthewire.org<br>
+                        <b>Port:</b> 2220 <br>
+<b>Username:</b> bandit0<br>
+<b>Password:</b> bandit0 <br></div>
+                    
+                    <div style = "clear:both;"></div>
+                    
+
+<br><br>
+A whole bunch of text will be printed into the terminal, hopefully looking a little something like this.,br>
+It's as simple as that, after providing the correct user name and password you are given access to a shell belonging to bandit0 on the bandit.labs.overthewire.org server. And with that we have logged into level 0... on to level 1!
+
+
+
+
+  <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+
+        </div>
+        
+        
+        
+      
+        
+          <div class = "first-exploit-episode-text-p5 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+  <h1>Level 0 -> Level 1</h1>
+              
+              At this point 
+
+luckily the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. But essentially the situation is the same for all levels:
+
+
+We have landed withing where we have asecure shell. We want to explore what applications and In the real world your purpose would be to find leveraging poitns in order to damage or move into other parts of the network, In the over the wire war games we are hoping to be able to find a 
+              
+              We have access to a restricted part of the network, our goal is to gain information use knowledge of common vulnerabilities in order to gain access to the 'next' part of the network. 
+
+c
+Here the default options are sufficient, we will simply run 'ls' in our command line.
+
+In this case we see a single file or directory called 'readme'
+
+** use file here? **
+
+
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+        
+        </div>
+        
+        
+                <div class = "first-exploit-episode-text-p5 page-text-f imppy2">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+In order to beat level 0, we will be utilising two basic UNIX commands.<br><br>
+                    
+                    
+<h3>the 'ls' command </h3>
+
+ls - short for <b>list</b> is a pretty straightforward UNIX command that can be used to list the contents of a directory.
+                    
+we'll cover some of the possible options, but for now we will use the default configuration.
+
+
+<h3>the 'cat' command </h3>
+                    
+It can be used to print the output of a file to the terminal:
+                    
+                    
+                         {% load static %}
+                <div class="iframe-dest2"> </div>
+           
+
+
+<br><br>The string of letters: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b> was printed to the screen.
+
+Quite simply, this is the password that we will need to log in to the next level.
+
+
+                    
+                     <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+        
+        </div>
+        
+         <div class = "first-exploit-episode-text-p6 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+<h3>Logging in to Level 1</h3>
+             
+             So we have successfully found the password for the bandit1 account on the over the wire server.
+             
+             All That's left to do in order to beat level 0 is log into bandit1 using SSH in the same way that we did for bandit0.
+          
+             There will be some instances in the over the wire series where we will use our current shell in order to pivot to another account within the over the wire server.
+             
+             In this case however, we are going to abandon our SSH shell for bandit0 and initiate a compeltely new one to connect to bandit1.
+
+             You can exit this SSH session by running the <b>exit</b> command.
+
+We'll now initiate another SSH session using our newly found password, in the exact same manner as (before).<br><br>
+
+Host: bandit.labs.overthewire.org (c)<br>
+Port: 2220 (c)<br>
+Username: bandit1 (c)<br>
+Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)<br><br>
+
+note that the server and port have stayed the same, only the user and password that we will provide changes.<br><br>
+
+Once being prompted to enter, you should recieve a text output similiarly to when we connected to bandit0.
+
+And thats it! We have successfully logged into level 1 and we can leave level 0 in the past.
+
+Congratulations!
+             
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+        
+        </div>
+        
+          <div class = "first-exploit-episode-text-p5 page-text-f imppy3">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        <div class = "slide-title-class-b">
+<h3>Finding the password for bandit2</h3>
+
+    </div>
+
+              
+               Again, we'll start by running ls to exanmine the contents of the directory.<br><br>
+    
+              The directory contains a file called '-' in UNIX, '-' is reserved as a special character.<br><br>
+              
+              the '.' command is used to run .. by providing . only, is a way of saying we are going to run from <b>this</b> directory.<br>
+              
+              the / is what is used to escape the special character, meaning we can refer to - as a reference to a file or directory rather than it's dedicated meaning.<br><br>
+              
+              The result of running these commands is shown below: <br><br>
+              
+               {% load static %}
+                <div class="iframe-dest3"> </div>
+              
+              
+               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+      
+        </div>
+        
+         <div class = "first-exploit-episode-text-p5 page-text-f imppy4">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+ <div class = "slide-title-class-b">
+<h3>Finding the password for bandit3</h3>
+
+    </div>
+              
+              Again, we'll start by running ls. <br>
+              
+              The directory contains a file called '-' in UNIX, '-' is reserved as a special character.
+              
+              the '.' command is used to run .. by providing . only, is a way of saying we are going to run from <b>this</b> directory.
+              
+              the / is what is used to escape the special character, meaning we can refer to - as a reference to a file or directory rather than it's dedicated meaning.
+              
+              The result of running these commands is shown below:
+              
+               {% load static %}
+                <div class="iframe-dest4"> </div>
+              
+              
+             
+      
+        </div>
+        
+    </div>
+    <div class = "episode-elipses-holer">
+    <h4>
+    <i class="fas fa-circle ep-slipse ep-slipse-active"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i></h4>
+    </div>
+    </div>
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    
+    pageList = document.getElementsByClassName("page-text-i");
+    elipsesList = document.getElementsByClassName("ep-slipse");
+    elipIndex = 0;
+    
+    var contentsFull = true;
+    
+    
+    
+    for(i=1;i<pageList.length;i++){
+        $(pageList[i]).hide();
+    }
+   var pageIndex = 0;
+    var ep1Index = 0;
+    var currentIndex = [pageIndex];
+    
+    $(".first-exploit-episode-text-p2").hide();
+    
+    $(".next-page-arrow").on("click",function(){
+        
+        goToNextPage(ep1Index);
+       
+        
+    });
+    
+      $(".last-page-arrow").on("click",function(){
+        
+        goToLastPage(ep1Index);
+       
+        
+    });
+    
+    function goToNextPage(){
+        
+         $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
+        
+        elipIndex++;
+        $(elipsesList[elipIndex]).addClass("ep-slipse-active");
+        
+         $(pageList[currentIndex[0]]).hide();
+        
+        currentIndex[0]++;
+        $(pageList[currentIndex[0]]).show();
+        
+    }
+    
+     function goToLastPage(){
+         $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
+        
+        elipIndex--;
+        $(elipsesList[elipIndex]).addClass("ep-slipse-active");
+        
+         $(pageList[currentIndex[0]]).hide();
+        
+        currentIndex[0]--;
+        $(pageList[currentIndex[0]]).show();
+         
+    }
+   
+    
+    $(".first-exploit-episode-text").hide();
+      $(".ublog-overview-text").hide();
+    
+
+    
+    
+    $(".episode-contents-item").on("click",function(){
+        
+        $(".contents-active").removeClass("contents-active");
+        $(".contents-active-text").removeClass("contents-active-text");
+    $(this).addClass('contents-active');
+        $(this).find("h4").addClass('contents-active-text');
+        
+        
+        if($(this).attr('id') == 'ublog-first'){
+           
+             makeActiveText($(".first-exploit-episode-text"));
+              pageList = document.getElementsByClassName("page-text-f");
+            currentIndex[0] = ep1Index;
+             for(i=0;i<pageList.length;i++){
+        $(pageList[i]).hide();
+                 
+    }
+             $(pageList[ep1Index]).show();
+           $(".episode-elipses-holer").css("display","block"); 
+            
+        }
+        
+        if($(this).attr('id') == 'ublog-intro'){
+            
+            makeActiveText($(".ublog-intro-text"));
+            $(".episode-elipses-holer").css("display","none");
+           
+            
+            
+        }
+        
+        if($(this).attr('id') == 'ublog-overview'){
+           makeActiveText($(".ublog-overview-text"));
+            $(".episode-elipses-holer").css("display","none");
+        }
+        
+        
+       
+    });
+    
+    
+    $("#open-blog-sign-up").on("click",function(){
+        var url = "/ublog_vuln_1_link";
+ window.open(url, '_blank');
+    });
+    
+    function makeActiveText(make_active){ 
+         $(".text-active").hide();
+             $(".text-active").removeClass("text-active");
+        make_active.fadeIn();
+        make_active.addClass("text-active");
+        
+    }
+    var not_run = true;
+    var not_run2 = true;
+    var not_run3 = true;
+      var not_run4 = true;
+    
+    $(".imppy").on("mouseover",function(){
+       if(not_run){
+          not_run = false;
+           $(".iframe-dest").html(" <iframe src = '/sshiframe' class = 'ssh-frame'></iframe>");
+          }
+    });
+    
+     $(".imppy2").on("mouseover",function(){
+       if(not_run2){
+          not_run2 = false;
+           $(".iframe-dest2").html(" <iframe src = '/b0frame' class = 'ssh-frame'></iframe>");
+          }
+    });
+    
+     $(".imppy3").on("mouseover",function(){
+       if(not_run3){
+          not_run3 = false;
+           $(".iframe-dest3").html(" <iframe src = '/b1frame' class = 'ssh-frame'></iframe>");
+          }
+    });
+    
+     $(".imppy4").on("mouseover",function(){
+       if(not_run4){
+          not_run4 = false;
+           $(".iframe-dest4").html(" <iframe src = '/b2frame' class = 'ssh-frame'></iframe>");
+          }
+    });
+    
+    
+    /*
+    The first line you need to type into your terminal is: <br><br>
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220<br>
+
+You should recieve a prompt asking you to input the username and then password, both are bandit0.
+
+    most of the generic ways that computers interact are covered.
+
+cryptology
+web application security.
+programme flaws such as buffer overflows.
+
+If you are pretty new to this, I reccomend you start off at Bandit.
+
+This is probably the only level I'd say there is merit to only going through the walkthorugh and not completeing your.
+
+Bandit covers the knowledge necessary to complete the later levels' so it's fine to whizz through just to check you are up to scratch.
+
+try nto to fall itno bad habits. You might not realise it at the time, but if you actually work through the problems yourself and take the time to understand what you yourself are doing, then the knowledge will stick a lot better.
+
+either find information held within the account, or find the means to exploit the application so that we can migrate to antoher user account, specifically the one that represents the next level.
+    
+The place that your commands are sent to The application that you are controlling, is determined by the host and port number that you have provided.
+    */
+    
+    
+    
+</script>
+
+{% endblock %}
+

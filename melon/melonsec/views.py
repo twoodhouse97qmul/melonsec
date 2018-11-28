@@ -79,7 +79,38 @@ def melonhome(request):
     context = {
 
     }
-    return render(request, 'small-melon.html', context)
+    return render(request, 'loadingscreen.html', context)
+
+def sshterm(request):
+    context = {
+
+    }
+    return render(request, 'sshterm.html', context)
+
+def b0frame(request):
+    context = {
+
+    }
+    return render(request, 'bandit0terminal.html', context)
+
+def b1frame(request):
+    context = {
+
+    }
+    return render(request, 'bandit1terminal.html', context)
+
+def b2frame(request):
+    context = {
+
+    }
+    return render(request, 'bandit2terminal.html', context)
+
+def otw(request):
+    context = {
+
+    }
+    return render(request, 'overthewire.html', context)
+
 
 def twhome(request):
     context = {
@@ -92,6 +123,13 @@ def features(request):
 
     }
     return render(request, 'melonFeatures.html', context)
+
+def rfidcomps(request):
+    context = {
+
+    }
+    return render(request, 'rfidcomp.html', context)
+
 
 def news(request):
     context = {

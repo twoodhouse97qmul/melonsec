@@ -1,0 +1,1217 @@
+{% extends 'melon-page.html'%}
+{% block page_insert %}
+
+  <!-- STYLE SHEETS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link href="css/font-awesome.min.css" rel="stylesheet"> <!-- fa glyphicons -->
+  <link href="css/PreLogIn.css" rel="stylesheet"> <!-- general style sheet.s -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+{% load static %}
+
+  <style>
+
+
+
+  .back1024{
+    width:1024px;
+    margin:0 auto;
+    max-height:400px;
+    overflow-y: hidden;
+  
+    
+  }
+
+
+  .phole{
+
+    margin-left:70px;
+    width:1024px;
+       max-height:400px;
+      overflow-y: hidden;
+    
+  }
+
+  .comp-text{
+    position:relative;
+      margin-top:-60px;
+    width:700px;
+    height:100px;
+   
+
+  }
+      
+      .righty{
+          float:right;
+      }
+      
+       .lefty{
+          float:left;
+      }
+
+  #comp-t{
+    font-size:250%;
+    font-weight:bold;
+  }
+
+
+
+  .greyText{
+    font-size:80%;
+    color:gray;
+  }
+
+  .rfid-part-holder{
+
+    width:160px;
+    height:160px;
+
+  }
+
+  .simpleBLink{
+    text-decoration:none;
+    color:black;
+  }
+  .simpleBLink:hover{
+    text-decoration:none;
+    color:black;
+  }
+  .simpleBLink:visited{
+    text-decoration:none;
+    color:black;
+  }
+
+  #rfid-wireless-div{
+    position:absolute;
+    z-index:3;
+    width:114px;
+    font-size:150%;
+    text-align:center;
+    margin:0 auto;
+    padding-top:20px;
+    margin-left:10px;
+
+
+  }
+  #rfid-wireless-div:hover{
+    font-size:200%;
+    text-align:center;
+    margin-left:30px;
+
+  }
+
+
+
+  .leftSide{
+
+
+    width:260px;
+    height:300px;
+    float:left;
+
+  }
+  .rightSide{
+
+    width:763px;
+    height:300px;
+    float:right;
+
+
+  }
+
+  .afterReaderSide{
+    width:563px;
+    height:300px;
+
+  }
+
+  #reader-div{
+
+    z-index:2;
+    margin-top:-10px;
+    position:absolute;
+      
+    background-image:url("{% static 'photos/comps/rdr.jpg' %}");
+    background-size:contain;
+
+  }
+  #reader-div:hover{
+    margin:-10px;
+    margin-top:-15px;
+
+  }
+
+  #readerArrows{
+    width:220px;
+    height:100px;
+
+
+
+
+  }
+
+  #readerArrowsT{
+    position:absolute;
+    width:170px;
+    height:200px;
+    z-index:13;
+
+
+
+  }
+
+  #readerArrowsT2{
+    margin-top:75px;
+    z-index:13;
+
+  }
+
+
+  .endFloat{
+    clear:both;
+  }
+
+  #softwareSec{
+    position:absolute;
+    margin-left:-15px;
+    width:200px;
+    height:190px;
+    background-image:url("{% static 'photos/comps/software.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+
+  }
+
+  #softwareSec:hover{
+
+    width:250px;
+    height:200px;
+    margin-left:-40px;
+
+
+
+
+  }
+
+  .leftRA{
+    width:220px;
+    height:100px;
+    position:absolute;
+    padding-left:30px;
+    padding-top:10px;
+    text-align:center;
+
+  }
+  .rightRA{
+    width:220px;
+    height:100px;
+    position:absolute;
+    margin-top:60px;
+    padding-left:30px;
+    text-align:center;
+
+
+  }
+
+  .leftRA2{
+    width:114px;
+    height:100px;
+    position:absolute;
+    padding-left:20px;
+    padding-top:10px;
+    text-align:center;
+
+
+  }
+  .rightRA2{
+    width:114px;
+    height:100px;
+    position:absolute;
+    margin-top:60px;
+    padding-left:20px;
+    text-align:center;
+
+
+  }
+  .rightRA2b{
+    width:114px;
+    height:100px;
+    position:absolute;
+    margin-top:15px;
+
+    text-align:center;
+
+
+  }
+
+
+
+  .halfv{
+    width:50%;
+
+  }
+
+  .hwidth{
+    width:50%;
+  }
+
+  .ad{
+
+    height:150px;
+    position:absolute;
+  }
+
+  .bd{
+
+    height:150px;
+    position:absolute;
+    margin-left:40px;
+  }
+
+  .clearo{
+    clear:both;
+  }
+
+  .bigArr{
+    font-size:200%;
+  }
+
+  .bigArr2{
+    font-size:110%;
+  }
+
+
+  #control-soft{
+    background-image:url("{% static 'photos/comps/diag.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+
+  }
+  #control-soft:hover{
+    background-image:url("{% static 'photos/comps/bluediag.jpg' %}");
+
+
+  }
+
+  #reader-control{
+    background-image:url("{% static 'photos/comps/diagalt.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+    position:absolute;
+    margin-top:-40px;
+
+  }
+
+  .soft-lock:hover{
+    width:120px;
+    height:120px;
+
+
+  }
+
+  #door-controller{
+    background-image:url("{% static 'photos/comps/dc.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+    padding-top:0;
+    margin-top:150px;
+
+  }
+
+  #locky{
+    background-image:url("{% static 'photos/comps/lock.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+  }
+
+
+
+
+
+  #h-wifi-hit-zone{
+    position:absolute;
+
+
+    height:75px;
+    width:100px;
+    z-index:20;
+  }
+  #v-wifi-hit-zone{
+    position:absolute;
+    height:100px;
+    width:155px;
+    z-index:20;
+
+
+  }
+
+  #reader-holder{
+
+    width:170px;
+    height:900px;
+    background-color:green;
+  }
+
+  .vert-arr-box{
+    position:absolute;
+    width:150px;
+    height:150px;
+
+
+    z-index:5;
+    margin-top:-20px;
+
+  }
+
+  .soft-data{
+    width:170px;
+    height:130px;
+
+
+
+  }
+
+  .lock-div{
+    width:170px;
+    height:200px;
+
+    position:absolute;
+
+
+    background-image:url("{% static 'photos/comps/lock.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+
+  }
+  .lock-div:hover{
+    width:220px;
+    height:220px;
+
+
+
+  }
+
+
+
+  #data-div{
+
+    background-image:url("{% static 'photos/comps/db.jpg' %}");
+    background-size:contain;
+    background-repeat:repeat-x;
+
+  }
+
+
+
+
+  .comp-list1{
+    width:250px;
+    text-align:center;
+
+  }
+
+
+
+
+
+
+  .l1{
+    width:454px;
+    height:600px;
+
+
+  }
+
+  .r1{
+    width:568px;
+    height:600px;
+      
+
+
+  }
+
+  #top-lr-2{
+    width:284px;
+
+  }
+
+
+
+
+
+  #controller-reader-transfer-holder{
+
+  }
+
+  #tagPic{
+    position:absolute;
+    z-index:1;
+    background-image:url("{% static 'photos/comps/rfidtag.jpg' %}");
+    background-size:contain;
+    
+
+  }
+  #tagPic:hover{
+    margin-left:-10px;
+
+  }
+
+
+
+
+  .reg-comp{
+    z-index:4;
+    position:absolute;
+    width:170px;
+    height:170px;
+
+
+  }
+
+  .reg-comp:hover{
+    width:190px;
+    height:190px;
+  }
+  .trans-comp{
+
+    margin-top:0;
+    position:absolute;
+    width:110px;
+    height:170px;
+
+
+  }
+
+  .trans-comp:hover{
+
+    width:190px;
+    height:190px;
+  }
+  .trans-compb{
+
+    margin-top:0;
+    position:absolute;
+    width:110px;
+    height:170px;
+    z-index:20;
+
+
+  }
+
+  .trans-compb:hover{
+
+    width:140px;
+    height:200px;
+    margin-left:-15px;
+
+  }
+
+
+
+
+  .comp-holder{
+    width:170px;
+    height:170px;
+
+    margin-bottom:110px;
+  }
+  .trans-holder{
+    width:114px;
+    height:114px;
+    margin-bottom:110px;
+  }
+
+  .cols45{
+    width:284px;
+    height:1200px;
+     
+
+  }
+
+
+
+  .compcolumn{
+    width:170px;
+    height:100%;
+    margin:0;
+
+  }
+
+  .transcolumn{
+    width:114px;
+    height:100%;
+
+  }
+
+  .compcolumnb{
+    width:110px;
+
+    height:100%;
+    margin:0;
+  }
+
+
+
+
+  .compcolumnc{
+    width:145px;
+
+    height:100%;
+    margin:0;
+  }
+
+  #tab1{
+    color:white;
+    font-size:130%
+  }
+
+  #tab1:hover{
+    color:black;
+    font-size:130%
+  }
+
+  #tab2:hover{
+    color:black;
+    font-size:130%
+  }
+
+  #dhco{
+
+    height:500px;
+    padding-top:125px;
+
+  }
+
+  #tab2{
+    color:white;
+    font-size:130%
+  }
+
+  #comcols123{
+
+    width:454px;
+      
+
+  }
+
+  #topI{
+    margin-top:75px;
+  }
+
+  #col3{
+
+  }
+
+  .components-list-holder{
+
+    position: fixed;
+    margin-top:80px;
+    padding-top:5px;
+    margin-left:80%;
+    background-color:#417C97;
+    border:0;
+    border-bottom:10px;
+    border-style:solid;
+    border-color:#4B4197;
+    border-radius:8px;
+    min-width:200px;
+    width:20%;
+    z-index:20;
+    text-align:center;
+
+  }
+
+
+  #closer{
+    text-align:center;
+    font-size:350%;
+    margin-top:15px;
+  }
+  #opener{
+    text-align:center;
+    font-size:350%;
+  }
+
+  #staright{
+    margin-top:175px;
+  }
+
+
+  .tabber{
+    width:20%;
+    text-align:center;
+  }
+
+
+  .nav-left{
+    width:100%;
+
+  }
+
+  .wnav{
+    background-color:#417C97;
+    border-radius:8px;
+    border:0;
+    position:fixed;
+    width:100%;
+    height:90px;
+    border-bottom:5px;
+    border-style:solid;
+    border-color:#4B4197;
+    padding-top: 15px;
+    border-radius:0;
+
+
+  }
+
+  .tabb{
+    width:250px;
+    text-align:center;
+  }
+
+
+
+
+
+
+
+  </style>
+
+
+<div class = "comp-text">
+          <h1 id = "comp-t">Components of a Typical RFID System</h1>
+        </div>
+
+<div class = "phole">
+
+      <div class = "back1024" id = "components-holder">
+
+        
+
+        <!-- columns 1,2 and 3 -->
+        <div class = "lefty" id = "comcols123">
+
+          <!-- column 1 -->
+          <div class = "lefty compcolumn">
+            <div class = "comp-holder" >
+              <!--tag div -->
+              <div class = "reg-comp" id = "tagPic"></div>
+            </div>
+
+            <div class = "comp-holder" id = "dataI">
+              <!-- database div -->
+              <div class = "reg-comp" id = "data-div"></div>
+            </div>
+          </div><!-- end column 1 -->
+
+          <!-- columns 2 and 3 -->
+          <div class = "righty" id = "top-lr-2">
+
+            <!-- column 2 -->
+            <div class = "lefty transcolumn">
+
+              <div class = "trans-holder">
+                <!-- rfid to wireless section -->
+                <div id = "rfid-wireless-div">
+                  <span id = "rsstext"><i class=" righty fa fa-wifi fa-5x fa-rotate-270"></i></span>
+                </div>
+              </div>
+
+              <div class = "trans-holder">
+                <!-- reader transfer arrows -->
+                <div class = "trans-comp" id = "readerArrowsT2">
+                  <!-- left arrow -->
+                  <div class = "leftRA2" id = "lra2"><span class = "bigArr2" id = "bigArr12"><i class="fa fa-long-arrow-left fa-4x"></i></span>
+                  </div>
+                  <!-- right arrow -->
+                  <div class = "rightRA2" id = "rra2"><span class = "bigArr2" id = "bigArr22"><i class="fa fa-long-arrow-right fa-4x"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end column 2 -->
+
+            <!-- column 3 -->
+            <div class = "righty compcolumn" id = "col3">
+
+              <div class = "comp-holder">
+                <!-- reader section -->
+                <div class = "reg-comp" id = "reader-div"></div><div class = "endFloat"></div>
+              </div>
+
+              <div class = "comp-holder">
+                <!-- software section -->
+                <div class = "reg-comp" id = "softwareSec"></div>
+              </div>
+            </div><!-- end column 3. -->
+
+          </div><!-- end columns 2 & 3 -->
+
+
+        </div><!-- end left columns -->
+
+        <!-- columns 4, -->
+        <div class = "righty r1">
+
+          <div class = "cols45 lefty">
+            <!-- column 4 -->
+            <div class = "lefty transcolumn" id = "controller-reader-transfer-holder">
+
+              <div class = "trans-holder" id = "topI">
+                <div class = "trans-compb" id = "reader-control"></div>
+              </div>
+
+              <div class = "trans-holder">
+                <div class = "trans-compb" id = "control-soft"></div>
+              </div>
+            </div><!-- end col 4 -->
+
+            <div class = "righty compcolumn">
+              <div class = "comp-holder" >
+                <div class = "reg-comp" id = "door-controller">
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end cols 45 -->
+
+          <div class = "cols56 righty">
+
+
+            <!-- column 6 -->
+            <div class = "lefty transcolumn">
+
+              <div class = "trans-holder">
+                <div class = "trans-comp" id = "staright">
+                  <div class = "rightRA2b" id = "rra2b"><span class = "bigArr2b" id = "bigArr22b"><i class="fa fa-long-arrow-right fa-5x"></i></span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- column 6 -->
+            <div class = "righty compcolumn" id = "controller-reader-transfer-holder">
+
+              <div class = "comp-holder" id = "dhco">
+                <div class = "reg-comp" id = "locky">
+                </div>
+              </div>
+
+            </div><!-- end col 6 -->
+
+
+          </div>
+
+        </div><!-- end rs -->
+
+
+      </div><!-- end 1024 -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        
+        
+        var enlargeLock = false;
+
+
+    /*$('#lSide').on('mouseenter',setPointers);*/
+
+    $('#readerArrowsT').on('mouseover',rAEntered);
+    $('#readerArrowsT').on('mouseleave',rAExit);
+    $('#readerArrowsT2').on('mouseover',rAEntered2);
+    $('#readerArrowsT2').on('mouseleave',rAExit2);
+
+
+    function rAEntered(){
+
+
+      document.getElementById('bigArr1').innerHTML = '<i class="fa fa-long-arrow-left fa-5x"></i>';
+      document.getElementById('bigArr2').innerHTML = '<i class="fa fa-long-arrow-right fa-5x"></i>';
+      document.getElementById("lra").style.marginTop = "-20px";
+      document.getElementById("lra").style.marginLeft = "-5px";
+      document.getElementById("lla").style.marginTop = "15px";
+    }
+
+
+    function rAExit(){
+
+
+      document.getElementById('bigArr1').innerHTML = '<i class="fa fa-long-arrow-left fa-4x"></i>';
+      document.getElementById('bigArr2').innerHTML = '<i class="fa fa-long-arrow-right fa-4x"></i>';
+      document.getElementById("lra").style.marginTop = "0px";
+      document.getElementById("lra").style.marginLeft = "0px";
+      document.getElementById("lla").style.marginTop = "0px";
+
+    }
+
+
+    function rAEntered2(){
+
+
+      document.getElementById('bigArr12').innerHTML = '<i class="fa fa-long-arrow-left fa-5x"></i>';
+      document.getElementById('bigArr22').innerHTML = '<i class="fa fa-long-arrow-right fa-5x"></i>';
+      document.getElementById("lra2").style.marginTop = "-20px";
+      document.getElementById("lra2").style.marginLeft = "-5px";
+      document.getElementById("lla2").style.marginTop = "15px";
+    }
+
+
+
+
+    $("#tlink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#rlink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#rclink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#clink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#cllink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#llink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#cslink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#slink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#sdlink").on('mouseleave',function(){
+      exitFade();
+    })
+    $("#dlink").on('mouseleave',function(){
+      exitFade();
+    })
+
+    $("#dlink").on('mouseleave',function(){
+      exitFade();
+    })
+
+
+        $("#tlink").on('mouseover',function(){
+            
+                highlightTag();
+               
+         
+        })
+        $("#rlink").on('mouseover',function(){
+          highlightR();
+        })
+        $("#rclink").on('mouseover',function(){
+          highlightRC();
+        })
+        $("#clink").on('mouseover',function(){
+          highlightC();
+        })
+        $("#cllink").on('mouseover',function(){
+          highlightCL();
+        })
+        $("#llink").on('mouseover',function(){
+          highlightL();
+        })
+        $("#cslink").on('mouseover',function(){
+          highlightCS();
+        })
+        $("#slink").on('mouseover',function(){
+          highlightS();
+        })
+        $("#sdlink").on('mouseover',function(){
+          highlightSD();
+        })
+        $("#dlink").on('mouseover',function(){
+          highlightD();
+        })
+
+        $("#trlink").on('mouseover',function(){
+          highlightTR();
+        })
+        $("#trlink").on('mouseleave',function(){
+          exitFade();
+        })
+
+
+        /*
+remember to make a lock.
+        */
+
+
+    function highlightTag(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightTR(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightR(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+    function highlightRC(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightC(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+    function highlightCL(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightL(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightCS(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightS(){
+
+
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightSD(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+      $("#data-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+    function highlightD(){
+
+      $("#softwareSec").fadeTo( "fast" , 0.4, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 0.4, finishFade);
+      $("#staright").fadeTo( "fast" , 0.4, finishFade);
+      $("#locky").fadeTo( "fast" , 0.4, finishFade);
+      $("#door-controller").fadeTo( "fast" , 0.4, finishFade);
+      $("#control-soft").fadeTo( "fast" , 0.4, finishFade);
+      $("#tagPic").fadeTo( "fast" , 0.4, finishFade);
+
+      $("#rfid-wireless-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-div").fadeTo( "fast" , 0.4, finishFade);
+      $("#reader-control").fadeTo( "fast" , 0.4, finishFade);
+
+    }
+
+
+    function finishFade(){
+
+    }
+
+    function exitFade(){
+      $("#softwareSec").fadeTo( "fast" , 1, finishFade);
+      $("#readerArrowsT2").fadeTo( "fast" , 1, finishFade);
+      $("#staright").fadeTo( "fast" , 1, finishFade);
+      $("#locky").fadeTo( "fast" , 1, finishFade);
+      $("#door-controller").fadeTo( "fast" , 1, finishFade);
+      $("#control-soft").fadeTo( "fast" , 1, finishFade);
+      $("#tagPic").fadeTo( "fast" , 1, finishFade);
+      $("#data-div").fadeTo( "fast" , 1, finishFade);
+      $("#rfid-wireless-div").fadeTo( "fast" , 1, finishFade);
+      $("#reader-div").fadeTo( "fast" , 1, finishFade);
+      $("#reader-control").fadeTo( "fast" , 1, finishFade);
+    }
+
+
+
+    $("#closer").on('click',closeContents);
+
+
+
+    function closeContents(){
+      $("#cl").hide();
+      document.getElementById('ca').innerHTML = '<i id = "opener" class="fa fa-chevron-circle-down" aria-hidden="true"></i>';
+      $("#opener").on('click',openContents);
+
+      $(".phole").css('width','90%');
+
+
+
+    }
+
+    function openContents(){
+      $("#cl").show();
+      document.getElementById('ca').innerHTML = '<i id = "closer" class="fa fa-chevron-circle-up" aria-hidden="true"></i>';
+      $("#closer").on('click',closeContents);
+    }
+
+
+
+
+    function rAExit2(){
+
+
+      document.getElementById('bigArr12').innerHTML = '<i class="fa fa-long-arrow-left fa-4x"></i>';
+      document.getElementById('bigArr22').innerHTML = '<i class="fa fa-long-arrow-right fa-4x"></i>';
+      document.getElementById("lra2").style.marginTop = "0px";
+      document.getElementById("lra2").style.marginLeft = "0px";
+      document.getElementById("lla2").style.marginTop = "0px";
+
+    }
+    /*
+    function setPointers(){
+
+    document.getElementById("v-wifi-hit-zone").style.cursor = "pointer";
+    document.getElementById("h-wifi-hit-zone").style.cursor = "pointer";
+
+  }
+
+  */
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+{% endblock %}
+

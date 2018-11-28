@@ -27,6 +27,14 @@ urlpatterns = [
     path('features/', views.features, name='porthome'),      #home
     path('news/', views.twhome, name='porthome'),
     path('tutorials/', views.tut_home, name='porthome'),
+    path('overthewire/', views.otw, name='porthome'),
+    path('rfidcomponents/', views.rfidcomps, name='porthome'),
+    path('sshiframe/', views.sshterm, name='porthome'),
+    path('b0frame/', views.b0frame, name='porthome'),
+    path('b1frame/', views.b1frame, name='porthome'),
+    path('b2frame/', views.b2frame, name='porthome'),
+
+
 
     path('tutorials/ublog', views.ublog_home, name='porthome'),
     path('floating/', views.floating_melon, name='porthome'),

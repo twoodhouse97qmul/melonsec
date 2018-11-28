@@ -1,0 +1,140 @@
+{% extends 'melon-page.html' %}
+{% block page_insert %}
+
+<style>
+
+     .next-page-arrow{
+       
+       
+        float:right;
+        margin-left:10px;
+        font-size:150%;
+        color:#0E5DC4;
+        
+    }
+    
+
+</style>
+
+<h1>Bandit</h1>
+
+Bandit is the introductory game in the Over the Wire Series
+
+This is definitely the place to start!
+
+<h4>Game Overview</h4>
+
+Bandit covers the fundamentals needed to tackle later levels.
+
+Command line/terminal basics.
+Creating an SSH connection.
+Common commands that are relevant to security.
+
+<h1>Level 0 -> Level 1</h1>
+
+Level Goal:
+
+**
+The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
+
+ <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+
+<h3>Command Line - Terminal - Bash Shell </h3>
+
+really basic definition.
+
+If a software engineer wants to write a programme that requires the ability to save data to the computers hardrive does not need to write the code from scratch, in fact in pretty much all OS's this is prohibitted, as these functions need to be standardised.<br><br>
+
+It is pretty easy to get away without, but may come back to bite you. having a low level understanding of the command line is necessary to understand the underlying functions behind many computer programmes, and furthermore to understand in general what is happening to the computer when we run high level code.<br><br>
+
+If you are here because you want to be a penetration tester - then it is absolutely 10000% necessary to be comfortable with the command line of your chosen OS.<br><br>
+
+On Windows OS, The command line is generally accessed through the programme. On MacOS you want the programme called Terminal.<br><br>
+
+most popular being linux/unix. <br><br>
+
+Don't worry, the whole point of the bandit game is to get you comfortable using the command line. Right now generally you can think of the terminal programme as an extremely 'raw' and stripped back interface into the heart of your computer.<br><br>
+
+Since we will be playing the wargames remotely - much like in real life where the target computer is likely to be a remote system, we are going to need to have the ability to run a bash shell on the target computer (in this case the over the wire servers).
+
+To do this, we will be utilising the power of SSH.
+
+<h3>SSH - Secure Shell.</h3>
+
+a bit about how to use it.
+
+every command we type into our terminal will be sent to the connected server. as if we were physically sitting at the machine and running a shell (a command line/terminal session)
+
+The place that your commands are sent to, The application that you are controlling, is determined by the host and port number that you have provided.
+
+a bit about different options.
+
+For bandit (and most of the other levels), having the options set to ''' is more than sufficient.
+
+So let's go ahead and connect to level 0.
+
+Host: bandit.labs.overthewire.org (c)
+Port: 2220 (c)
+Username: bandit0 (c)
+Password: bandit0 (c)
+
+The first line you need to type into your terminal is: 
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+You should recieve a prompt asking you to input the username -- we are using bandit0.
+
+Next you should be asked to enter a password, whihc is also bandit0.
+
+At that point you should have started an SSH session on the bandit.labs.overthewire.org server.
+
+a whole bunch of text will be printed into the terminal... hopefully looking a little something like this:
+
+At this point 
+
+luckily the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. But essentially the situation is the same for all levels:
+
+
+We have landed withing where we have asecure shell. We want to explore what applications and In the real world your purpose would be to find leveraging poitns in order to damage or move into other parts of the network, In the over the wire war games we are hoping to be able to find a 
+
+<h3>the 'ls' command </h3>
+
+Here the default options are sufficient, we will simply run 'ls' in our command line.
+
+In this case we see a single file or directory called 'readme'
+
+** use file here? **
+
+<h3>the 'cat' command </h3>
+
+
+running the cat command in our SSH shell to print the information in the file called 'readme'
+
+showCode.
+
+The result was that the string of letters: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b> was printed to the screen.
+
+Quite simply, this is the password that we will need to log in to the next
+
+you can exit this SSH session by running the 'exit' command.
+
+We'll now initiate another SSH session using our newly found password, in the exact same manner as (before).
+
+Host: bandit.labs.overthewire.org (c)
+Port: 2220 (c)
+Username: bandit1 (c)
+Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)
+
+note that the server and port have stayed the same, only the user has changes.
+
+You should recieve
+
+And thats it! We have successfully logged into level 1 and we can leave level 0 in the past.
+
+Congratulations!
+
+<h1>Level 1 -> Level 2</h1>
+
+
+
+{% endblock %}

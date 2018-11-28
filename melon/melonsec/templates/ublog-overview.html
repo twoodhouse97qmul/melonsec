@@ -199,7 +199,7 @@
   <h3>Welcome To The Ublog Website Penetration Testing Tutorials</h3>
            
             <div class = "ublog-intro-text-disclaimer page-text-i">
-                 The Web Application Penetration Testing series teaches you how to learn the fundamentals of *white hat* web application hacking. The tutorials cover setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
+                 The Web Application Penetration Testing series teaches you how to learn the fundamentals of white hat web application hacking. The tutorials cover 3 main aspects: setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
               
            </div>
             <div class = "ublog-intro-text-disclaimer page-text-i">
@@ -216,18 +216,17 @@ Some things are just an out right big no-no.
 
 With this is mind the first tutorials based around logic flaws etc and you will be fine.
 
-I will be sure to check this out, you need to show some self initiative, Just like with most actions in life, when you are just setting out learning and practicing your penetration testing skills It’s your own decision to decide what is ethical, and it’s your own responsibility to ensure what you are doing is legal.
+No aspect of these or future UBlog tutorials will require breaking the law to complete, but you need to show some self initiative, Just like with most actions in life, when you are just setting out learning and practicing your penetration testing skills It’s your own decision to decide what is ethical, and it’s your own responsibility to ensure what you are doing is legal.
 
-I give you full permission, and if you are I always try to respond swiftly.
+I give you full permission, and if you are really annoyed you wanted to practice some skills that this site doesnt allow then let em know and I always try to respond swiftly.
 
-The cyber industry is expanding mahousively, 
-
-If you are really interested in something then the chances are other people are too, more often than not someone has had this idea too and the resource is out there. 
+The cyber industry is expanding mahousively, If you are really interested in something then the chances are other people are too, more often than not someone has had this idea too and the resource is out there. 
 
 If thats not the case well then great! let me know and we will see what we can make.
+    
 A list of some good sites for alternative pen testing are below:
 
-If you want some sites to practice scripting etc. 
+If you want some sites to practice scripting etc:
 
 
 
@@ -241,23 +240,31 @@ If you want some sites to practice scripting etc.
             
             <h4>What Is The Purpose of The Ublog?</h4>
          <p>
+             
+             Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.
+             
+             Theoretical attacks are much easeir to pictute when given a real world example - this is the exact, rather than generic examples exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
+             
+               </p>
         
+         
+            <h4>What Is The Ublog Application?</h4>
+         <p>
+             
             Ublog — where the elite of society go to get away from the grievances that come with using social media alongside commoners. 
 
-About Ublog
+Ublog is centered around covert social media advertising. Instead of paying for advertising space, companies come to Ublog to give away free products to members who will share them with their social media audience.
 
-Ublog is centered. Instead of paying for advertising space, they give away free products to the members.
-
-Awards are given depending on how many followers a user has across their linked social media accounts.
-
-            
+Awards are given depending on how many followers a user has across their social media accounts.
+             
+             Business Accounts also exist where companies can create offers, as well as interact with social media influencers.
+             
         </p>
         
     </div>
     
     <div class = "first-exploit-episode-text">
-        
-       
+         
         <div class = "first-exploit-episode-text-p1 page-text-f">
 <div class = "slide-title-class">
   <h1>First Exploit: Flawed Authentication Logic</h1>
@@ -301,27 +308,22 @@ Okay, this is getting out of hand quickly, there MUST be a better way.
             
             <p>I appreciate most people following this tutorial either wont want to, or simply won't be bothered to link any personal media ccounts of own.
                 
-                Creating a 'throw-away account' on facebook would take a few minutes most people don't have time for, for that reason you will see a little, under the name melonsec. unfortunately we have no friends.
+                Creating a 'throw-away account' on facebook would take a few minutes most people don't have time for, for that reason you will see a thrid social media icon, under the name melonsec. 
             
             
-            Simply click on the 'link fakebook' button (Show Button)<br><br>
+            Simply click on the 'link fakebook' button (Show Button), and you will be linked to a facebooka ccoutn that has 1 friend.<br><br>
             
-            saving you some time doing that step, however the account isnt allowed in by the ublog verification system. Lets see what happens when we try to progress by hitting 'verify'<br><br>
+            This does save us the bother of having to link an actual facebook account, however the account isnt allowed in by the ublog verification system. Lets see what happens when we try to progress by hitting 'verify'<br><br>
             
             We're greeted with the annoying message ''. <br><br>
             
-            We're not going to use any complicated or fancy analysis techniques.<br><br>
-            
-            Lets just take a look at what is going on on the surface. <br><br>
-            
-            The HTTPRequest:
+            To find an explopit here we're not going to use any complicated or fancy analysis techniques, lets just take a broad look at what is going on on the surface when we requested Ublog create this account<br><br>
+        
+            The HTTP Request:
             
             ublog/addfacebook/FBID10101011010101
             
-            
-Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that this has been verified using the third party Facebook verification system.
 
-In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
             
              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
             
@@ -335,21 +337,18 @@ In reality I know this is true, the site has a (session variable) cookie that is
             quick definition.
             
             might recognise them: usually finduser?name=john?age=12. <br><br>
-            
-            these parameters are going, they can use these values when they decide what content to render back to you. In the case above this would be which results to display on the page. <br><br>
-            
-            you'd be very surprised what kind of shortcuts people are willing to take to make things work, I think people are quite commonly under the impression that if nobody is going to thoroghly review the code they are writing that the problem won't come to the surface, there are many ways to make something work, but this doesnt mean you've made it work well.  <br><br>
+             
+            May be a trivial example, but  you'd be very surprised what kind of shortcuts people are willing to take to make things work, I think people are quite commonly under the impression that if nobody is going to thoroghly review the code they are writing that the problem won't come to the surface, there are many ways to make something work, but this doesnt mean you've made it work well.  <br><br>
+           
+           
      
-        
-            
-            Django can be very secure and you cna build web apps very quickly, ... here the paramaters are handled seperated by the '/'
+            Django can be very secure and you can build web apps very quickly, ... here the paramaters are handled seperated by the '/'
             
             finduser/john/12 <br><br>
             
             finduser-john-12 <br><br>
             
-            So that actually makes it a bit easier for us, we can disregard paraater names and the '?' business.
-            
+            So that actually makes it a bit easier for us, we can disregard paramater names and the '?' business.
         
             ublog/addfacebook/10101011010101
             
@@ -358,9 +357,27 @@ In reality I know this is true, the site has a (session variable) cookie that is
             10101010 definitely looks like some kind of variable that is related to us personally as we make this request, so that is interesting.
             
             An educated guess would be that this value is the ID of my facebook account.
+                   
+lets see what happens when we input the facebook of an accoutn that we don't own.
              
-             Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that this has been verified using the third party Facebook verification system. In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
+              I've decided to impersonate Vin Diesel, as I thought we shared the most physical likeness out of the top 10 followed people on facebook.
+                    
+                    Finding his ID on the facebook API is pretty straightforward. You can see how here.
+                    
+                    If you can't be bothered to find a valid target facebook ID: 
+                    
+                    <b>Here</b> is a list of some that have more than 10 000 followers.
+                    <br><br>
              
+             so lets switch the value of our facebook ID with Vin Diesels, the request becomes:
+             
+             ublog/addfacebook/10101011010101 --> ublog/addfacebook/VinnyD
+             
+             
+                
+Damn, it’s unprotected but it looks like there is some kind of internal mechanism to check that this has been verified using the third party Facebook verification system.
+
+In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
             
         </div>
@@ -370,93 +387,53 @@ In reality I know this is true, the site has a (session variable) cookie that is
                    
             <h3>HTTP Paramater pollution. </h3> <br><br>
             
-            share definition.
+           definition.
             
         
-            application developers may make functions that are useful purely during development, such as to retrieve database results quicker or to escalate the privalages of an account for some reason. (example) <br><br>
+            application developers may make functions that are useful purely during development, such as to retrieve database results quicker or to escalate the privalages of an account for some reason. I am definitely guilty of this. Sometimes the reasoning will be completely mental. maybe the function that processes a users password change is is failing in an unexplainable mannor, it is tempting to copy the code to another function that is working to see if the problem lies in the code or elsewhere, Once the author has seen if the code runs or fails when placed elsewhere she might be so excited or depressed at the outcome that she forgets to remove it.
+                    
+                     For example you could try finduser?name=john?age=12?password=newpassword. <br><br>
             
-            For example you could try finduser?name=john?age=12?password=newpassword. <br><br>
+                    This is a pretty unlikely scenario, but these kind of needless and carelless vulnerabilities are littered all over many web applications. Finding mistakes and weakensses like these can be how you seperate yourself from the many other penetration testers useing standard tools and methadologies to find common bugs.<br><br>
             
-            is probably extremely unlikely,  <br><br>
-            
-            There is some merit to, we are essentially just trying to get a feel for the website and see what behavhour we can make happen. To see how something behaves we need to stimulate and provoke it in every way possible, in high stakes web applciation bounty hunting, original ideas and out of the box thinking can be how you find a vulnerability that others have not. <br><br>
+            We are essentially just trying to get a feel for the website and see what behavhour we can make happen. To see how something behaves we need to stimulate and provoke it in every way possible, in high stakes web applciation bounty hunting, original ideas and out of the box thinking can be how you find a vulnerability that others have not. <br><br>
+                    
+                    The types of vulnerability we are talkign about here would generally come under the umbrella term of 'HTTP Paramter Pollution'
+                    
+                    Defintion..
             
             generally, we will repeat the the same variable twice, and hope we can induce some unexpected results from the application. <br><br>
             
             
-            In the ublog example, the variable we'd really love to manipulate is the value of facebookID. since we have an account, and we can probably find ID's for other accounts that do have more than 10 000 followers.
+            In the ublog example, the variable we'd really love to manipulate is the value of facebookID. This is because we have a valid account with a valid ID, and we can probably find ID's for other accounts that do have more than 10 000 followers.
+                    
+                    So our plan is quite simple: We have a valid facbook ID that doesnt have enough followers, We will find a facebook ID that we are not authorised for but does have enough followers, and we will insert the values in pretty much every combination we can until we find an exploit or get tired.
             
-                    I've decided to impersonate Vin Diesel, as I thought we shared the most physical likeness out of the top 10 followed people on facebook.
-                    try switching FBID01
-            
-            
-            lets put in -- does the /dummy/
-            
-            so if we put in the avlue of X for dummy.
-            
-            now we can without needing 10 000 followers.
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            you could easily implement a search in the form finduser-john-12 <br><br>
-            
-            
-            
-            
-            
-            regex ().
-            
-            essentially is being processed by some back end database,
-            
-            The Django platform protects against this, in this case its a problem with a custom regular expression (see regex expressions), is an error which 
-            
-          
-
-            
-            
-            
-            
-            Nowerdays, this is where web attack suites come into play.
-            
-            
-            
-            
-        
-So what exactly has happened?<br><br>
-
-We verified
-
-Sent it in an url.
-
-
-
-
-What if we add an extra parameter to the end?
-
-Error:
-
-You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’
-
-Then add second parameter ‘penis’
-
-sameurl/value1/penis/
-
-
+                   
+                    
+So lets get to work at brute forcing the signup function with our two facebook ID's
+                    
+                    remember when we tried to create an account with only 1 follower we were sent to the page:
+                    
+                
+                    We then tried switching our ID with Vin Diesels and got a different error message:
+                    
+                    
+                    Lets carry on from this point. The last request we sent was: ublog/addfacebook/VinnyD
+                    
+                    What if we add an extra parameter to the end?
+                    
+                    I'm not going to bother finding another facebook ID, this is purely to see how the website behaves.
+                    
+                    I'm going to send the request:
+                    
+                    ublog/addfacebook/VinnyD/VinnyD
 Error(s)
 
 You have not verified for the account (show account (or ID)) please verify using the ‘X-Tab’.
-No Account Found for ID = ‘penis’ — please try resynchronising your social media accounts to the blog platform.
-
-Interesting, very interesting…
+No Account Found for ID = ‘VinnyD’ — please try resynchronising your social media accounts to the blog platform.
+                    
+                    Interesting, very interesting…
 
 -  So we still get the error message saying we don’t own that account.
 We also get a new error message saying — did the actually query Facebook to ask for the number of followers for that account?.
@@ -498,6 +475,46 @@ I used the Facebook API in a way that was unsafe and not at all as intended by t
 (BA HACK link) mention Alexia…. I hope to cover an article of that chain of events.
 
 for now I think this trend will only keep on growing.
+
+
+          
+                    
+                    
+                    
+                    
+                    
+               
+            
+            
+            is a very flexible framework:
+            
+            you could easily implement a search in the form finduser-john-12 <br><br>
+            
+            The Django platform protects against this, in this case its a problem with a custom regular expression (see regex expressions), is an error which 
+            
+          
+
+            
+            
+            
+            
+            Nowerdays, this is where web attack suites come into play.
+            
+            
+            
+            
+        
+So what exactly has happened?<br><br>
+
+We verified
+
+Sent it in an url.
+
+
+
+
+
+
 
 
 
