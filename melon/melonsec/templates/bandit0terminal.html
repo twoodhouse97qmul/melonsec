@@ -24,8 +24,8 @@
 
 .terminal-window {
   text-align: left;
-  width: 510px;
-  height: 360px;
+  width: 310px;
+  height: 270px;
   border-radius: 10px;
   margin: auto;
   position: relative;
@@ -413,6 +413,11 @@
         
         $(function() {
   var data = [
+  { 
+    action: 'type',
+    strings: ["Let's Go!", ''],
+    postDelay: 2000
+  },
   { 
     action: 'type',
     strings: ["ls^400"],

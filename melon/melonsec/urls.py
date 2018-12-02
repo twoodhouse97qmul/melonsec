@@ -33,6 +33,8 @@ urlpatterns = [
     path('b0frame/', views.b0frame, name='porthome'),
     path('b1frame/', views.b1frame, name='porthome'),
     path('b2frame/', views.b2frame, name='porthome'),
+    path('b3frame/', views.b3frame, name='porthome'),
+    path('b4frame/', views.b4frame, name='porthome'),
 
 
 

@@ -24,8 +24,8 @@
 
 .terminal-window {
   text-align: left;
-  width: 310px;
-  height: 270px;
+  width: 455px;
+  height: 400px;
   border-radius: 10px;
   margin: auto;
   position: relative;
@@ -98,6 +98,12 @@
 .terminal-window .gray { color: gray; }
 .terminal-window .green { color: green;}
         
+        
+        
+        .tr955{
+            font-size:90%;
+        }
+        
     </style>
 
 <body>
@@ -109,8 +115,10 @@
     <div class="button red"></div>
   </header>
   <section class="terminal">
+     
     <div class="history"></div>
-    bandit1@bandit:~$&nbsp;<span class="prompt"></span>
+  
+    <span class = "orig-pr">bandit1@bandit:~$</span>&nbsp;<span class="prompt"></span>
     <span class="typed-cursor"></span>
     
   </section>
@@ -421,18 +429,37 @@
   { 
     action: 'type',
     strings: ["ls^400"],
-    output: '<span class="gray"><br> -<br></span>&nbsp;',
+    output: '<span class="gray"><br>inhere<br></span>&nbsp;',
     postDelay: 1000
   },
   { 
     action: 'type',
     //clear: true,
-    strings: ['cat ./-^400'],
-    output: '<span class="gray"><br> <b>CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9</b><br><br></span>',
+    strings: ['cd inhere/^400'],
+    output: '<span class="gray tr955"></span>',
   },
   { 
     action: 'type',
-    strings: ["We found the password for bandit2!", ''],
+    //clear: true,
+    strings: ['ls/^400'],
+    output: '<span class="gray tr955">-file00  -file02  -file04  -file06  -file08<br>-file01  -file03  -file05  -file07  -file09</span>',
+  },
+  { 
+    action: 'type',
+    //clear: true,
+    strings: ['du -h | file ./*/^400'],
+    output: '<span class="gray tr955"><br>./-file01: data<br>[...]<br>./-file07: ASCII text<br>./-file08: data<br>./-file09: data<br><br></span>',
+
+  },
+   { 
+    action: 'type',
+    //clear: true,
+    strings: ['cat ./-file07^400'],
+    output: '<span class="gray tr955"><br>koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br><br></span>',
+  },
+  { 
+    action: 'type',
+    strings: ["We found the password for bandit3!", ''],
     postDelay: 2000
   }
   
@@ -441,12 +468,24 @@
 });
 
 function runScripts(data, pos) {
+    
+   
     var prompt = $('.prompt'),
         script = data[pos];
     if(script.clear === true) {
       $('.history').html(''); 
     }
+    
+    
+     
+            
+    
+     
     switch(script.action) {
+            
+        
+           
+            
         case 'type':
           // cleanup for next execution
           prompt.removeData();
@@ -457,7 +496,23 @@ function runScripts(data, pos) {
             callback: function() {
               var history = $('.history').html();
               history = history ? [history] : [];
-              history.push('bandit1@bandit:~$ ' + prompt.text());
+                
+                var histpush = 'bandit1@bandit:~$ ';
+                
+                if(pos>1){
+                   $(".orig-pr").html("bandit1@bandit:~/inhere$ ");
+                   }
+                
+                if(pos>2){
+                   histpush = 'bandit1@bandit:~/inhere$ ';
+                   }
+                
+                
+                
+                 history.push( histpush+ prompt.text());
+              
+          
+                
               if(script.output) {
                 history.push(script.output);
                 prompt.html('');

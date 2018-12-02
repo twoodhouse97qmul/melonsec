@@ -24,8 +24,8 @@
 
 .terminal-window {
   text-align: left;
-  width: 510px;
-  height: 210px;
+  width: 310px;
+  height: 270px;
   border-radius: 10px;
   margin: auto;
   position: relative;
@@ -415,6 +415,11 @@
   var data = [
   { 
     action: 'type',
+    strings: ["Let's Go!", ''],
+    postDelay: 2000
+  },
+  { 
+    action: 'type',
     strings: ["ls^400"],
     output: '<span class="gray"><br> spaces in this file name<br></span>&nbsp;',
     postDelay: 1000
@@ -423,11 +428,11 @@
     action: 'type',
     //clear: true,
     strings: ['cat spaces/ in/ this/ file/ name^400'],
-    output: '<span class="gray"><br> <b>CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9</b><br><br></span>',
+    output: '<span class="gray"><br> <b>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</b><br><br></span>',
   },
   { 
     action: 'type',
-    strings: ["We found the password for bandit2!", ''],
+    strings: ["We found the password for bandit3!", ''],
     postDelay: 2000
   }
   

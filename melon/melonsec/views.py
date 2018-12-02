@@ -105,6 +105,20 @@ def b2frame(request):
     }
     return render(request, 'bandit2terminal.html', context)
 
+def b3frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit3terminal.html', context)
+
+def b4frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit4terminal.html', context)
+
 def otw(request):
     context = {
 

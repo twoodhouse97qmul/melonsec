@@ -25,6 +25,16 @@
         margin-top:-40px;
     }
     
+    
+    .page-text-f{
+        min-height:580px;
+        max-height:580px;
+     
+        position:relative;
+        margin-top:-40px;
+     
+    }
+    
     .episode-contents-item{
         height:75px;
         width:69%;
@@ -82,6 +92,35 @@
         overflow: hidden;
     }
     
+    .ssh-frame-s{
+        width:320px;
+        height:270px;
+        position:relative;
+        float:right;
+        overflow: hidden;
+         margin-left:40px;
+         margin-left:40px;
+        margin-right:-60px;
+       
+        margin-top:-20px;
+        margin-bottom:10px;
+    }
+    
+    
+    .ssh-frame-m{
+        width:470px;
+        height:400px;
+        position:relative;
+        float:right;
+        overflow: hidden;
+         margin-left:40px;
+         
+        margin-right:-65px;
+       
+        margin-top:-20px;
+        margin-bottom:10px;
+    }
+    
     .contents-active{
         border-color: lawngreen;
         font-size:150%;
@@ -119,6 +158,14 @@
 	padding-right: 10px;
 
 }
+    
+    .text95{
+        font-size: 95%;
+    }
+    
+    .text955{
+        font-size: 90%;
+    }
 
 /*
 * These styles creates the underlining of link
@@ -158,16 +205,36 @@
 	transition-duration: .15s;
 }
     
+    {% load static %}
+    .level-displayer{
+        width:250px;
+        height:150px;
+        border-radius:10px;
+         background-image:url("{% static 'photos/otw.jpg' %}");
+        background-size:contain;
+        background-repeat: no-repeat;
+        padding-top:100px;
+    }
+    
+    .biggerdash{
+        font-size:200%;
+        position:fixed;
+        margin-top:-12px;
+    }
+    
     .next-page-arrow{
        
        
         float:right;
         margin-left:10px;
-        font-size:150%;
+        font-size:300%;
         color:#0E5DC4;
-        
+        bottom:0;
         min-width:20px;
         min-height: 20px;
+         position:absolute;
+        bottom:0;
+        right:10px;
         
     }
     
@@ -185,9 +252,23 @@
         
     }
     
+    .lev-display-text{
+        width:100%;
+        background-color: red;
+        height:50px;
+        background-color: aliceblue;
+        
+        
+    }
+    
+    .lev-head{
+        margin-top: 0;
+        text-align: center;
+    }
+    
     
     .first-exploit-episode-text{
-        
+     
     }
     
     .NY{
@@ -201,8 +282,7 @@
     }
     
     .level-goal-hold{
-        background-color:lightgray;
-        width:80%;
+           background-color: aliceblue;
         border-style:solid;
         border-width:0px;
         border-left-width:5px;
@@ -210,6 +290,14 @@
         border-radius:5px;
         padding:8px;
         padding-left:9px;
+    }
+    
+    .lgl{
+        width:80%;
+    }
+    
+    .lgm{
+        width:50%;
     }
 
 </style>
@@ -251,6 +339,23 @@
 
            
             <div class = "ublog-intro-text-disclaimer page-text-i">
+                <h1>Welcome To The Over-The-Wire Tutorials</h1>
+                
+                <h4>The General Goal</h4>
+                
+                 Each level presents you with the same abstract task: You are given access to a remote shell within a user account on the over the wire servers. Essentially we have access to a limited/restricted part of the network, and our goal is to obtain information or use knowledge of common vulnerabilities in order to gain access to the <span class ="italy">next</span> part of the network.<br><br>
+              
+              Helpfully, the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. <br><br>
+              
+                
+                <div class = "all-levels-display">
+                <div class = "level-displayer">
+                    
+                    <div class = "lev-display-text">
+                    <h2 class = "lev-head">Bandit</h2>
+                    </div>
+                </div>
+                </div>
                 
            </div>
             <div class = "ublog-intro-text-disclaimer page-text-i">
@@ -259,27 +364,6 @@
     
      
     
-——  Disclaimer ——
-
-I fully appreciate that a big part of learning is exploring and experimenting and trying out different things, but unfortunately the platform is not capable of being a full out playground, please respect the platform and other users
-
-Some things are just an out right big no-no.
-
-With this is mind the first tutorials based around logic flaws etc and you will be fine.
-
-No aspect of these or future UBlog tutorials will require breaking the law to complete, but you need to show some self initiative, Just like with most actions in life, when you are just setting out learning and practicing your penetration testing skills It’s your own decision to decide what is ethical, and it’s your own responsibility to ensure what you are doing is legal.
-
-I give you full permission, and if you are really annoyed you wanted to practice some skills that this site doesnt allow then let em know and I always try to respond swiftly.
-
-The cyber industry is expanding mahousively, If you are really interested in something then the chances are other people are too, more often than not someone has had this idea too and the resource is out there. 
-
-If thats not the case well then great! let me know and we will see what we can make.
-    
-A list of some good sites for alternative pen testing are below:
-
-If you want some sites to practice scripting etc:
-
-
 
 </p>
            </div>
@@ -287,30 +371,7 @@ If you want some sites to practice scripting etc:
     </div>
     
     <div class = "ublog-overview-text">
-            <h2>Ublog</h2>
-            
-            <h4>What Is The Purpose of The Ublog?</h4>
-         <p>
-             
-             Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.
-             
-             Theoretical attacks are much easeir to pictute when given a real world example - this is the exact, rather than generic examples exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
-             
-               </p>
-        
-         
-            <h4>What Is The Ublog Application?</h4>
-         <p>
-             
-            Ublog — where the elite of society go to get away from the grievances that come with using social media alongside commoners. 
-
-Ublog is centered around covert social media advertising. Instead of paying for advertising space, companies come to Ublog to give away free products to members who will share them with their social media audience.
-
-Awards are given depending on how many followers a user has across their social media accounts.
-             
-             Business Accounts also exist where companies can create offers, as well as interact with social media influencers.
-             
-        </p>
+          
         
     </div>
     
@@ -322,19 +383,21 @@ Awards are given depending on how many followers a user has across their social 
 
     </div>
     
-    Bandit is the introductory game in the Over the Wire Series. You can find the landing page to the Bandit game by clicking <a href = "#">here</a>.
+    Bandit is the introductory game in the Over the Wire Series. You can find the landing page to the Bandit game by clicking <a href = "http://www.overthewire.org/wargames/bandit/">here</a>.
 
-
-
+<br><br>
+ <div class = "level-goal-hold lgl">
 <h4 style = "text-align: center;">Game Overview</h4>
 
 Bandit covers the fundamentals needed to tackle the other games in the over the wire series.<br><br>
 
 Command line/terminal basics.<br>
 Creating an SSH connection.<br>
-Common commands that are relevant to security.<br><br><br>
-            
-            As well as ensuring you have the relevant prequisite knowledge, any run of the mill problesm such as connecting to the over the wire servers should come up during this level. This means that once you power through Bandit you should be set to have fun playing all the other games,
+Common commands that are relevant to security.
+     
+            </div>
+            <br><br><br>
+            As well as ensuring you have the relevant prequisite knowledge, any run of the mill problems such as connecting to the over the wire servers should come up during this level. This means that once you power through Bandit you should be set to have fun playing all the other games.
 
 
  <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
@@ -355,11 +418,11 @@ Common commands that are relevant to security.<br><br><br>
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
             
             
-<h1>Connecting to Level 0.</h1>
+<h1>First Level - Bandit0</h1>
             
             Browsing the first level on the Over The Wire site, we are presented with the following level descriptor:<br><br>
 
-            <div class = "level-goal-hold">
+            <div class = "level-goal-hold lgl">
                 
                 
                 <b>Level Goal:</b><br><br>
@@ -413,16 +476,20 @@ If you are here because you want to be a penetration tester - then it is absolut
                 <div class = "first-exploit-episode-text-p4 page-text-f">
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                    
-           <h3>SSH - Secure Shell.</h3>
+           <h3>The <b>man</b> command and SSH - Secure Shells.</h3>
                     
-                    Since we will be playing the wargames remotely - much like in real life where the target computer is likely to be a remote system - we are going to need to have the ability to run a bash shell on the target computer (in this case the over the wire servers).<br><br>
-
-To do this, we will be utilising the power of SSH.<br><br>
-
-definition....
+                     The man (short for manual) command can be used to gain information about other UNIX commands....<br><br>
                     
+                    Since we will be playing the wargames remotely - much like in real life where the target computer is likely to be a remote system - we are going to need to have the ability to run a remote shell on the target computer (in this case the over the wire servers).<br><br>
 
-every command we type into our terminal will be sent to the connected server. as if we were physically sitting at the machine and running a shell (a command line/terminal session) <br><br>
+                     To do this, we will be utilising the power of <b>SSH</b>.<br><br>
+                    
+                    Try typing man ssh into your terminal, you will recieve a whole bunch of information about the SSH command. The display is in a pager format, hit b to go back, and hit q to return to the shell programme.<br><br>
+                  
+
+To summarise the... shell that is running on a remote computer, to which you maintain a connection using the secure socket layer. <br><br>
+
+The result of this is that every command we type into our terminal will be sent to the connected system. as if we were physically sitting at the machine and running a shell (a command line/terminal session) <br><br>
                     You can learn about SSH in more depth here.<br><br>
                     
                     We are going to learn by doing and dive right in, lets create an SHH connection to the over the wire servers.<br><br>
@@ -461,8 +528,8 @@ every command we type into our terminal will be sent to the connected server. as
                     
 
 <br><br>
-A whole bunch of text will be printed into the terminal, hopefully looking a little something like this.,br>
-It's as simple as that, after providing the correct user name and password you are given access to a shell belonging to bandit0 on the bandit.labs.overthewire.org server. And with that we have logged into level 0... on to level 1!
+A whole bunch of text will be printed into the terminal, hopefully looking a little something like this.
+It's as simple as that, after providing the correct user name and password you are given access to a shell belonging to bandit0 on the bandit.labs.overthewire.org server. <br><br>And with that we have logged into level 0... on to level 1!
 
 
 
@@ -475,60 +542,42 @@ It's as simple as that, after providing the correct user name and password you a
         
       
         
-          <div class = "first-exploit-episode-text-p5 page-text-f">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-        
-        
-  <h1>Level 0 -> Level 1</h1>
-              
-              At this point 
-
-luckily the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. But essentially the situation is the same for all levels:
-
-
-We have landed withing where we have asecure shell. We want to explore what applications and In the real world your purpose would be to find leveraging poitns in order to damage or move into other parts of the network, In the over the wire war games we are hoping to be able to find a 
-              
-              We have access to a restricted part of the network, our goal is to gain information use knowledge of common vulnerabilities in order to gain access to the 'next' part of the network. 
-
-c
-Here the default options are sufficient, we will simply run 'ls' in our command line.
-
-In this case we see a single file or directory called 'readme'
-
-** use file here? **
-
-
-              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-        
-        </div>
-        
         
                 <div class = "first-exploit-episode-text-p5 page-text-f imppy2">
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+                    
+                         {% load static %}
+                <div class="iframe-dest2"> </div>
+                    
+                    <h1>Defeating Level 0</h1>
+                    
+                    
+                    <div class = "level-goal-hold lgm">
+<h4 style = "text-align: center;">OTW Level Description</h4>
+
+The password for the next level is stored in a file called — located in the home directory
+     
+            </div><br><br>
         
 In order to beat level 0, we will be utilising two basic UNIX commands.<br><br>
                     
-                    
+                          
 <h3>the 'ls' command </h3>
 
-ls - short for <b>list</b> is a pretty straightforward UNIX command that can be used to list the contents of a directory.
+<span class = "italy">ls</span> - short for <b>list</b> is a pretty straightforward UNIX command that can be used to list the contents of the current working directory.
                     
-we'll cover some of the possible options, but for now we will use the default configuration.
+we'll cover some of the possible options later, but for now we will use the default configuration.
 
 
 <h3>the 'cat' command </h3>
                     
 It can be used to print the output of a file to the terminal:
-                    
-                    
-                         {% load static %}
-                <div class="iframe-dest2"> </div>
-           
-
-
-<br><br>The string of letters: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b> was printed to the screen.
+                  
+<br><br>As shown in the terminal window, after running these commands the string of letters: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b> was printed to the screen.
 
 Quite simply, this is the password that we will need to log in to the next level.
+                    
+                    All the useful resources for each level are accessible via the resource icon. 
 
 
                     
@@ -536,34 +585,50 @@ Quite simply, this is the password that we will need to log in to the next level
         
         </div>
         
+        
+          <div class = "first-exploit-episode-text-p5 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+  <h1>The General Idea</h1>
+              
+              So that was pretty simple, but the fundamental method of each level has become clear:<br><br>
+              
+              We have landed within a user account on the over the wire servers where we have a secure shell. Essentially we have access to a limited/restricted part of the network. <br><br>Our goal is to obtain information or use knowledge of common vulnerabilities in order to gain access to the <span class ="italy">next</span> part of the network.<br><br>
+              
+              Helpfully, the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. <br><br>
+              
+              Later the games become much more complex, and you will have to eploit vulnerabilities of the current user account to 'pivot' and jump to the next account from within the server, rather than making repeated SSH connections as we do throughout Bandit, this is much more comparable to the real life scenarios.
+              
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+        
+        </div>
+        
+        
          <div class = "first-exploit-episode-text-p6 page-text-f">
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
         
         
 <h3>Logging in to Level 1</h3>
              
-             So we have successfully found the password for the bandit1 account on the over the wire server.
+             So we have successfully found the password for the bandit1 account on the over the wire server.<br><br>
              
-             All That's left to do in order to beat level 0 is log into bandit1 using SSH in the same way that we did for bandit0.
-          
-             There will be some instances in the over the wire series where we will use our current shell in order to pivot to another account within the over the wire server.
-             
-             In this case however, we are going to abandon our SSH shell for bandit0 and initiate a compeltely new one to connect to bandit1.
-
-             You can exit this SSH session by running the <b>exit</b> command.
+             All That's left to do in order to beat level 0 is log into bandit1 using SSH in the same way that we did for bandit0.<br><br>
+        
+             You can exit this SSH session by running the <b>exit</b> command.<br><br>
 
 We'll now initiate another SSH session using our newly found password, in the exact same manner as (before).<br><br>
-
+ <div class = "level-goal-hold lgl">
 Host: bandit.labs.overthewire.org (c)<br>
 Port: 2220 (c)<br>
 Username: bandit1 (c)<br>
-Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)<br><br>
+     Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)</div><br><br>
 
 note that the server and port have stayed the same, only the user and password that we will provide changes.<br><br>
 
-Once being prompted to enter, you should recieve a text output similiarly to when we connected to bandit0.
+Once entering the correct password, you should recieve a text output similiarly to when we connected to bandit0.<br><br>
 
-And thats it! We have successfully logged into level 1 and we can leave level 0 in the past.
+And thats it! We have successfully logged into bandit1 and we can leave bandit0 in the past.<br><br>
 
 Congratulations!
              
@@ -575,24 +640,30 @@ Congratulations!
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
         
         <div class = "slide-title-class-b">
+             {% load static %}
+                <div class="iframe-dest3"> </div>
 <h3>Finding the password for bandit2</h3>
 
     </div>
-
+                <p class = "text95">
               
-               Again, we'll start by running ls to exanmine the contents of the directory.<br><br>
-    
-              The directory contains a file called '-' in UNIX, '-' is reserved as a special character.<br><br>
+               Again, we'll start by running <b>ls</b> to exanmine the contents of the directory, we see that the directory contains a file called: <span class = "biggerdash" ><b>-</b></span> 
               
-              the '.' command is used to run .. by providing . only, is a way of saying we are going to run from <b>this</b> directory.<br>
+              <br><br>In UNIX, '-' is reserved as a <b>special</b> character. Specifically the '-' symbol is used to prefix an option following a UNIX command. (It's also used to switch between input and output, as well as filling the traditional role of arithmetic subtraction.)<br><br>
               
-              the / is what is used to escape the special character, meaning we can refer to - as a reference to a file or directory rather than it's dedicated meaning.<br><br>
+              Remember back to when we sent out our <b>ssh</b> command: <b>ssh bandit0@bandit.labs.overthewire.org -p 2220</b>. 
               
-              The result of running these commands is shown below: <br><br>
+              Part of our command contains the component '-p 2220', here we were supplying 2220 as the value of the port option for the ssh command.
               
-               {% load static %}
-                <div class="iframe-dest3"> </div>
+              Since '-' is interpretted differently than other characters, This leaves us with a problem. In the previous example we used 'cat (filename)' in order to print the contents of the file. if we try to input '-' as the our filename, the command line interprets this as us telling it we will supply an option to the cat command, which we never do.<br><br>
               
+              If you have a background in coding, you may already be familiar with the concept of special characters. Remember that bash is not just a 'brand' of shell, but also a language in itself, logically it has a whole bunch of special characters that are reserved to have specific role. You can learn more about special characters in UNIX here. <br><br>
+              
+              Luckily the fact that people would inevitably use the special characters that are set aside in the bash language to name their own crap didn't make it past Brian and the other developers, and the language provides a simple work around.<br><br>
+                    
+             Providing ./ lets the command you are providing the exact location of an executable? file.
+               
+              </p>
               
                <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
       
@@ -603,26 +674,159 @@ Congratulations!
         
         
  <div class = "slide-title-class-b">
-<h3>Finding the password for bandit3</h3>
+     
+         {% load static %}
+                <div class="iframe-dest4"> </div>
+              
+<h3>Bandit 2 -> 3</h3>
 
     </div>
               
-              Again, we'll start by running ls. <br>
+              you guessed it, we're going to start by running <b>ls</b>. <br><br>
               
-              The directory contains a file called '-' in UNIX, '-' is reserved as a special character.
-              
-              the '.' command is used to run .. by providing . only, is a way of saying we are going to run from <b>this</b> directory.
-              
-              the / is what is used to escape the special character, meaning we can refer to - as a reference to a file or directory rather than it's dedicated meaning.
-              
-              The result of running these commands is shown below:
-              
-               {% load static %}
-                <div class="iframe-dest4"> </div>
-              
-              
+              This directory contains a file called <b>spaces in this file name</b>.<br><br>
              
+              In the terminal, a space is used to seperate arguments, so the sentance 'spaces in this file name' is interpretted as 5 seperate and distinct arguments.<br><br>
+             
+              By inserting '\' we essentially escape the spaces, allowing us to provide the name of our file as an argument, which is what we need to do if we want to reference it to be printed!<br><br>
+             
+              Pretty simple again, and clearly the main thing to take away is the knowledge that you can use \ to escape spaces in the command line.<br><br>
+             
+             This time, the password we recieved was: <b>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</b>
+             
+              
+              
+           
+                <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
       
+        </div>
+        
+         <div class = "first-exploit-episode-text-p5 page-text-f imppy6">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+ <div class = "slide-title-class-b">
+     
+         {% load static %}
+                <div class="iframe-dest5"> </div>
+              
+<h3>Bandit 3 -> 4 </h3>
+
+    </div>
+              <p class = "text955">
+             Hopefully you're getting the hang of this and you've already typed <b>ls</b> into your terminal like a pro. <br><br>
+              
+             This directory contains another directory, it's not what we're used to but don't worry we will power through.<br><br>
+             
+             Let's start by navigating into the 'inhere' directory, we do this by using the <b>cd</b> command, a very commonly used UNIX command that simply means 'change directory'.<br><br>
+             Earlier I said we would explore the options of the ls command in more detail and I'm a man of my word. 
+             
+             We'll start by covering how the ls command handles hidden files. 
+             
+             <br><br>In UNIX, a hidden file is any file that begins with a dot (.) By convention, the ls command does not list <b>hidden files</b>. <br><br>
+             
+             providing the letter <b>a</b> as an option to the ls command will signify that you want to list the hidden directories.,br>,br.
+             
+             The <b>l</b> option is used to produce output in a UNIX long represention, in simpler terms we won't just get the name of the file but also be shown the permissions among other details.<br><br>
+             
+             The command that we are going to run is <b>ls -la</b>   (most terminals accept EITHER ls -la OR ls -al).
+        
+             If you want to learn more about the ls function, <a href = "http://https://opensource.com/article/18/10/ls-command">this</a> is a good resource<br><br>
+                  
+             The file '.hidden' is very intriguing, and infact when we print the contents of the file we are presented with the SSH password we came for.
+                  
+             
+             
+           
+              </p>
+           
+              
+               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+      
+        </div>
+        
+          <div class = "first-exploit-episode-text-p5 page-text-f imppy5">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+ <div class = "slide-title-class-b">
+     
+         {% load static %}
+                <div class="iframe-dest6"> </div>
+              
+<h3>Bandit 4 ->5 </h3>
+     
+     We could just dive in like animals and start printing every file but we are better than that.<br><br>
+     
+     Instead we are going to use a nicer solution that would also scale well if there were many more files<br><br>
+     
+     We're going to be utilising another new command, the <b>du</b> command.<br><br>
+     
+     As with the other commands you learn, it's useful to type man du to get a rundown on what the command is all about.<br><br>
+     
+     du (disk usage) can be used to check the information of disk usage of files and directories on a machine, we are particularliy interested in du's ability to differentiate 'data' and human readable ASCII text.<br><br>
+     
+     To do this we type: du -h | file ./*<br><br>
+     
+     remember from bandit1 that ./ means 'run from this directory', and adding the * means we interate through all files.<br><br>
+     
+     Once running the command, we see that only one file containing ACSII text has been identified.<br><br>
+     
+     The file also contains another annoying dash, so we are going to have to use './' to provide the exact location of the file to the cat command before we print it.<br><br>
+     
+     printing the contents of the file, we see it contains another '' SSH token: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+     
+
+
+    </div>
+              <p class = "text95">
+            
+              </p>
+           
+              
+               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+      
+        </div>
+        
+         <div class = "first-exploit-episode-text-p5 page-text-f imppy5">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+        
+        
+ <div class = "slide-title-class-b">
+     
+         {% load static %}
+                <div class="iframe-dest6"> </div>
+              
+<h3>Bandit 5 ->6 </h3>
+     
+     We could just dive in like animals and start printing every file but we are better than that.<br><br>
+     
+     Instead we are going to use a nicer solution that would also scale well if there were many more files<br><br>
+     
+     We're going to be utilising another new command, the <b>du</b> command.<br><br>
+     
+     As with the other commands you learn, it's useful to type man du to get a rundown on what the command is all about.<br><br>
+     
+     du (disk usage) can be used to check the information of disk usage of files and directories on a machine, we are particularliy interested in du's ability to differentiate 'data' and human readable ASCII text.<br><br>
+     
+     To do this we type: du -h | file ./*<br><br>
+     
+     remember from bandit1 that ./ means 'run from this directory', and adding the * means we interate through all files.<br><br>
+     
+     Once running the command, we see that only one file containing ACSII text has been identified.<br><br>
+     
+     The file also contains another annoying dash, so we are going to have to use './' to provide the exact location of the file to the cat command before we print it.<br><br>
+     
+     printing the contents of the file, we see it contains another '' SSH token:
+     
+
+
+    </div>
+              <p class = "text95">
+            
+              </p>
+           
+              
         </div>
         
     </div>
@@ -757,6 +961,8 @@ Congratulations!
     var not_run2 = true;
     var not_run3 = true;
       var not_run4 = true;
+     var not_run5 = true;
+     var not_run6 = true;
     
     $(".imppy").on("mouseover",function(){
        if(not_run){
@@ -768,21 +974,36 @@ Congratulations!
      $(".imppy2").on("mouseover",function(){
        if(not_run2){
           not_run2 = false;
-           $(".iframe-dest2").html(" <iframe src = '/b0frame' class = 'ssh-frame'></iframe>");
+           $(".iframe-dest2").html(" <iframe src = '/b0frame' class = 'ssh-frame-s'></iframe>");
           }
     });
     
      $(".imppy3").on("mouseover",function(){
        if(not_run3){
           not_run3 = false;
-           $(".iframe-dest3").html(" <iframe src = '/b1frame' class = 'ssh-frame'></iframe>");
+           $(".iframe-dest3").html(" <iframe src = '/b1frame' class = 'ssh-frame-s'></iframe>");
           }
     });
     
      $(".imppy4").on("mouseover",function(){
        if(not_run4){
           not_run4 = false;
-           $(".iframe-dest4").html(" <iframe src = '/b2frame' class = 'ssh-frame'></iframe>");
+           $(".iframe-dest4").html(" <iframe src = '/b2frame' class = 'ssh-frame-s'></iframe>");
+          }
+    });
+    
+    
+     $(".imppy5").on("mouseover",function(){
+       if(not_run5){
+          not_run5 = false;
+           $(".iframe-dest5").html(" <iframe src = '/b3frame' class = 'ssh-frame-m'></iframe>");
+          }
+    });
+    
+     $(".imppy6").on("mouseover",function(){
+       if(not_run6){
+          not_run6 = false;
+           $(".iframe-dest6").html(" <iframe src = '/b4frame' class = 'ssh-frame-m'></iframe>");
           }
     });
     
@@ -811,6 +1032,7 @@ try nto to fall itno bad habits. You might not realise it at the time, but if yo
 either find information held within the account, or find the means to exploit the application so that we can migrate to antoher user account, specifically the one that represents the next level.
     
 The place that your commands are sent to The application that you are controlling, is determined by the host and port number that you have provided.
+     A nice solution to this is to consider the space a 'special character' and in fact the bash shell responds quite desirably under this paradigm.
     */
     
     
