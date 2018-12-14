@@ -1,35 +1,220 @@
 {% extends 'melon-page.html'%}
 {% block page_insert %}
 
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+
 <style>
+    
+    
+    
+    
+    p{
+         font-family: "jura",sans-serif;
+    }
+    .content-holding{
+        overflow: hidden;
+    }
+    
+    
+    .blue-cov{
+        padding:30px;
+    position:relative;
+    min-width:976px;
+     max-width:976px;
+    min-height:300px;
+    max-height:300px;
+  
+    background-color: #2E2B54;
+         margin-top:-50px; margin-left:-48px;
+        color:white;
+    }
+    
+    .mid-blue-beam{
+        float:right;
+         background-color: #2E2B54;
+   
+        margin-right:-125px;
+        color:white;
+         padding:30px;
+    position:relative;
+    min-width:535px;
+     max-width:535px;
+    min-height:655px;
+    max-height:655px;
+    }
+    
+    .mid-blue-beam2{
+        float:right;
+         background-color: #2E2B54;
+   
+        margin-right:-125px;
+        margin-top:-25px;
+        color:white;
+         padding:30px;
+    position:relative;
+    min-width:380px;
+     max-width:380px;
+    min-height:700px;
+    max-height:700px;
+    }
+    
+    .gr-blue-beam{
+         background-color: #F5F6F8;
+         margin-top:-50px; 
+        margin-left:-89px;
+        
+         padding:30px;
+    position:relative;
+    min-width:425px;
+     max-width:425px;
+    min-height:655px;
+    max-height:655px;
+    }
+    
+    .gr-blue-beamB{
+         background-color: #F5F6F8;
+         margin-top:-50px; 
+        margin-left:-89px;
+        
+         padding:30px;
+    position:relative;
+    min-width:510px;
+     max-width:510px;
+    min-height:655px;
+    max-height:655px;
+    }
+    
+    .gr-blue-beam2{
+         background-color: #F5F6F8;
+         margin-top:-50px; 
+        margin-left:-89px;
+        
+         padding:30px;
+    position:relative;
+    min-width:550px;
+     max-width:550px;
+    min-height:655px;
+    max-height:655px;
+    }
+    
+    
+    
+    .blue-cov2{
+        padding:30px;
+    position:relative;
+    min-width:976px;
+     max-width:976px;
+    min-height:270px;
+    max-height:270px;
+  
+    background-color: #2E2B54;
+         margin-top:-50px; margin-left:-89px;
+        color:white;
+    }
+    
+    
+    
+    
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+.bbody {
+    padding-top:30px;
+    position:relative;
+    min-width:976px;
+     max-width:976px;
+    min-height:400px;
+    max-height:400px;
+
+    background-color: #2E2B54; overflow: hidden;  -webkit-font-smoothing: antialiased; margin: 0;     margin-top:-50px; margin-left:-89px;}
+.flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}
+
+.slider-wrapper div {position: relative;}
+.slider-wrapper {margin-top: 5vw;  margin-left: 30px;}
+.slide-image {height: 200px; }
+.slide-image img {width: 300px; cursor: pointer;}
+.slide-content {width: 600px; color: #fff; padding:0; padding-left:20px; margin-right:50px; margin-top:-25px;}
+    .slide-content-l {width: 900px; color: #fff; padding:0; padding-left:20px; margin-right:50px; margin-top:-25px;}
+.slide-date {color: #0a8acb; font-size: 1.1vw; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw;}
+.slide-title {font-size: 1.2vw; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw;}
+.slide-text {font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;}
+.slide-more {font-weight: 400; letter-spacing: 0.1vw; float: left; font-size: 0.9vw;}
+.slide-bullet {width: 0.5vw; height: 0.5vw; background-color: #0b8bcc; border-radius: 200%; position: relative; margin-left: 1.2vw;}
+.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
+
+div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
+div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
+
+.arrows{width: 3.5vw; position:absolute; bottom:50px; right:50px;}
+.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid #fff; border-left: 0.15vw solid #fff; transition: all .1s ease-in-out; text-decoration: none; color: transparent;
+}
+.arrow:hover {border-color: #0A8ACB; border-width: 0.25vw;
+}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: 0;}
+.arrow.next {transform: rotate(135deg); right: 0;}
+    
+    
+    
+
+.slider-wrapper2 div {position: relative;}
+.slider-wrapper2 {margin-top: 5vw;  margin-left: 30px;}
+.slide-image2 {height: 200px; }
+.slide-image2 img {width: 300px; cursor: pointer;}
+.slide-content2 {width: 600px; color: #fff; padding:0; padding-left:20px; margin-right:50px; margin-top:-25px;}
+.slide-content-l {width: 900px; color: #fff; padding:0; padding-left:20px; margin-right:50px; margin-top:-25px;}
+.slide-date2 {color: #0a8acb; font-size: 1.1vw; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw;}
+.slide-title2 {font-size: 1.2vw; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw;}
+.slide-text2 {font-size: 1.1vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;}
+.slide-more2 {font-weight: 400; letter-spacing: 0.1vw; float: left; font-size: 0.9vw;}
+.slide-bullet2 {width: 0.5vw; height: 0.5vw; background-color: #0b8bcc; border-radius: 200%; position: relative; margin-left: 1.2vw;}
+.slide-nav2 {margin-left: 64vw; margin-top: -5.5vw;}
+
+div.overlay-blue2 {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
+div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
+
+
+    
+    
+    
+    
     
     .content-viewer{
         float:left;
-        width:30%;
+        width:325px;
+        margin-left:-52px;
+        margin-top:-70px;
+        height:635px;
         
     }
     
     .content-viewer-a{
+        background-color: white;
         float:left;
-        width:75%;
+        width:80%;
+        margin-left:-21px;
+        padding-left:10px;
+        border-radius:8px;
+        height:640px;
     }
     
      .episode-text{
+          color:#2E2B54;
         float:right;
-        width:70%;
+         margin-right:50px;
+         width:70%;
          margin-top:-30px;
          max-height:650px;
     }
     .slide-title-class-b{
         position:relative;
         margin-top:-40px;
+         color:#2E2B54;
     }
     
     
     .page-text-f{
         min-height:580px;
         max-height:580px;
-     
+      color:#2E2B54;
         position:relative;
         margin-top:-40px;
      
@@ -43,6 +228,7 @@
         border-width: 0 0 2px 0;
         border-color:black;
         padding-top:10px;
+        color:#2E2B54;
     }
     
     .italy{
@@ -71,7 +257,7 @@
         margin-left:10px;
         font-size:150%;
         position:relative;
-        color:#0E5DC4;
+        color:#1FC295;
     }
     
     
@@ -83,6 +269,7 @@
     
     .episode-contents-item:hover{
         cursor:pointer;
+        color:#2E2B54;
     }
     
     
@@ -106,23 +293,46 @@
         margin-bottom:10px;
     }
     
-    
-    .ssh-frame-m{
-        width:470px;
-        height:400px;
+    .ssh-frame-s3{
+        width:320px;
+        height:270px;
+        position:relative;
+        float:right;
+        overflow: hidden;
+         
+        margin-right:10px;
+       
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+     .ssh-frame-s2{
+        width:320px;
+        height:250px;
         position:relative;
         float:right;
         overflow: hidden;
          margin-left:40px;
-         
-        margin-right:-65px;
+      
+        margin-right:40px;
        
         margin-top:-20px;
         margin-bottom:10px;
     }
     
+    .ssh-frame-m{
+        width:470px;
+        height:400px;
+        position:relative;
+        
+        overflow: hidden;
+
+        margin-top:10px;
+        margin-left:-25px;
+        margin-bottom:10px;
+    }
+    
     .contents-active{
-        border-color: lawngreen;
+        border-color:#1FC295;
         font-size:150%;
         font-weight: 800;
         width:90%;
@@ -136,7 +346,61 @@
         font-weight: 800;
          text-align: left;
          
+         
       
+    }
+    
+    .imppy2{
+        width:960px;
+        margin-left:-86px;
+        padding:86px;
+        min-height:650px;
+        padding-top:0;
+
+    }
+    
+    .imppy3{
+        width:960px;
+        margin-left:-86px;
+        padding:86px;
+        min-height:650px;
+        padding-top:0;
+
+    }
+    
+    .imppy{
+  
+        width:960px;
+        margin-left:-86px;
+        padding:86px;
+        min-height:650px;
+        padding-top:0;
+    }
+    
+    .imppy5{
+        position:relative;
+        width:113%;
+       color:#2E2B54;
+        margin-left:-40px;
+    }
+    
+    .imppy6{
+        position:relative;
+        width:113%;
+       color:#2E2B54;
+        margin-left:-40px;
+    }
+    
+    
+    .blue-move{
+         position:relative;
+        width:113%;
+
+        margin-left:-50px;
+    }
+    
+    .cleario{
+        clear:both;
     }
     
     .marged-header{
@@ -208,14 +472,19 @@
     {% load static %}
     .level-displayer{
         width:250px;
-        height:150px;
+        height:155px;
         border-radius:10px;
-         background-image:url("{% static 'photos/otw.jpg' %}");
-        background-size:contain;
+        overflow: hidden;
         background-repeat: no-repeat;
-        padding-top:100px;
+        margin-top:100px;
+         background-image:url("{% static 'photos/banditsc.jpg' %}");
+          padding-top:105px;
+        background-size: cover;
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
+        
     }
     
+  
     .biggerdash{
         font-size:200%;
         position:fixed;
@@ -225,40 +494,79 @@
     .next-page-arrow{
        
        
-        float:right;
+      
         margin-left:10px;
         font-size:300%;
-        color:#0E5DC4;
+         color:#2E2B54;
         bottom:0;
         min-width:20px;
         min-height: 20px;
          position:absolute;
-        bottom:0;
-        right:10px;
+        bottom:20px;
+       right:10px;
+        z-index:999999999999999999999999999999;
         
+    }
+    
+    .next-page-arrow2{
+    
+        font-size:300%;
+         color:white;
+    
+        min-width:20px;
+        min-height: 20px;
+         position:absolute;
+        bottom:10px;
+       right:10px;
     }
     
      .last-page-arrow{
        
        
-        float:left;
+        
         margin-left:-60px;
         font-size:300%;
-        color:#0E5DC4;
-      
+        color:#2E2B54;
+       position:absolute;
           min-width:20px;
         min-height: 20px;
-
+          bottom:20px;
+         left:100px;
+      
         
     }
+    
+    .bandit-int{
+        background-image:url("{% static 'photos/bandit.jpg' %}");
+        width:100px;
+        height:100px;
+        background-size: cover;
+        text-align: center;
+       float:left;
+    
+        border-radius:50px;
+        margin-right:-100px;
+        
+    }  
     
     .lev-display-text{
         width:100%;
         background-color: red;
         height:50px;
-        background-color: aliceblue;
+        background-color: #E63462;
+         color:#2E2B54;
+        padding-top:5px;
+        font-weight: 900;
         
         
+    }
+    
+    .all-levels-display{
+
+    
+        margin-top:-100px;
+        height:300px;
+        padding-top:50px;
     }
     
     .lev-head{
@@ -278,26 +586,120 @@
     .content-holding{
 
         max-height:650px;
-        overflow-y: scroll;
+        
     }
     
     .level-goal-hold{
-           background-color: aliceblue;
+           background-color: #E7ECEF;
         border-style:solid;
         border-width:0px;
         border-left-width:5px;
         border-color:black;
         border-radius:5px;
-        padding:8px;
-        padding-left:9px;
+        
+         padding:15px;
+         padding-left:20x;
+         padding-right:20px;
+       
+         color:#6096BA;
+       
     }
     
     .lgl{
         width:80%;
     }
     
+    .lgov{
+        float:right;
+        max-width:400px;
+         color:#2E2B54;
+        margin-right:-10px;
+        
+    }
+    
     .lgm{
         width:50%;
+      color:black;
+        background-color: #40798C;
+        border-color: #0B2027;
+        border-left-width: 7px;
+    }
+    .inside-blue{
+         color:black;
+        background-color: #40798C;
+        border-color: #0B2027;
+        border-left-width: 7px;
+    }
+    
+    .first-exploit-episode-text-p1{
+        position:relative;
+        margin-left:-40px;
+        color:#2E2B54;
+    }
+    
+    p{
+         color:#2E2B54;
+        font-family: "Sawarabi Mincho",sans-serif;
+    }
+    
+    .testies{
+        font-family: "jura",sans-serif;
+    }
+    .mincho{
+        font-family: "jura",sans-serif;
+    }
+    
+    .intro-AB{
+        float:left;
+        width:66%;
+    }
+    
+    .lefty{
+        float:left;
+    }
+    .righty{
+        float:right;
+    }
+    
+    .level-preview-im{
+        position: absolute;
+        width:250px;
+        z-index:999999999999;
+        opacity:0;
+        height:155px;
+       margin-top:-105px;
+        border-radius:8px;
+        background-color: black;
+        color:white;
+        padding-top:10px;
+    }
+    
+    .level-preview-im:hover{
+        opacity:0.85;
+        text-align:center;
+        
+    }
+    
+    .lefty-50{
+        float:left;
+        width:50%;
+        padding-right:30px;
+        
+    }
+    
+    
+    .righty-50{
+        float:right;
+        width:50%;
+        padding-left:30px;
+        
+    }
+    
+    
+    .correct-sized-inner{
+        width:900px;
+        height:640px;
+        overflow: hidden;
     }
 
 </style>
@@ -305,7 +707,7 @@
 
 <div class = "content-viewer">
     
-    <div class = "content-viewer-a">
+    <div class = "content-viewer-a mincho">
     
     
     <div class = "episode-contents-item contents-active" id = "ublog-intro"><h4 class = "contents-active-text">0. Introduction</h4></div>
@@ -323,9 +725,13 @@
 
 </div>
 
-<div class = "episode-text">
+<div class = "episode-text mincho">
     
-       <div class = "ublog-intro-text text-active">
+     <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+    <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+          
+       <div class = "ublog-intro-text text-active mincho">
 
   
 
@@ -338,22 +744,69 @@
 </div>
 
            
-            <div class = "ublog-intro-text-disclaimer page-text-i">
-                <h1>Welcome To The Over-The-Wire Tutorials</h1>
+            <div class = "ublog-intro-text-disclaimer page-text-i mincho">
                 
-                <h4>The General Goal</h4>
-                
-                 Each level presents you with the same abstract task: You are given access to a remote shell within a user account on the over the wire servers. Essentially we have access to a limited/restricted part of the network, and our goal is to obtain information or use knowledge of common vulnerabilities in order to gain access to the <span class ="italy">next</span> part of the network.<br><br>
+                <div class="bbody mincho">
+                    
+                    
+                  <div class="slider">
+                       <h1 class="mincho" style= "position: absolute; margin-top:-80px; color:white; margin-left:40px; font-weight:900;"><b>Welcome To The Over-The-Wire Tutorials</b></h1>
+<div class="slider-wrapper flex">
+	<div class="slide flex">
+		<div class="slide-image slider-link prev"><img src="{% static 'photos/otw2.png' %}" style = "width:300px; height:200px; background-size:cover;"><div class="overlay"></div></div>
+		<div class="slide-content mincho">
+			<div class="slide-date">Introduction</div>
+	
+			<div class="slide-text">‘Over The Wire’ is my favourite brand of online capture-the-flag style wargames, the flags arerepresented by a password stored somewhere on the current level that can be used to log into the next level.<br><br>
+
+Currently over the wire offers 12 online games, and 4 downloadable games, more than enough to keep a you entertained for a while.<br><br>
+
+The games cover a range topics, from simple things like navigating directories and files on a remote server, to exploiting common web vulnerabilities, Buffer Overflows and much much more.<br><br>
+ If you are purely looking for solutions or to get to the end of the games as quickly as possible, then this probably isn't the place for you. The purpose of these walkthroughs is to discuss the underlying methods behind each solution, our main focus is learning. </div>
+			
+		</div>	
+	</div>
+	<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="{% static 'photos/goal-setting.jpg' %}" style = "width:300px; height:200px; background-size:cover;"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">The General Goal</div>
+			
+			<div class="slide-text">  Each level presents you with the same abstract task: You are given access to a remote shell within a user account on the over the wire servers. Essentially we have access to a limited/restricted part of the network, and our goal is to obtain information or use knowledge of common vulnerabilities in order to gain access to the <span class ="italy">next</span> part of the network.<br><br>
               
-              Helpfully, the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. <br><br>
-              
-                
+              Helpfully, the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. </div>
+			
+		</div>	
+	</div>	
+	<div class="slide flex">
+		<div class="slide-image slider-link next">     <iframe src = "/landscape" class = "landscape-frame" style = "width:300px; height:200px; "></iframe><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">How To Get Stuck In</div>
+			<div class="slide-title"></div>
+			<div class="slide-text">Start At Bandit </div>
+		
+		</div>	
+	</div>
+		
+</div>
+<div class="arrows">
+<a href="#" title="Previous" class="arrow slider-link prev"></a>
+<a href="#" title="Next" class="arrow slider-link next"></a>
+</div>
+</div>
+                    
+                    </div>
+               
+                    
                 <div class = "all-levels-display">
+                 
                 <div class = "level-displayer">
                     
+                       <div class= "level-preview-im">Bandit covers the fundamentals needed to tackle the other games in the over the wire series.<br><br><button class = "btn btn-primary bandit-buy">Play Bandit</button></div>
+                    
                     <div class = "lev-display-text">
-                    <h2 class = "lev-head">Bandit</h2>
+                    <h2 class = "lev-head"><b>Bandit</b></h2>
                     </div>
+                    
                 </div>
                 </div>
                 
@@ -376,33 +829,71 @@
     </div>
     
     <div class = "first-exploit-episode-text">
+        
+
+
+    
          
         <div class = "first-exploit-episode-text-p1 page-text-f">
+                    
+
+ 
+            
+            <div class = "blue-cov">
+            
+            
+             <div class = "level-goal-hold lgl lgov inside-blue">
+                    
+<h4 style = "text-align: center;" class="mincho">Game Overview</h4>
+     
+     
+     
+The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. <b>If you notice something essential is missing or have ideas for new levels, please let us know!</b>
+     
+
+     
+            </div>
+             <div class = "bandit-int">
+       
+    </div>
+           
+            
+             <h1 style ="font-size:680%; text-align:center; font-weight: 900;">&nbsp;&nbsp;&nbsp;Bandit</h1>
+            
+            
+            
+            
+            
+        
+            <br>
+    Bandit is the introductory game in the Over the Wire Series. <br>find the landing page to the Bandit game by clicking <a href = "http://www.overthewire.org/wargames/bandit/">here</a>.<br><br>
+            
+          </div>  
 <div class = "slide-title-class">
- <h1>Bandit</h1>
+   
+   
+
 
     </div>
-    
-    Bandit is the introductory game in the Over the Wire Series. You can find the landing page to the Bandit game by clicking <a href = "http://www.overthewire.org/wargames/bandit/">here</a>.
-
+            
+            <div class = "cleario"></div>
+            
+          
+    <br><br>
+<p style="text-align: center; font-size: 120%;" class="mincho">
+Bandit covers the fundamentals needed to tackle the other games in the over the wire series.<br> As well as ensuring you have the relevant prequisite knowledge, any run of the mill problems such as connecting to the over the wire servers should come up during this level.<span style="font-size: 90%;"> <br>This means that once you power through Bandit you should be set to have fun playing all the other games.</span>
 <br><br>
- <div class = "level-goal-hold lgl">
-<h4 style = "text-align: center;">Game Overview</h4>
-
-Bandit covers the fundamentals needed to tackle the other games in the over the wire series.<br><br>
+    <span style="font-size: 130%; font-weight: 700;"> Main Focus Points:</span><br>
+    
 
 Command line/terminal basics.<br>
 Creating an SSH connection.<br>
 Common commands that are relevant to security.
-     
-            </div>
-            <br><br><br>
-            As well as ensuring you have the relevant prequisite knowledge, any run of the mill problems such as connecting to the over the wire servers should come up during this level. This means that once you power through Bandit you should be set to have fun playing all the other games.
-
-
- <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-
+<br><br>
     
+
+        </p>
+            
    
 
     
@@ -413,16 +904,14 @@ Common commands that are relevant to security.
         
         
         
-        <div class = "first-exploit-episode-text-p2 page-text-f">
-            
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-            
+        <div class = "first-exploit-episode-text-p2 page-text-f mincho">
+           
             
 <h1>First Level - Bandit0</h1>
             
             Browsing the first level on the Over The Wire site, we are presented with the following level descriptor:<br><br>
 
-            <div class = "level-goal-hold lgl">
+            <div class = "level-goal-hold lgl inside-blue">
                 
                 
                 <b>Level Goal:</b><br><br>
@@ -435,59 +924,112 @@ The goal of this level is for you to log into the game using SSH. The host to wh
             
             <b>1.</b> Getting familiar with the command line.<br><br>
             
-            <b>2.</b> Initiating a SSH connection.
+            <b>2.</b> Initiating a SSH connection.<br><br>Let's start by making sure you are comfortable with the command line.
+
             
             
             
             
             
-             <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
             
         </div>
         
          <div class = "first-exploit-episode-text-p3 page-text-f">
-               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-            
-          <h3> Bash Shell - Terminal - Command Line</h3>
-            
              
-             In laymans terms, a <b>shell</b> means any program that is used to send commands to the operating system. A shell provides a means to interact with the kernel, and the 'lower levels' of the operating system. <br><br>
-            
-If a software engineer wants to write a programme that requires the ability to interact with the underlying operating system (that would be all of them), for example to read/write from a file, or to play sound through the speakers, that is where a <b>shell</b> comes in handy. The author does not need to write the code from scratch, in fact in pretty much all OS's this is prohibitted, as these functions need to be standardised. The limited functions of the underlying operating system are all accessible through <b>commands</b>, which can be sent from a shell.<br><br>
              
-           
-            The <b>Bash</b> Shell is a <b>Unix</b> shell and command language written by Brian Fox.
+               <div class="bbody mincho">
+                    
+                    
+                  <div class="slider2">
+                       <h1 class="mincho" style= "position: absolute; margin-top:-80px; color:white; margin-left:40px; font-weight:900;"><b>  Bash Shell - Terminal - Command Line</b></h1>
+<div class="slider-wrapper2 flex">
+	<div class="slide2 flex">
+		<div class="slide-image2 slider-link2 prev"><div class="overlay2"></div></div>
+		<div class="slide-content-l mincho">
+			<div class="slide-date2">What Is A Shell?</div>
+	
+			<div class="slide-text2">In laymans terms, a <b>shell</b> means any program that is used to send commands to the operating system. A shell provides a means to interact with the kernel, and the 'lower levels' of the operating system. <br><br> The <b>Bash</b> Shell is a <b>Unix</b> shell and command language written by Brian Fox.
              
              The <b>terminal</b> is the programme that provides the interface to the bash shell, allowing the user to interactively send commands directly to the OS.
              
              When we do this, we are interacting with the <b>Command Line</b>.<br><br>
-             
-If you want to understand how a general computer application functions, you are usually going to need to understand how it is interacting with the OS, that is the fundamental reason as to why it is important to have the necessary knowledge of UNIX commands, to know <span class = "italy">what</span> you can ask from your OS and <span class = "italy">how</span> you can ask it.<br><br>
+            
+</div>
+			
+		</div>	
+	</div>
+	<div class="slide2 flex">
+		<div class="slide-image2 slider-link2 next"><div class="overlay2"></div></div>
+		<div class="slide-content-l">
+			<div class="slide-date2">Are They Useful?</div>
+			
+			<div class="slide-text2"> If a software engineer wants to write a programme that requires the ability to interact with the underlying operating system (that would be all of them), for example to read/write from a file, or to play sound through the speakers, that is where a <b>shell</b> comes in handy. <br><br>The author does not need to write the code from scratch, in fact in pretty much all OS's this is prohibitted, as these functions need to be standardised. The limited functions of the underlying operating system are all accessible through <b>commands</b>, which can be sent from a shell. 
+            </div>
+		</div>	
+	</div>	
+	<div class="slide2 flex">
+		<div class="slide-image2 slider-link2 next">    <div class="overlay2"></div></div>
+		<div class="slide-content-l">
+			<div class="slide-date2">Do I Need To Know This Shit?</div>
+			<div class="slide-text2">If you want to understand how a general computer application functions, you are usually going to need to understand how it is interacting with the OS, that is the fundamental reason as to why it is important to have the necessary knowledge of UNIX commands, to know <span class = "italy">what</span> you can ask from your OS and <span class = "italy">how</span> you can ask it.<br><br>
 
 If you are here because you want to be a penetration tester - then it is absolutely 100% necessary to be comfortable with the command line of your chosen OS.<br><br>
 
-<b>Don't worry</b>, the whole point of the bandit game is to get you comfortable using the command line. Right now generally you can think of the terminal programme as an extremely 'raw' and stripped back interface into the heart of your computer.<br><br>
-
-              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+<b>Don't worry</b>, the whole point of the bandit game is to get you comfortable using the command line. Right now generally you can think of the terminal programme as an extremely 'raw' and stripped back interface into the heart of your computer.<br><br></div>
+		
+		</div>	
+	</div>
+		
+</div>
+<div class="arrows">
+<a href="#" title="Previous" class="arrow slider-link2 prev"></a>
+<a href="#" title="Next" class="arrow slider-link2 next"></a>
+</div>
+</div>
+                    
+                    </div>
              
+             
+             <br><br>
+                Your OS will have a native programme to initiate a shell, If you're on a windows system you want the Command Prompt programme, and on MacOS it's the application called Terminal.<br><br>
+             
+                Hopefully you have managed to open up your shell programme. From here, we can send commands, and also recieve output to the screen.<br><br>
+                    
+                  
+             
+             
+             
+             
+             
+             
+            
+         
+            
+             
+             <br><br>
+             
+           
+           
+             
+
+
             
         </div>
         
                 <div class = "first-exploit-episode-text-p4 page-text-f">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                    
            <h3>The <b>man</b> command and SSH - Secure Shells.</h3>
                     
-                     The man (short for manual) command can be used to gain information about other UNIX commands....<br><br>
+                     The first command we will utilise is the man command (short for manual). It can be used to gain information about other UNIX commands. The command <b>man [command-identifier]</b> essentially asks the terminal to tell you all about the command you specified.  <br><br>
                     
                     Since we will be playing the wargames remotely - much like in real life where the target computer is likely to be a remote system - we are going to need to have the ability to run a remote shell on the target computer (in this case the over the wire servers).<br><br>
 
                      To do this, we will be utilising the power of <b>SSH</b>.<br><br>
                     
-                    Try typing man ssh into your terminal, you will recieve a whole bunch of information about the SSH command. The display is in a pager format, hit b to go back, and hit q to return to the shell programme.<br><br>
+                    Try typing <b>man ssh</b> into your terminal, you will recieve a whole bunch of information about the <b>SSH comand</b>. The display is in a pager format, hit q to return to the shell programme.<br><br>
                   
 
-To summarise the... shell that is running on a remote computer, to which you maintain a connection using the secure socket layer. <br><br>
+To summarise, initiating an SSH connection provides you with a shell that is running on a remote computer, to which you maintain a connection using the secure socket layer. <br><br>
 
 The result of this is that every command we type into our terminal will be sent to the connected system. as if we were physically sitting at the machine and running a shell (a command line/terminal session) <br><br>
                     You can learn about SSH in more depth here.<br><br>
@@ -497,12 +1039,9 @@ The result of this is that every command we type into our terminal will be sent 
               
 
 
-  <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-
         </div>
         
          <div class = "first-exploit-episode-text-p4 page-text-f imppy">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                    
            <h3>Making the First SHH Connection As Bandit0</h3>
                     
@@ -518,7 +1057,7 @@ The result of this is that every command we type into our terminal will be sent 
                      
 
 </div>
-             <div style = "float: right; width:210px;"><br><br><br>
+             <div style = "float: right; width:230px; margin-right:-30px;"><br><br><br>
                  <b>Host:</b> bandit.labs.overthewire.org<br>
                         <b>Port:</b> 2220 <br>
 <b>Username:</b> bandit0<br>
@@ -528,13 +1067,12 @@ The result of this is that every command we type into our terminal will be sent 
                     
 
 <br><br>
-A whole bunch of text will be printed into the terminal, hopefully looking a little something like this.
-It's as simple as that, after providing the correct user name and password you are given access to a shell belonging to bandit0 on the bandit.labs.overthewire.org server. <br><br>And with that we have logged into level 0... on to level 1!
+             
+The command line graphic above should walk you through creating your first SSH request. <br>
+Once providing legitimate credentials we are given access to a shell belonging to bandit0 on the bandit.labs.overthewire.org server. <br><br>And with that we have logged into level 0... on to level 1!
 
 
 
-
-  <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
 
         </div>
         
@@ -544,52 +1082,83 @@ It's as simple as that, after providing the correct user name and password you a
         
         
                 <div class = "first-exploit-episode-text-p5 page-text-f imppy2">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-                    
+                <div class = "blue-cov2">    
+                  
+             
+                      
                          {% load static %}
                 <div class="iframe-dest2"> </div>
                     
-                    <h1>Defeating Level 0</h1>
+                    <h1 style = "margin-top:-20px;">Defeating Level 0</h1>
                     
                     
                     <div class = "level-goal-hold lgm">
 <h4 style = "text-align: center;">OTW Level Description</h4>
 
-The password for the next level is stored in a file called — located in the home directory
-     
-            </div><br><br>
-        
+The password for the next level is stored in a file called  readme located in the home directory
+                            <br><br>
 In order to beat level 0, we will be utilising two basic UNIX commands.<br><br>
                     
-                          
-<h3>the 'ls' command </h3>
-
-<span class = "italy">ls</span> - short for <b>list</b> is a pretty straightforward UNIX command that can be used to list the contents of the current working directory.
+     
+            </div>
+                        
+                        </div>
                     
-we'll cover some of the possible options later, but for now we will use the default configuration.
-
-
-<h3>the 'cat' command </h3>
                     
-It can be used to print the output of a file to the terminal:
+    <div class = "lefty-50"><h3>the 'ls' command </h3>
+
+<span class = "italy">ls</span> - short for <b>list</b>, is a pretty straightforward UNIX command that can be used to list the contents of the current working directory.<br><br>
+                    
+we'll cover some of the possible options later, but for now we will use the default configuration. By running the ls command we see there is a single visible file with the name <b>readme</b> </div>
+                    <div class = "righty-50"><h3>the 'cat' command </h3>
+
+the cat command can be used to print the output of a file to the terminal.
                   
-<br><br>As shown in the terminal window, after running these commands the string of letters: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b> was printed to the screen.
+<br><br><br>After running the <b>cat</b> command on the <b>readme</b> file, a string of letters is printed to the screen: <b>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</b><br>We've Found Our Password!</div>
+                          
 
-Quite simply, this is the password that we will need to log in to the next level.
+
+<div class= "cleario" ></div>
                     
-                    All the useful resources for each level are accessible via the resource icon. 
+                    <p style = "text-align: center;" class= "mincho">
+<br><br>                
+                    All the useful resources for each level are accessible via the resource icon. <br><br>
 
 
-                    
-                     <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-        
+                    </p>
+                     
         </div>
         
         
-          <div class = "first-exploit-episode-text-p5 page-text-f">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+          <div class = "first-exploit-episode-text-p5 page-text-f remrem">
+              
+             
+                <div class = "mid-blue-beam"> 
+                     
+               <h1>Logging in to Level 1</h1>
+                    
+                    
+             
+             We have successfully found the password for the bandit1 account on the over the wire server.
+             
+             All That's left to do in order to beat level 0 is log into bandit1 using SSH in the same way that we did for bandit0.<br><br>
         
+             You can exit this SSH session by running the <b>exit</b> command. We'll now initiate another SSH session using our newly found password, in the exact same manner as (before).<br><br>
+ <div class = "level-goal-hold lgl inside-blue">
+Host: bandit.labs.overthewire.org (c)<br>
+Port: 2220 (c)<br>
+Username: bandit1 (c)<br>
+     Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)</div><br><br>
+
+
+Once entering the correct password, you should recieve a text output similiarly to when we connected to bandit0.<br><br>
+
+And thats it! We have successfully logged into bandit1 and we can leave bandit0 in the past.<br><br>
+ <p style = "text-align: center; color:white;" class= "mincho">
+     Congratulations!</p></div>
         
+ 
+              <div class = "gr-blue-beam">       
   <h1>The General Idea</h1>
               
               So that was pretty simple, but the fundamental method of each level has become clear:<br><br>
@@ -598,54 +1167,34 @@ Quite simply, this is the password that we will need to log in to the next level
               
               Helpfully, the levels run logically in order and you generally have some idea of what type of vulnerability you are looking for. <br><br>
               
-              Later the games become much more complex, and you will have to eploit vulnerabilities of the current user account to 'pivot' and jump to the next account from within the server, rather than making repeated SSH connections as we do throughout Bandit, this is much more comparable to the real life scenarios.
+              Later the games become much more complex, and you will have to exploit vulnerabilities of the current user account to 'pivot' and jump to the next account from within the server, rather than making repeated SSH connections as we do throughout Bandit, this is much more comparable to the real life scenarios.
+              </div>
               
-              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-        
+            
+             
         </div>
         
         
-         <div class = "first-exploit-episode-text-p6 page-text-f">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-        
-        
-<h3>Logging in to Level 1</h3>
-             
-             So we have successfully found the password for the bandit1 account on the over the wire server.<br><br>
-             
-             All That's left to do in order to beat level 0 is log into bandit1 using SSH in the same way that we did for bandit0.<br><br>
-        
-             You can exit this SSH session by running the <b>exit</b> command.<br><br>
-
-We'll now initiate another SSH session using our newly found password, in the exact same manner as (before).<br><br>
- <div class = "level-goal-hold lgl">
-Host: bandit.labs.overthewire.org (c)<br>
-Port: 2220 (c)<br>
-Username: bandit1 (c)<br>
-     Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 (c)</div><br><br>
-
-note that the server and port have stayed the same, only the user and password that we will provide changes.<br><br>
-
-Once entering the correct password, you should recieve a text output similiarly to when we connected to bandit0.<br><br>
-
-And thats it! We have successfully logged into bandit1 and we can leave bandit0 in the past.<br><br>
-
-Congratulations!
-             
-              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-        
-        </div>
+     
         
           <div class = "first-exploit-episode-text-p5 page-text-f imppy3">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+             
+        <div class = "mid-blue-beam2"> 
         
-        <div class = "slide-title-class-b">
              {% load static %}
                 <div class="iframe-dest3"> </div>
-<h3>Finding the password for bandit2</h3>
+            
+            
+            
 
-    </div>
-                <p class = "text95">
+
+    
+              </div>
+              
+              <div class = "gr-blue-beam2">  
+                  
+                  <h3>Finding the password for bandit2</h3>
+                <p class = "text95 mincho">
               
                Again, we'll start by running <b>ls</b> to exanmine the contents of the directory, we see that the directory contains a file called: <span class = "biggerdash" ><b>-</b></span> 
               
@@ -655,36 +1204,35 @@ Congratulations!
               
               Part of our command contains the component '-p 2220', here we were supplying 2220 as the value of the port option for the ssh command.
               
-              Since '-' is interpretted differently than other characters, This leaves us with a problem. In the previous example we used 'cat (filename)' in order to print the contents of the file. if we try to input '-' as the our filename, the command line interprets this as us telling it we will supply an option to the cat command, which we never do.<br><br>
+              In the previous example we used 'cat (filename)' in order to print the contents of the file. If we try to input '-' as the our filename, the command line interprets this as us telling it we will supply an option to the cat command, which we never do.<br><br>
               
-              If you have a background in coding, you may already be familiar with the concept of special characters. Remember that bash is not just a 'brand' of shell, but also a language in itself, logically it has a whole bunch of special characters that are reserved to have specific role. You can learn more about special characters in UNIX here. <br><br>
+              If you have a background in coding, you may already be familiar with the concept of special characters. Remember that bash is not just a 'brand' of shell, but also a language in itself, logically it has a whole bunch of special characters that are reserved to have a specific role. You can learn more about special characters in UNIX here. <br><br>
               
               Luckily the fact that people would inevitably use the special characters that are set aside in the bash language to name their own crap didn't make it past Brian and the other developers, and the language provides a simple work around.<br><br>
                     
              Providing ./ lets the command you are providing the exact location of an executable? file.
                
-              </p>
+                  </p></div>
               
-               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-      
+              
         </div>
         
          <div class = "first-exploit-episode-text-p5 page-text-f imppy4">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+             
+             <div class = "mid-blue-beam2"> {% load static %}
+                <div class="iframe-dest4"> </div> </div>
         
-        
- <div class = "slide-title-class-b">
+ <div class = "slide-title-class-b mincho">
      
-         {% load static %}
-                <div class="iframe-dest4"> </div>
+        
               
-<h3>Bandit 2 -> 3</h3>
+
 
     </div>
-              
-              you guessed it, we're going to start by running <b>ls</b>. <br><br>
-              
-              This directory contains a file called <b>spaces in this file name</b>.<br><br>
+               <div class = "gr-blue-beam"> 
+                   
+                   <h1>Bandit 2 -> 3</h1>
+              you guessed it, we're going to start by running <b>ls</b>.<br><br> This directory contains a file called <b>spaces in this file name</b>.<br><br>
              
               In the terminal, a space is used to seperate arguments, so the sentance 'spaces in this file name' is interpretted as 5 seperate and distinct arguments.<br><br>
              
@@ -693,72 +1241,70 @@ Congratulations!
               Pretty simple again, and clearly the main thing to take away is the knowledge that you can use \ to escape spaces in the command line.<br><br>
              
              This time, the password we recieved was: <b>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</b>
-             
+             </div>
               
               
            
-                <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-      
+               
         </div>
         
-         <div class = "first-exploit-episode-text-p5 page-text-f imppy6">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-        
-        
- <div class = "slide-title-class-b">
-     
+         <div class = "first-exploit-episode-text-p5 page-text-f imppy5">
+             
+             <div class = "mid-blue-beam">
          {% load static %}
-                <div class="iframe-dest5"> </div>
+                <div class="iframe-dest5"> </div> </div>
+            <div class = "gr-blue-beamB"><div class = "slide-title-class-b">
+     
               
-<h3>Bandit 3 -> 4 </h3>
+<h1>Bandit 3 -> 4 </h1>
 
     </div>
               <p class = "text955">
-             Hopefully you're getting the hang of this and you've already typed <b>ls</b> into your terminal like a pro. <br><br>
-              
-             This directory contains another directory, it's not what we're used to but don't worry we will power through.<br><br>
+             Hopefully you're getting the hang of this and you've already typed <b>ls</b> into your terminal like a pro. This directory contains another directory, it's not what we're used to but don't worry we will power through.<br><br>
              
              Let's start by navigating into the 'inhere' directory, we do this by using the <b>cd</b> command, a very commonly used UNIX command that simply means 'change directory'.<br><br>
              Earlier I said we would explore the options of the ls command in more detail and I'm a man of my word. 
              
              We'll start by covering how the ls command handles hidden files. 
              
-             <br><br>In UNIX, a hidden file is any file that begins with a dot (.) By convention, the ls command does not list <b>hidden files</b>. <br><br>
+             <br><br>In UNIX, a hidden file is any file that begins with a dot (.) By convention, the ls command does <b>not</b> list hidden files. <br><br>
              
-             providing the letter <b>a</b> as an option to the ls command will signify that you want to list the hidden directories.,br>,br.
+             Providing the letter <b>a</b> as an option to the ls command will signify that you want to list the hidden directories.<br><br>
              
              The <b>l</b> option is used to produce output in a UNIX long represention, in simpler terms we won't just get the name of the file but also be shown the permissions among other details.<br><br>
              
-             The command that we are going to run is <b>ls -la</b>   (most terminals accept EITHER ls -la OR ls -al).
+             The command that we are going to run is <b>ls -la</b>   (most terminals accept EITHER ls -la OR ls -al).<br><br>
         
-             If you want to learn more about the ls function, <a href = "http://https://opensource.com/article/18/10/ls-command">this</a> is a good resource<br><br>
+           
                   
-             The file '.hidden' is very intriguing, and infact when we print the contents of the file we are presented with the SSH password we came for.
+             The file '.hidden' is very intriguing, and infact when we print the contents of the file we are presented with the SSH password we came for!<br><br>
+                  
+                    If you want to learn more about the ls function, <a href = "http://https://opensource.com/article/18/10/ls-command">this</a> is a good resource
                   
              
              
            
-              </p>
+              </p></div>
+        
+ 
            
-              
-               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-      
+           
         </div>
         
           <div class = "first-exploit-episode-text-p5 page-text-f imppy5">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-        
-        
+              
+               <div class = "mid-blue-beam">
+         {% load static %}
+                <div class="iframe-dest6"> </div> </div>
+             <div class = "gr-blue-beamB">
  <div class = "slide-title-class-b">
      
-         {% load static %}
-                <div class="iframe-dest6"> </div>
+     
               
-<h3>Bandit 4 ->5 </h3>
+<h1>Bandit 4 ->5 </h1>
      
-     We could just dive in like animals and start printing every file but we are better than that.<br><br>
-     
-     Instead we are going to use a nicer solution that would also scale well if there were many more files<br><br>
+        
+     We could just dive in like animals and start printing every file but we are better than that. Instead we are going to use a nicer solution that would also scale well if there were many more files<br><br>
      
      We're going to be utilising another new command, the <b>du</b> command.<br><br>
      
@@ -768,50 +1314,7 @@ Congratulations!
      
      To do this we type: du -h | file ./*<br><br>
      
-     remember from bandit1 that ./ means 'run from this directory', and adding the * means we interate through all files.<br><br>
-     
-     Once running the command, we see that only one file containing ACSII text has been identified.<br><br>
-     
-     The file also contains another annoying dash, so we are going to have to use './' to provide the exact location of the file to the cat command before we print it.<br><br>
-     
-     printing the contents of the file, we see it contains another '' SSH token: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-     
-
-
-    </div>
-              <p class = "text95">
-            
-              </p>
-           
-              
-               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
-      
-        </div>
-        
-         <div class = "first-exploit-episode-text-p5 page-text-f imppy5">
-              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
-        
-        
- <div class = "slide-title-class-b">
-     
-         {% load static %}
-                <div class="iframe-dest6"> </div>
-              
-<h3>Bandit 5 ->6 </h3>
-     
-     We could just dive in like animals and start printing every file but we are better than that.<br><br>
-     
-     Instead we are going to use a nicer solution that would also scale well if there were many more files<br><br>
-     
-     We're going to be utilising another new command, the <b>du</b> command.<br><br>
-     
-     As with the other commands you learn, it's useful to type man du to get a rundown on what the command is all about.<br><br>
-     
-     du (disk usage) can be used to check the information of disk usage of files and directories on a machine, we are particularliy interested in du's ability to differentiate 'data' and human readable ASCII text.<br><br>
-     
-     To do this we type: du -h | file ./*<br><br>
-     
-     remember from bandit1 that ./ means 'run from this directory', and adding the * means we interate through all files.<br><br>
+     remember from bandit1 that ./ means 'run from this directory', and adding the * means we iterate through all files.<br><br>
      
      Once running the command, we see that only one file containing ACSII text has been identified.<br><br>
      
@@ -820,11 +1323,86 @@ Congratulations!
      printing the contents of the file, we see it contains another '' SSH token:
      
 
-
-    </div>
-              <p class = "text95">
+                 </div></div>
             
-              </p>
+           
+              
+        </div>
+        
+         <div class = "first-exploit-episode-text-p5 page-text-f imppy6">
+             
+             
+                  <div class = "mid-blue-beam">
+         {% load static %}
+                <div class="iframe-dest7"> </div> </div>
+             <div class = "gr-blue-beamB">
+ <div class = "slide-title-class-b">
+     
+     
+              
+<h1>Bandit 5 ->6  </h1>
+     
+        
+     
+     
+     The find command is a pretty complex function, it's worth looking into in more depth when you have the time.<br><br>
+     
+     Here we are using some useful options you might find yourself using regularly, it is benificial to try to remember them, but many 'cheat sheets' are available such as <a href="#">this</a><br><br>
+     
+     find an item whose type is file, is readable, non executable and has a size of 1033 bytes.
+     
+     find . -type f -readable ! -executable -size 1033c<br><br>
+     
+     we have supplied the -type option, with a value of f (torepresent file), following that we apply the -readable flag.<br><br>
+     
+     ! is used to mean <b>not</b>, so when we sebsequently supply the -executable option we are telling the command line that we don't want to include results that are executable.<br><br> 
+     
+     Next we supply the size option with a value of 1033c (1033 bytes).<br><br>
+     
+     Again the OS does all the hard work for us, a single result is printed to the screen. examiningthe file we see it does in fact contain the elusive flag.<br><br>
+     
+     
+
+                 </div></div>
+             
+        
+
+           
+               
+        </div>
+        
+          <div class = "first-exploit-episode-text-p5 page-text-f imppy7">
+              
+              
+                  <div class = "mid-blue-beam">
+         {% load static %}
+                <div class="iframe-dest7"> </div> </div>
+             <div class = "gr-blue-beamB">
+ <div class = "slide-title-class-b">
+     
+     
+              
+<h1>Bandit 6 -> 7 </h1>
+     
+     find / -user bandit7 -group bandit6 -size 33c
+     
+     The file containing our password is one of the many outputted files, youmay be able to see it, since its the only line that does not contain an error message, we don't have permission to read any of the other files.
+     
+     A quick fix is to append <b>2>/dev/null</b> to the end of our command.
+     
+      <b>2</b> is the standard identifier for error output.<br><br>
+     
+     On a linux system, dev/null is considered as a black hole or a void, anything placed in there is considered lost forever.<br><br>
+     
+     Once the annoying error messages havebeen sent to the abyss, we can see the name of the file we were looking for much more conveniently.
+    
+  
+     
+     
+
+                 </div></div>
+            
+        
            
               
         </div>
@@ -839,13 +1417,34 @@ Congratulations!
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
     
+     var not_run = true;
+    var not_run2 = true;
+    var not_run3 = true;
+      var not_run4 = true;
+     var not_run5 = true;
+     var not_run6 = true;
+    var not_run7 = true;
+    
+    
+    function showArr(){
+        $(".last-page-arrow").show();
+        $(".next-page-arrow").show();
+    }
+    
+    function hideArr(){
+        $(".last-page-arrow").hide();
+        $(".next-page-arrow").hide();
+    }
+    
+    hideArr();
+    
     pageList = document.getElementsByClassName("page-text-i");
     elipsesList = document.getElementsByClassName("ep-slipse");
     elipIndex = 0;
     
     var contentsFull = true;
     
-    
+  
     
     for(i=1;i<pageList.length;i++){
         $(pageList[i]).hide();
@@ -863,6 +1462,14 @@ Congratulations!
         
     });
     
+      $(".next-page-arrow2").on("click",function(){
+        
+        goToNextPage(ep1Index);
+       
+        
+    });
+    
+    
       $(".last-page-arrow").on("click",function(){
         
         goToLastPage(ep1Index);
@@ -870,30 +1477,135 @@ Congratulations!
         
     });
     
-    function goToNextPage(){
-        
+    function elipseForwards(){
          $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
-        
         elipIndex++;
         $(elipsesList[elipIndex]).addClass("ep-slipse-active");
         
+    }
+    
+    
+    function flickPageForwards(){
          $(pageList[currentIndex[0]]).hide();
-        
         currentIndex[0]++;
-        $(pageList[currentIndex[0]]).show();
+         $(pageList[currentIndex[0]]).show();
+    }
+    
+    function loadPageSpecifics(){
+           switch(currentIndex[0])
+    {
+     
+    case 1:
+            $(".next-page-arrow").css("color","#2E2B54");
+    showArr();
+      break;
+    case 2:
+      $(".next-page-arrow").css("color","#2E2B54");
+      break;
+    case 3:
+        $(".next-page-arrow").css("color","#2E2B54");
+      break;
+    case 4:
+        $(".next-page-arrow").css("color","#2E2B54");
+            if(not_run){
+          not_run = false;
+           $(".iframe-dest").html(" <iframe src = '/sshiframe' class = 'ssh-frame'></iframe>");
+          }
+      break;
+    case 5:
+        $(".next-page-arrow").css("color","#2E2B54");
+        if(not_run2){
+          not_run2 = false;
+           $(".iframe-dest2").html(" <iframe src = '/b0frame' class = 'ssh-frame-s2'></iframe>");
+          }
+      break;
+    case 6:
+        $(".next-page-arrow").css("color","white");
+             $(".episode-elipses-holer").hide();
+
+      break;
+    case 7:
+          $(".next-page-arrow").css("color","white");
+        if(not_run3){
+          not_run3 = false;
+           $(".iframe-dest3").html(" <iframe src = '/b1frame' class = 'ssh-frame-s3'></iframe>");
+          }
+      break;
+    case 8:
+         $(".next-page-arrow").css("color","white");
+            if(not_run4){
+          not_run4 = false;
+           $(".iframe-dest4").html(" <iframe src = '/b2frame' class = 'ssh-frame-s3'></iframe>");
+          }
+      break;
+    case 9:
+        $(".next-page-arrow").css("color","white");
+             
+             if(not_run5){
+          not_run5 = false;
+           $(".iframe-dest5").html(" <iframe src = '/b3frame' class = 'ssh-frame-m'></iframe>");
+          }
+      break;
+    case 10:
+          
+ $(".next-page-arrow").css("color","white");
+             
+            if(not_run6){
+          not_run6 = false;
+           $(".iframe-dest6").html(" <iframe src = '/b4frame' class = 'ssh-frame-m'></iframe>");
+          }
+      break;
+    case 11:
+          
+ $(".next-page-arrow").css("color","white");
+             
+            if(not_run7){
+          not_run7 = false;
+           $(".iframe-dest7").html(" <iframe src = '/b5frame' class = 'ssh-frame-m'></iframe>");
+          }
+      break;
+    case 12:
+          
+ $(".next-page-arrow").css("color","white");
+             
+            if(not_run7){
+          not_run7 = false;
+           $(".iframe-dest7").html(" <iframe src = '/b5frame' class = 'ssh-frame-m'></iframe>");
+          }
+      break;
+           
+    
+    default:
+        $(".next-page-arrow").css("color","#2E2B54");
+    }
+    }
+    
+    function goToNextPage(){
+        
+        
+        flickPageForwards();
+        loadPageSpecifics();
+        elipseForwards();
         
     }
     
      function goToLastPage(){
          $(elipsesList[elipIndex]).removeClass("ep-slipse-active");
         
-        elipIndex--;
+         if(elipIndex>0){
+          elipIndex--;
+           }
+        
         $(elipsesList[elipIndex]).addClass("ep-slipse-active");
         
          $(pageList[currentIndex[0]]).hide();
+        if(currentIndex>0){
+           currentIndex[0]--;
+           }
         
-        currentIndex[0]--;
         $(pageList[currentIndex[0]]).show();
+         
+          loadPageSpecifics();
          
     }
    
@@ -913,7 +1625,7 @@ Congratulations!
         
         
         if($(this).attr('id') == 'ublog-first'){
-           
+             $(".next-page-arrow").show();
              makeActiveText($(".first-exploit-episode-text"));
               pageList = document.getElementsByClassName("page-text-f");
             currentIndex[0] = ep1Index;
@@ -945,6 +1657,47 @@ Congratulations!
     });
     
     
+    function changeToLevel(levelName){
+        showArr();
+        $(".contents-active").removeClass("contents-active");
+        $(".contents-active-text").removeClass("contents-active-text");
+    $(this).addClass('contents-active');
+        $(this).find("h4").addClass('contents-active-text');
+        
+        
+        if(levelName == 'bandit'){
+           
+             makeActiveText($(".first-exploit-episode-text"));
+              pageList = document.getElementsByClassName("page-text-f");
+            currentIndex[0] = ep1Index;
+             for(i=0;i<pageList.length;i++){
+        $(pageList[i]).hide();
+                 
+    }
+             $(pageList[ep1Index]).show();
+           $(".episode-elipses-holer").css("display","block"); 
+            
+        }
+        
+        
+        
+        
+       
+    }
+    
+   
+    
+    
+    
+    
+   
+    
+    
+    $(".bandit-buy").on("click",function(){
+        changeToLevel("bandit");
+    });
+    
+    
     $("#open-blog-sign-up").on("click",function(){
         var url = "/ublog_vuln_1_link";
  window.open(url, '_blank');
@@ -957,56 +1710,8 @@ Congratulations!
         make_active.addClass("text-active");
         
     }
-    var not_run = true;
-    var not_run2 = true;
-    var not_run3 = true;
-      var not_run4 = true;
-     var not_run5 = true;
-     var not_run6 = true;
-    
-    $(".imppy").on("mouseover",function(){
-       if(not_run){
-          not_run = false;
-           $(".iframe-dest").html(" <iframe src = '/sshiframe' class = 'ssh-frame'></iframe>");
-          }
-    });
-    
-     $(".imppy2").on("mouseover",function(){
-       if(not_run2){
-          not_run2 = false;
-           $(".iframe-dest2").html(" <iframe src = '/b0frame' class = 'ssh-frame-s'></iframe>");
-          }
-    });
-    
-     $(".imppy3").on("mouseover",function(){
-       if(not_run3){
-          not_run3 = false;
-           $(".iframe-dest3").html(" <iframe src = '/b1frame' class = 'ssh-frame-s'></iframe>");
-          }
-    });
-    
-     $(".imppy4").on("mouseover",function(){
-       if(not_run4){
-          not_run4 = false;
-           $(".iframe-dest4").html(" <iframe src = '/b2frame' class = 'ssh-frame-s'></iframe>");
-          }
-    });
-    
-    
-     $(".imppy5").on("mouseover",function(){
-       if(not_run5){
-          not_run5 = false;
-           $(".iframe-dest5").html(" <iframe src = '/b3frame' class = 'ssh-frame-m'></iframe>");
-          }
-    });
-    
-     $(".imppy6").on("mouseover",function(){
-       if(not_run6){
-          not_run6 = false;
-           $(".iframe-dest6").html(" <iframe src = '/b4frame' class = 'ssh-frame-m'></iframe>");
-          }
-    });
-    
+   
+
     
     /*
     The first line you need to type into your terminal is: <br><br>
@@ -1038,6 +1743,128 @@ The place that your commands are sent to The application that you are controllin
     
     
 </script>
+
+
+
+
+
+
+
+
+    <script  >
+    
+    ( function($) {
+  
+  $(document).ready(function() {
+    
+    var s           = $('.slider'),
+        sWrapper    = s.find('.slider-wrapper'),
+        sItem       = s.find('.slide'),
+        btn         = s.find('.slider-link'),
+        sWidth      = sItem.width(),
+        sCount      = sItem.length,
+        slide_date  = s.find('.slide-date'),
+        slide_title = s.find('.slide-title'),
+        slide_text  = s.find('.slide-text'),
+        slide_more  = s.find('.slide-more'),
+        slide_image = s.find('.slide-image img'),
+        sTotalWidth = sCount * sWidth;
+
+    sWrapper.css('width', sTotalWidth);
+    sWrapper.css('width', sTotalWidth);
+    
+    var clickCount  = 0;
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+
+      if( $(this).hasClass('next') ) {
+        
+        ( clickCount < ( sCount - 1 ) ) ? clickCount++ : clickCount = 0;
+      } else if ( $(this).hasClass('prev') ) {
+        
+        ( clickCount > 0 ) ? clickCount-- : ( clickCount = sCount - 1 );
+      }
+      TweenMax.to(sWrapper, 0.4, {x: '-' + ( sWidth * clickCount ) })
+
+
+      //CONTENT ANIMATIONS
+
+      var fromProperties = {autoAlpha:0, x:'-50', y:'-10'};
+      var toProperties = {autoAlpha:0.8, x:'0', y:'0'};
+
+      TweenLite.fromTo(slide_image, 1, {autoAlpha:0, y:'40'}, {autoAlpha:1, y:'0'});
+      TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+      TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+      TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+      TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+
+    });
+          
+  });
+})(jQuery);
+
+$('.overlay').addClass('overlay-blue');
+        
+            ( function($) {
+  
+  $(document).ready(function() {
+    
+    let s           = $('.slider2'),
+        sWrapper    = s.find('.slider-wrapper2'),
+        sItem       = s.find('.slide2'),
+        btn         = s.find('.slider-link2'),
+        sWidth      = 950;
+        sCount2      = sItem.length,
+        slide_date  = s.find('.slide-date2'),
+        slide_title = s.find('.slide-title2'),
+        slide_text  = s.find('.slide-text2'),
+        slide_more  = s.find('.slide-more2'),
+        slide_image = s.find('.slide-image2 img'),
+        sTotalWidth = sCount2 * sWidth;
+     
+       
+    sWrapper.css('width', sTotalWidth);
+    sWrapper.css('width', sTotalWidth);
+    
+    let clickCount2  = 0;
+    
+    $(".slider-link2").on('click', function(e) {
+      e.preventDefault();
+
+      if( $(this).hasClass('next') ) {
+        
+        ( clickCount2 < ( sCount2 - 1 ) ) ? clickCount2++ : clickCount2 = 0;
+      } else if ( $(this).hasClass('prev') ) {
+        
+        ( clickCount2 > 0 ) ? clickCount2-- : ( clickCount2 = sCount2 - 1 );
+      }
+      TweenMax.to(sWrapper, 0.4, {x: '-' + ( sWidth * clickCount2 ) })
+
+
+      //CONTENT ANIMATIONS
+
+      let fromProperties = {autoAlpha:0, x:'-50', y:'-10'};
+      let toProperties = {autoAlpha:0.8, x:'0', y:'0'};
+
+      TweenLite.fromTo(slide_image, 1, {autoAlpha:0, y:'40'}, {autoAlpha:1, y:'0'});
+      TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+      TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+      TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+      TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+
+    });
+          
+  });
+                
+                
+})(jQuery);
+
+$('.overlay2').addClass('overlay-blue2');
+        
+    </script>
+
+
 
 {% endblock %}
 

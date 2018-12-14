@@ -428,34 +428,23 @@
   },
   { 
     action: 'type',
-    strings: ["ls^400"],
-    output: '<span class="gray"><br>inhere<br></span>&nbsp;',
-    postDelay: 1000
+    strings: ["cd inhere/ ; ls -la^400"],
+    output: '<span class="gray tr955"><br>total 88<br>[...]<br>drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere00<br>drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere01<br>[...]<br>drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere09<br><br></span>',
+    
   },
   { 
     action: 'type',
     //clear: true,
-    strings: ['cd inhere/^400'],
-    output: '<span class="gray tr955"></span>',
-  },
-  { 
-    action: 'type',
-    //clear: true,
-    strings: ['ls/^400'],
-    output: '<span class="gray tr955">-file00  -file02  -file04  -file06  -file08<br>-file01  -file03  -file05  -file07  -file09</span>',
-  },
-  { 
-    action: 'type',
-    //clear: true,
-    strings: ['du -h | file ./*/^400'],
-    output: '<span class="gray tr955"><br>./-file01: data<br>[...]<br>./-file07: ASCII text<br>./-file08: data<br>./-file09: data<br><br></span>',
+    strings: ['find . -type f -readable ! -executable -size 1033c/^400'],
+    output: '<span class="gray tr955"><br>./maybehere07/.file2<br><br></span>',
+    
 
   },
    { 
     action: 'type',
     //clear: true,
-    strings: ['cat ./-file07^400'],
-    output: '<span class="gray tr955"><br>koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br><br></span>',
+    strings: ['cat ./maybehere07/.file2^400'],
+    output: '<span class="gray tr955"><br>XjZPULLxYr17uwoI01bNLQbtFemEgo7<br><br></span>',
   },
   { 
     action: 'type',

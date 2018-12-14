@@ -3,10 +3,59 @@
 
 <style>
     
+    body{
+        
+         font-family: "jura",sans-serif;
+    }
+    p{
+         color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+    
+    h1{
+        color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+     h2{
+        color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+     h3{
+        color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+    
+     h4{
+        color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+    
+     h5{
+        color:#2E2B54;
+         font-family: "jura",sans-serif;
+    }
+    
+    
+    .jura{
+         font-family: "jura",sans-serif;
+    }
     .content-viewer{
         float:left;
         width:30%;
+        margin-left:-52px;
+        margin-top:-70px;
+        height:635px;
         
+    }
+    
+    .content-viewer-a{
+        background-color: white;
+        float:left;
+        width:100%;
+        margin-left:-21px;
+        padding-left:10px;
+        border-radius:8px;
+        height:640px;
     }
     
      .episode-text{
@@ -14,12 +63,13 @@
         width:70%;
          margin-top:-30px;
          max-height:650px;
+          color:#2E2B54;
     }
     
     .episode-contents-item{
         height:75px;
         width:69%;
-
+ color:#2E2B54;
         border-style: solid;
         border-width: 0 0 2px 0;
         border-color:black;
@@ -72,7 +122,7 @@
     }
     
      .contents-active-text{
-       
+        color:#2E2B54;
         font-size:130%;
         font-weight: 800;
          text-align: left;
@@ -161,7 +211,7 @@
     
     
     .first-exploit-episode-text{
-        
+        color:#2E2B54;
     }
     
     .NY{
@@ -173,13 +223,18 @@
         max-height:650px;
         overflow-y: scroll;
     }
+    
+    
+    
+ 
+    
 
 </style>
 
 
 <div class = "content-viewer">
     
-    
+    <div class="content-viewer-a">
     <div class = "episode-contents-item contents-active" id = "ublog-intro"><h4 class = "contents-active-text">1. Introduction</h4></div>
      <div class = "episode-contents-item" id = "ublog-overview"><h4>2. Ublog Overview</h4></div>
     <div class = "episode-contents-item" id = "ublog-first"><h4>3. First Exploit.</h4><h6>Exploiting Authentication Control Logic</h6></div>
@@ -187,20 +242,20 @@
     <div class = "episode-contents-item NY"><h4>5. Cross-Site Scripting</h4><h6>Exploiting Access Control Logic</h6></div>
     <div class = "episode-contents-item NY"><h4>6. XS Request Forgery</h4><h6>Exploiting Access Control Logic</h6></div>
     <div class = "episode-contents-item NY"><h4>7. Parameter Pollution</h4><h6>tet text tet</h6></div>
-
+</div>
 
 
 </div>
 
 <div class = "episode-text">
     
-       <div class = "ublog-intro-text text-active">
+       <div class = "ublog-intro-text text-active righter-page">
 
-  <h3>Welcome To The Ublog Website Penetration Testing Tutorials</h3>
+  <h3 class ="jura"  style = "font-size:200%; font-weight:900; text-align: center;">Welcome To The Ublog <br>Website Penetration Testing Tutorials</h3>
            
-            <div class = "ublog-intro-text-disclaimer page-text-i">
-                 The Web Application Penetration Testing series teaches you how to learn the fundamentals of white hat web application hacking. The tutorials cover 3 main aspects: setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
-              
+            <div class = "ublog-intro-text-disclaimer page-text-i jura" style="font-size: 110%;"><p><br><br>
+                 The Web Application Penetration Testing series teaches you how to learn the fundamentals of white hat web application hacking. <br><br>The tutorials cover 3 main aspects: setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.<br><br>Theoretical Exploits are demonstrated on the Ublog Web Application, a Blogging Platform that is littered with common web vulnerabilities.
+              </p>
            </div>
             <div class = "ublog-intro-text-disclaimer page-text-i">
 
@@ -235,7 +290,7 @@ If you want some sites to practice scripting etc:
     
     </div>
     
-    <div class = "ublog-overview-text">
+    <div class = "ublog-overview-text jura">
             <h2>Ublog</h2>
             
             <h4>What Is The Purpose of The Ublog?</h4>
@@ -263,7 +318,7 @@ Awards are given depending on how many followers a user has across their social 
         
     </div>
     
-    <div class = "first-exploit-episode-text">
+    <div class = "first-exploit-episode-text jura">
          
         <div class = "first-exploit-episode-text-p1 page-text-f">
 <div class = "slide-title-class">
@@ -289,10 +344,6 @@ Hopefully you’ve progressed nicely to the second stage in creating a UBlog Blo
 
 This is where we are expected to link to an account with 10 000 followers.<br><br>
 
-What do we do? We could mascarade as a Vegan lifestyle blogger and go for the 10 000 followers in an attempt to infiltrate the application? <br><br>
-
-Okay, this is getting out of hand quickly, there MUST be a better way.
-    
     <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
     
 

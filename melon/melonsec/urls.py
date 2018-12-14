@@ -35,6 +35,10 @@ urlpatterns = [
     path('b2frame/', views.b2frame, name='porthome'),
     path('b3frame/', views.b3frame, name='porthome'),
     path('b4frame/', views.b4frame, name='porthome'),
+    path('b5frame/', views.b5frame, name='porthome'),
+    path('screencreep/', views.creep, name='porthome'),
+    path('landscape/', views.landscape, name='porthome'),
+
 
 
 

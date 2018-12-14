@@ -1,6 +1,9 @@
 {% extends 'melon-slider.html' %}
 
 
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+
+
 {% block slide_1_block %}
 
 <style>
@@ -19,6 +22,14 @@
     
     .smill{
         font-size:90%;
+    }
+    
+    .mincho{
+        font-family: "jura",sans-serif;
+    }
+    
+    p{
+        font-family: "jura",sans-serif;
     }
     
    
@@ -96,11 +107,43 @@
         
         }
     
+    .ani-framb{
+            width:600px;
+        height:420px;
+      
+        overflow: hidden;
+        border:none;
+        margin-top:-10px;
+        
+        }
+    
      .content-holding{
         max-height:400px;
         overflow-y: scroll;
         background-color: blue;
     }
+    
+    
+    
+    .item-bg{
+        background-color: #F5F6F8;
+    }
+    
+    
+    .bld{
+        font-weight: 900;
+    }
+    
+     .bld1{
+        font-weight: 900;
+    }
+    
+    .news-date__title{
+        font-weight: 900;
+    }
+    
+    
+   
     
    
 
@@ -108,17 +151,17 @@
 </style>
 
 
-<div class="news-slider__item swiper-slide slide-1">
+<div class="news-slider__item swiper-slide slide-1 mincho">
 
 <a href="#" class="news__item" id = "abcdffu">
           <div class="news-date">
-            <span class="news-date__title">Welcome To MelonSec</span>
+            <span class="news-date__title mincho bld1">Welcome To MelonSec</span>
                
         
           </div>
           
 
-          <p class = "justy">
+          <p class = "justy mincho">
            
 
 
@@ -149,7 +192,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_3_block %}
 
- <div class="news-slider__item swiper-slide web-pen-slide">
+ <div class="news-slider__item swiper-slide web-pen-slide mincho">
 
 <a href="/tutorials/ublog" class="news__item" id = "abcdffu">
     
@@ -159,8 +202,8 @@ Home to a modest array of casual tutorials, official projects, belated news and 
         
         
          <div class="news-date fixed-wid-1">
-            <span class="news-date__title">Web Penetration Testing </span>
-               <span class="news-date__txt">Tutorials</span>
+            <span class="news-date__title mincho bld1">Web Penetration Testing </span>
+               <span class="news-date__txt mincho">Tutorials</span>
         
           </div>
         
@@ -181,7 +224,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
     
     
    
-          <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+          <h3 class = "righty fixed-wid right-title bld"> About The Course </h3>
 
           <p   class = "justy news__txt righty fixed-wid">
             The Web Application Penetration Testing series teaches you how to learn the fundamentals of *white hat* web application hacking. The tutorials cover setting up your penetration testing environmnet, how to find common web application vulnerabilities, and how to disclose them in a way that benefits you the most.
@@ -205,12 +248,12 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_3_block_gone %}
 
-<div class="news-slider__item swiper-slide tutorials-slide">
+<div class="news-slider__item swiper-slide tutorials-slide mincho">
 
 <a href="/tutorials" class="news__item" id = "abcdffu">
           <div class="news-date">
-            <span class="news-date__title">Tutorials</span>
-               <span class="news-date__txt">Get up to date with what's going down in the cyber community</span>
+            <span class="news-date__title mincho">Tutorials</span>
+               <span class="news-date__txt mincho">Get up to date with what's going down in the cyber community</span>
         
           </div>
           
@@ -231,7 +274,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 {% block slide_2_block %}
 
 
-      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide mincho">
 
 
 <a href="/overthewire" class="news__item" id = "abcdff">
@@ -240,8 +283,8 @@ Home to a modest array of casual tutorials, official projects, belated news and 
     <div class = "lefty">
         
          <div class="news-date fixed-wid-1">
-            <span class="news-date__title">Over The Wire Walkthrough</span>
-            <span class="news-date__txt"> Solutions to my favourite online wargames. </span>
+            <span class="news-date__title mincho">Over The Wire Walkthrough</span>
+            <span class="news-date__txt mincho"> Solutions to my favourite online wargames. </span>
           </div>
         
        
@@ -265,11 +308,14 @@ Home to a modest array of casual tutorials, official projects, belated news and 
    
         
 
-            <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+            <h3 class = "righty fixed-wid right-title bld"> About The Course </h3>
 
           <p class = "news__txt righty fixed-wid justy">
-            Over the wire hosts a range of.. When I did these puzzles the first time around I was pretty unimpressed with, with vast, and not many for the harder levels. Most just showed solutions and ABC, But it's really important to understand what you are doing if you are playing the games for the purpose of learning.</p>
-    
+           Over The Wire’ is my favourite brand of online capture-the-flag style wargames, the flags are represented by a password stored somewhere on the current level that can be used to log into the next level.<br><br>
+
+Currently over the wire offers 12 online games, and 4 downloadable games, more than enough to keep a you entertained for a while.<br><br>
+
+The games cover a range topics, from simple things like navigating directories and files on a remote server, to exploiting common web vulnerabilities, Buffer Overflows and much much more.
      <div class ="cleario"></div>
 
          
@@ -282,7 +328,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 {% block slide_10_block %}
 
 
-      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide mincho">
 
 
 <a href="/unavailable/home" class="news__item" id = "abcdff">
@@ -333,7 +379,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_5_block %}
 
- <div class="news-slider__item swiper-slide">
+ <div class="news-slider__item swiper-slide mincho">
 
 <a href="/unavailable/home" class="news__item" id = "abcdffu">
           <div class="news-date">
@@ -359,7 +405,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_4_block %}
 
- <div class="news-slider__item swiper-slide">
+ <div class="news-slider__item swiper-slide mincho">
 
 <a href="/unavailable/home" class="news__item" id = "abcdffu">
           <div class="news-date">
@@ -386,7 +432,7 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_7_block %}
 
- <div class="news-slider__item swiper-slide">
+ <div class="news-slider__item swiper-slide mincho">
 
 <a href="/unavailable/home" class="news__item" id = "abcdffu">
           <div class="news-date">
@@ -438,26 +484,24 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 {% block slide_9_block %}
 
- <div class="news-slider__item swiper-slide">
+ <div class="news-slider__item swiper-slide api-slide mincho">
+     
+     
 
 <a href="/unavailable/home" class="news__item" id = "abcdffu">
+    
           <div class="news-date">
-            <span class="news-date__title">MelonSec API</span>
-               <span class="news-date__txt">Comprehensive Coverage of global Cyber Security Trends </span>
-        
-          </div>
-          
-
-          <p>
-          
+      
+            <span class="news-date__title" >MelonSec API</span>
               
-         
-          </p>
-
-          <div class="news__img">
-              {% load static %}
-            <img src="{% static 'photos/ninja.png' %}" alt="news">
+            
+               <span class="news-date__txt">Theres a lot going on inside the cyber world, find out all about it here. </span>
+                {% load static %}
+            <iframe src = "/screencreep" class = "ani-framb"></iframe>
+      
           </div>
+          
+
         </a>
      
 </div>
@@ -507,19 +551,19 @@ Home to a modest array of casual tutorials, official projects, belated news and 
 
 <a href="/rfidcomponents" class="news__item" id = "abcdff">
           <div class="news-date">
-            <span class="news-date__title">Hacking RFID Access Controls</span>
-            <span class="news-date__txt">Projects: Physical Access Security</span>
+            <span class="news-date__title mincho">Hacking RFID Access Controls</span>
+            <span class="news-date__txt mincho">Projects: Physical Access Security</span>
           </div>
-          <div class="news__title">
+          <div class="news__title mincho">
             Part 3 - The Duke
           </div>
 
-           <p class = "justy news__txt">
+           <p class = "justy news__txt mincho">
             Tom shows how to perform a man in the middle attack on HID readers using a Raspberry Pi and open source software.
           </p>
 
          
-          <div class="news__img">
+          <div class="news__img mincho">
               {% load static %}
             <img src="{% static 'photos/rfid.jpg' %}" alt="news">
           </div>

@@ -36,6 +36,22 @@ def unavailable(request):
     }
     return render(request, 'content-unavailable.html', context)
 
+
+def creep(request):
+
+    context = {
+
+    }
+    return render(request, 'creepy-screen.html', context)
+
+
+def landscape(request):
+
+    context = {
+
+    }
+    return render(request, 'landscape.html', context)
+
 def unavailable_back(request,backurl):
     context = {
             'back_url': backurl
@@ -118,6 +134,13 @@ def b4frame(request):
 
     }
     return render(request, 'bandit4terminal.html', context)
+
+def b5frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit5terminal.html', context)
 
 def otw(request):
     context = {
