@@ -1,5 +1,5 @@
    {% extends 'ublog/blog-profile-view.html'%}
-{% block first-ing %}
+{% block first-in %}
 
 <style>
 
@@ -7,7 +7,7 @@
 
 .congrats-all{
     position:absolute;
-    z-index:999999999999999999999999;
+    z-index:99999999999999999999999999;
 	background: #3da1d1;
 	color: #fff;
 	overflow: hidden;
@@ -15,6 +15,7 @@
     height:100%;
     margin-top:-30px;
     margin-left:-30px;
+    padding-top:200px;
 }
 .lil{
 	font-size:50%;
@@ -31,18 +32,19 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+    top:100px;
 }
 
 .congrats{
-	transform-origin: 50% 50%;
+	
 	font-size: 50px;
 	font-family: 'Sigmar One', cursive;
 	cursor: pointer;
 	z-index: 2;
 	position: absolute;
-	top: 0;
 	text-align: center;
 	width: 100%;
+     top:100px;
 }
 
 .blob {
@@ -66,8 +68,8 @@
 <div class = "congrats-all">
 
 <div class="congrats">
-	<h1 class = "congrats">Congratulations!
-		<span class = "lil">You are officially a member of Ublog</span></h1>
+	<h1 class = "congrats"><br><br><br>Congratulations!
+		<span class = "lil"><br><br>You are officially a member of Ublog</span></h1>
 </div>
     
     </div>
@@ -82,13 +84,13 @@
 <script>
     
     timet = setTimeout(function(){
-        moveToinnerPage();
+        //moveToinnerPage();
     },3000);
     
     
     
     function moveToinnerPage(){
-        $(".congrats-all").fadeOut();
+       // $(".congrats-all").fadeOut();
         
     }
 

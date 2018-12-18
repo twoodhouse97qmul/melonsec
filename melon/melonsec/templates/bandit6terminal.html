@@ -118,7 +118,7 @@
      
     <div class="history"></div>
   
-    <span class = "orig-pr">bandit1@bandit:~$</span>&nbsp;<span class="prompt"></span>
+    <span class = "orig-pr">bandit6@bandit:~$</span>&nbsp;<span class="prompt"></span>
     <span class="typed-cursor"></span>
     
   </section>
@@ -426,37 +426,29 @@
     strings: ["Let's Go!", ''],
     postDelay: 2000
   },
-  
+  { 
+    action: 'type',
+    strings: ["find / -user bandit7 -group bandit6 -size 33c^400"],
+    output: '<span class="gray tr955"><br>total 88<br>[...]<br>find: ‘/var/log’: Permission denied<br>find: ‘/var/tmp’: Permission denied<br>find: ‘/var/cache/ldconfig’: Permission denied<br>/var/lib/dpkg/info/bandit7.password<br>find: ‘/var/lib/apt/lists/partial’: Permission denied<br>find: ‘/var/lib/polkit-1’: Permission denied<br>[...]<br><br></span>',
+    
+  },
   { 
     action: 'type',
     //clear: true,
-    strings: ['cd inhere/ ; ls^400'],
-    output: '<span class="gray tr955">-file00  -file02  -file04  -file06  -file08<br>-file01  -file03  -file05  -file07  -file09</span>',
-  },
-  
-  { 
-    action: 'type',
-    //clear: true,
-    strings: ['file ./*^400'],
-    output: '<span class="gray tr955"><br>./-file01: data<br>[...]<br>./-file07: ASCII text<br>./-file08: data<br>./-file09: data<br><br></span>',
-
-  },
-     { 
-    action: 'type',
-    //clear: true,
-    strings: ['file ./* | grep "ASCII"^400'],
-    output: '<span class="gray tr955"><br>-file07: ASCII text<br><br></span>',
+    strings: ['find / -user bandit7 -group bandit6 -size 33c 2>/dev/null^400'],
+    output: '<span class="gray tr955"><br>/var/lib/dpkg/info/bandit7.password<br></span>',
+    
 
   },
    { 
     action: 'type',
     //clear: true,
-    strings: ['cat ./-file07^400'],
-    output: '<span class="gray tr955"><br>koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br><br></span>',
+    strings: ['cat /var/lib/dpkg/info/bandit7.password^400'],
+    output: '<span class="gray tr955"><br>HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs<br><br></span>',
   },
   { 
     action: 'type',
-    strings: ["We found the password for bandit3!", ''],
+    strings: ["We found the password for bandit7!", ''],
     postDelay: 2000
   }
   
@@ -497,11 +489,11 @@ function runScripts(data, pos) {
                 var histpush = 'bandit1@bandit:~$ ';
                 
                 if(pos>1){
-                   $(".orig-pr").html("bandit1@bandit:~/inhere$ ");
+                   $(".orig-pr").html("bandit6@bandit:~/inhere$ ");
                    }
                 
                 if(pos>2){
-                   histpush = 'bandit1@bandit:~/inhere$ ';
+                   histpush = 'bandit6@bandit:~/inhere$ ';
                    }
                 
                 

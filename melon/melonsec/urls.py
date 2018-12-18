@@ -36,6 +36,10 @@ urlpatterns = [
     path('b3frame/', views.b3frame, name='porthome'),
     path('b4frame/', views.b4frame, name='porthome'),
     path('b5frame/', views.b5frame, name='porthome'),
+    path('b6frame/', views.b6frame, name='porthome'),
+    path('b7frame/', views.b7frame, name='porthome'),
+    path('b8frame/', views.b8frame, name='porthome'),
+    path('b9frame/', views.b9frame, name='porthome'),
     path('screencreep/', views.creep, name='porthome'),
     path('landscape/', views.landscape, name='porthome'),
 
@@ -53,8 +57,8 @@ urlpatterns = [
     #WILL BE UBLOG
 
     path('addsocial', views.add_socials, name='index'),
-    path('addSocial/addFacebook/<slug:mainaccount>/', views.add_facebook, name='index'),
-    path('addSocial/addFacebook/<slug:mainaccount>/<slug:mainaccount2>/', views.add_facebook_d, name='index'),
+    path('addSocial/addFacebook/<slug:mainaccount>/', views.add_twitter, name='index'),
+    path('addSocial/addFacebook/<slug:mainaccount>/<slug:mainaccount2>/', views.add_twitter, name='index'),
     path('changebio', views.change_biography, name='post_new'),
     path('/changebio', views.change_biography, name='post_new'),
     path('changebiown', views.change_biography_wn, name='post_new'),

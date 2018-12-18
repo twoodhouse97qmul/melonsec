@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS background change on scroll</title>
+  
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  
+</head>
+
+<body>
+
+
+  
+
+<style>
+    
+    
+   
+.button {
+  background: #3498db;
+  width: 180px;
+  padding: 4px 0;
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+
+  
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: darken(#f1c40f, 20%);
+    opacity: 0.4;
+    bottom: -30px;
+  }
+}
+    
+    .content, .wrapper:before {
+  box-sizing: border-box;
+  display: block;
+  font-size: 4em;
+  padding: 20px;
+  width: 6em;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding-top:5px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+
+}
+
+.content {
+    font-size: 1em;
+  font-weight: bold;
+    min-width:400px;
+  text-align: center;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  mix-blend-mode: lighten;
+
+   
+}
+
+section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+  height: 100vh;
+  padding: 1em;
+}
+
+.wrapper {
+  clip: rect(auto auto auto auto);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   
+    
+    
+}
+.wrapper:before {
+  content: " ";
+ padding: 2em 3.5em;
+  mix-blend-mode: darken;
+}
+    
+.wrapper2:before {
+  content: " ";
+ padding: 2em 5.5em;
+  mix-blend-mode: darken;
+}
+    
+   
+    {% load static %}
+.one {
+ background-image:url("{% static 'photos/nature1.jpeg' %}");
+
+}
+.one .wrapper:before {
+     background: #e4135d;
+ 
+}
+
+.two {
+  background-image: url(https://source.unsplash.com/1920x1080?landscape);
+}
+.two .wrapper:before {
+  background: purple;
+  mix-blend-mode: difference;
+}
+
+.three {
+  background-image: url(https://source.unsplash.com/1920x1080?portrait);
+}
+.three .wrapper:before {
+  background: #6c320a;
+  mix-blend-mode: screen;
+}
+
+.four {
+  background-image: url(https://source.unsplash.com/1920x1080?stars);
+}
+.four .wrapper:before {
+  background: red;
+}
+    
+    
+   #containerl {
+  width: 560px;
+  margin: 25px auto;
+    background-color: white;
+    border-radius:5px;
+    height:450px;
+  
+}
+
+.whysign {
+  float: right;
+  background-color: white;
+  width: 250px;
+  height: 347px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.signup {
+  float: left;
+  width: 300px;
+  padding: 30px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+    font-size:200%;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+    
+}
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+    font-size:200%;
+}
+
+h1 {
+  color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+p {
+  color: rgba(0,0,0,.6);
+  font-size: 1.2em;
+  margin: 50px 0 50px 0;
+}
+
+span {
+  font-size: .75em;
+  background-color: white;
+  padding: 2px 5px;
+  color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  margin: 5px;
+}
+    
+    
+    
+
+span:hover {
+  color: #53CACE;
+}
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+    
+    .cleario{
+        clear:both;
+    }
+    
+    .sign-up-phase-2{
+        display:none;
+        
+    }
+    
+    .social-choose-area{
+        position:relative;
+        width:90%;
+        margin:0 auto;
+        height:200px;
+       
+        padding-top:0px;
+        margin-top:-50px;
+        
+    }
+    
+ 
+    
+ 
+    
+    .dual-facebook-holder{
+        float:right;
+       
+        width:344px;
+        height:200px;
+        
+    }
+    .fakebook-holder{
+        float:left;
+       
+        width:160px;
+        height:200px;
+        margin-left:12px;
+        
+    }
+    .facebook-holder{
+        float:right;
+       
+        width:160px;
+        height:200px;
+        
+    }
+    
+     .insta-holder{
+        float:left;
+
+        width:160px;
+        height:200px;
+        
+    }
+    
+   .button-div{
+        
+       
+      
+        margin:0 auto;
+       margin-top:50px;
+       margin-left:260px;
+      
+     
+    }
+    
+    .social-icon{
+        width:120px;
+        height:120px;
+        border-radius:60px;
+        background-color: blue;
+        margin:0 auto;
+        margin-top:10px;
+         box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.35);
+       
+    }
+    
+    .social-icon:hover{
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.7);
+         width:124px;
+        height:124px;
+        border-radius:62px;
+        cursor:grab;
+        margin-top:8px;
+    }
+    
+    .social-add-holder{
+        border-radius:10px;
+        text-align: center;
+    }
+    
+    .link-foll-text{
+        font-size:80%;
+    }
+    
+    .link-sm-title{
+        text-align: center;
+        margin-top:10px;
+         margin-bottom:20px;
+    }
+    
+    .sign-up-icon{
+        margin-top:15px;
+        font-size: 500%;
+       
+        
+    }
+
+     .fb-sign-up-icon{
+        color:white;
+    }
+    
+    
+    
+    .red-tt{
+        color:red;
+        font-size:75%;
+        margin-left:50px;
+        margin-right:50px;
+        margin-top:75px;
+    }
+
+.facey-wacey{
+        background-color: #1da1f2;
+    }
+    
+    .stand-in{
+        font-size:150%;
+    }
+    
+    .next-page-arrow{
+        position:fixed;
+        bottom:5px;
+        right:10px;
+        
+    }
+    
+    .next-page-arrow:hover{
+        cursor: grab;
+    }
+    
+    
+    
+    .all-held{
+        position:fixed;
+        width:100%;
+    }
+    
+    .fb-sign-up-icon2{
+        position:fixed;
+        margin-top:15px;
+        margin-left:-30px;
+        color:white;
+        opacity:1;
+    }
+    
+    .there{
+        position: absolute;
+        z-index:999999999999999999;
+        background-color: red;
+        color:black;
+        margin:0 auto;
+    }
+    
+    
+
+    
+
+    
+   
+
+</style>
+    
+    
+      
+
+
+
+  <!-- Optional content you want to persist between sections -->
+<div class="content"><h1 style = "margin:0; margin-bottom:20px;">Sign Up</h1>
+    <div class = "sign-up-current">
+        <h1><i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i></h1>
+   <input type='text' placeholder='name' class="stand-in"  />
+    <input type='text' placeholder='username' class="stand-in"  />
+    <input type='text' placeholder='password' class="stand-in" style = "margin-bottom:1px;" /><br>
+    </div>
+   
+     <div class = "sign-up-phase-2">
+          
+        <div class = "social-choose-area">
+            
+             <h6 class = "red-tt">You need AT LEAST 10 000 followers linked to your social media accounts in order to sign up to the ublog platform.</h6>
+          
+            <div class = "insta-holder social-add-holder">
+                <div class = "social-icon insta-icon insta-jinsta">
+                    <i class="fab fa-instagram sign-up-icon fb-sign-up-icon2"></i>
+                </div>
+                <p class = "link-foll-text">Linked Followers: 0</p>
+            </div>
+            <div class = 'dual-facebook-holder'>
+                <div class = 'facebook-holder social-add-holder'>
+                      <div class = "social-icon facebook-icon  fb-ic-fake facey-wacey">
+                          <i class="fab fa-twitter sign-up-icon fb-sign-up-icon"></i>
+                </div>
+                    <p class = "link-foll-text link-foll-text-fake">Linked Followers: 0</p>
+            </div>
+                <div class = 'fakebook-holder social-add-holder'>
+                      <div class = "social-icon fakebook-icon facey-wacey">
+                          <i class="fab fa-twitter sign-up-icon fb-sign-up-icon fb-su-fake"></i>
+                </div>
+                    <p class = "link-foll-text">Linked Followers: 0</p>
+            </div>
+            </div>
+             <div class = "cleario"></div>
+        </div>
+         
+          <div class = "cleario"></div>
+         
+       
+         
+        <div class = "button-div" id = "blog-make-account-conf">
+            <div class = "there">
+        <div class="button ">
+  Create Account
+</div>
+    </div>
+        
+        </div>
+  
+</div>
+    
+     <div class = "sign-up-phase-3">
+      
+</div>
+     
+            
+    
+    </div>
+
+    <div class = "all-held">
+<section class="one">
+  <div class="wrapper"></div>
+</section>
+    
+    
+    
+<section class="two">
+  <div class="wrapper"></div>
+</section>
+
+<section class="three">
+  <div class="wrapper"></div>
+</section>
+
+<section class="four">
+  <div class="wrapper"></div>
+</section>
+  
+  </div>
+
+
+
+
+</body>
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script>
+       
+        
+    
+        $(".next-page-arrow").on("click",function(){
+            
+        
+            
+            
+            let screenHeight = 2000;
+            screenHeight = window.innerHeight;
+            screenHeight = screenHeight * 1.05;
+            $(".all-held").animate({
+                
+                'marginTop' : "-="+screenHeight+"px" //moves left
+                
+                
+            },500);
+            
+               $(".content").animate({
+            'width' : "+=200px"
+            
+            },600);
+            
+            
+            $(".sign-up-current").fadeOut();
+            setTimeout(function(){
+
+                $(".sign-up-phase-2").fadeIn();
+            },800);
+            
+             
+          
+            $(".wrapper").addClass("wrapper2");
+             
+            
+            
+            
+        });
+        
+        var urlset = "/addSocial/addFacebook/N_A/";
+         $(".fb-ic-fake").on("click",function(){
+            
+            
+            $(".fb-ic-fake").html("<i class='fas fa-cog sign-up-icon fb-sign-up-icon fa-spin' style = 'color:black;'></i>");
+            
+            timert = setTimeout(function(){
+                $(".fb-ic-fake").html("<i class='fas fa-check sign-up-icon fb-sign-up-icon' style = 'color:green;'></i>");
+                
+                $(".link-foll-text-fake").html("Linked Followers: 1");
+            },1500);
+             
+             urlset = "/addSocial/addFacebook/melon/";
+                            
+
+                            });
+        
+        $(".sign-up-phase-3").hide();
+        
+        
+        
+        
+             $('#blog-make-account-conf').on("click", function(){
+        
+         
+             window.location.href = urlset;
+        
+    });
+        
+        
+        
+        var $button = document.querySelector('.button');
+$button.addEventListener('click', function() {
+  var duration = 0.3,
+      delay = 0.08;
+  TweenMax.to($button, duration, {scaleY: 1.6, ease: Expo.easeOut});
+  TweenMax.to($button, duration, {scaleX: 1.2, scaleY: 1, ease: Back.easeOut, easeParams: [3], delay: delay});
+  TweenMax.to($button, duration * 1.25, {scaleX: 1, scaleY: 1, ease: Back.easeOut, easeParams: [6], delay: delay * 3 });
+});
+        
+            /*
+     $('#blog-make-account-conf').on("click", function(){
+        
+         
+             window.location.href = "/addSocial/addFacebook/facebookid_764525461328/";
+        
+    });
+        
+        $(".sign-up-phase-2").hide();
+        
+        $(".fb-ic-fake").on("click",function(){
+            
+            
+            $(".fb-ic-fake").html("<i class='fas fa-cog sign-up-icon fb-sign-up-icon fa-spin' style = 'color:black;'></i>");
+            
+            timert = setTimeout(function(){
+                $(".fb-ic-fake").html("<i class='fas fa-check sign-up-icon fb-sign-up-icon' style = 'color:green;'></i>");
+                
+                $(".link-foll-text-fake").html("Linked Followers: 1");
+            },1500);
+                            
+
+                            }); */
+        
+    
+    </script>>
+
+</html>

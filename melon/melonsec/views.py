@@ -20,6 +20,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from django.http import Http404
 from django.contrib.auth.models import User
+from .ublogverify import UblogVerifier
 
 
 
@@ -69,7 +70,7 @@ def blogger_su(request):
     context = {
 
     }
-    return render(request, 'ublog/sign-up-blogger.html', context)
+    return render(request, 'sign-up1.html', context)
 
 def tut_home(request):
     context = {
@@ -141,6 +142,32 @@ def b5frame(request):
 
     }
     return render(request, 'bandit5terminal.html', context)
+
+def b6frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit6terminal.html', context)
+def b7frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit7terminal.html', context)
+
+def b8frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit8terminal.html', context)
+def b9frame(request):
+
+    context = {
+
+    }
+    return render(request, 'bandit9.html', context)
 
 def otw(request):
     context = {
@@ -314,25 +341,44 @@ def makeBaseAccount(request,name,passw):
 
 
 def add_facebook(request,mainaccount):
-    return_error = "Sorry, you don't have enough followers on that account:";
-    return_message = "Come back when you have more friends.";
+
+
+
+    verifier = UblogVerifier();
+    return_error = "";
+    return_message = "";
+    error_type = "";
+    error_type2 = "";
+    e_target= "";
+    error_1 = False;
+
+    owned = verifier.verifyUserOwnership(mainaccount);
+    limit = verifier.verify1000(mainaccount);
+
+    if(limit == False):
+        return_error = "Sorry, you don't have enough followers on that account:";
+        return_message = "Come back when you have more friends.";
+        error_type = "Friendless Error";
+        e_target = "(Twitter ID: "+mainaccount+")";
+        error_1 = True;
+
     return_error_2 = "";
     return_message_2 = "";
     return_target_2 = "";
 
-    print(mainaccount[11:]);
-
-
-
-    if(mainaccount[11:] != '764525461328'):
-        return_error_2 = "You Don't have verification for that account ";
+    if(owned == False):
+        return_error_2 = "You don't have authorisation for that account ";
         return_message_2 = "please go back and verifiy a social media account.";
-        return_target_2 = "(Facebook ID "+mainaccount[11:]+")";
+        return_target_2 = "(Twitter ID: "+mainaccount+")";
+        error_type2 = 'Verification Error';
 
     context = {
+    'error_1':error_1,
+    'error_type':error_type,
+    'error_type2':error_type2,
     'error_info':return_error,
     'error_message':return_message,
-    'error_target':"(Facebook ID: "+mainaccount[11:]+")",
+    'error_target':e_target,
     'error_info_2':return_error_2,
     'error_message_2':return_message_2,
     'error_target_2':return_target_2,
@@ -340,36 +386,141 @@ def add_facebook(request,mainaccount):
 
     }
 
-    return render(request, 'error-page.html', context)
+    return render(request, 'sign-up-errors.html', context)
 
-def add_facebook_d(request,mainaccount,mainaccount2):
+def argsToArray(kwargs):
+    arguments = [];
 
-    return_text = "";
-    acc_verified = True;
-    enough_followers = True;
+    for k,v in kwargs.items():
+        arguments.append(v);
 
-    if(mainaccount != 'melonsecfb'):
-        acc_verified = False;
-        return_text += "You Don't have verification for that account (Facebook ID: "+mainaccount+"), please go back and verifiy a social media account."+'\n';
-    if(mainaccount == 'facebookid_764525461328'):
-        acc_verified = True;
-        return_text = "";
+    return arguments;
 
-    if(mainaccount2 != '123FAMOUS123'):
-        enough_followers = False;
-        return_text += '\n'+'\n'+"Sorry, you don't have enough followers linked to the account"+'\n'+'\n'+"("+ mainaccount2+")"+'\n'+'\n'+" Come back when you have more friends.";
 
-    if(acc_verified&enough_followers):
-        context2 = {
+def add_twitter(request,**kwargs):
 
-        }
+    arguments = argsToArray(kwargs);
 
-        return render(request, 'congratulations.html', context2)
+    verifier = UblogVerifier();
+    owned = verifier.verifyUserOwnership(arguments[0]); #TAKES FIRST
+    limit = verifier.verify1000(arguments[-1]); #TAKES LAST
+
+
+
+    return_error = "";
+    return_message = "";
+    error_type = "";
+    error_type2 = "";
+    e_target= "";
+    error_1 = False;
+    error_2 = False;
+
+    if(owned &  limit):
+        return render(request, 'congratulations.html', {})
+
+
+    if(limit == False):
+        return_error = "Sorry, you don't have enough followers on that account:";
+        return_message = "Come back when you have more friends.";
+        error_type = "Friendless Error";
+        e_target = "(Twitter ID: "+arguments[-1]+")";
+        error_1 = True;
+
+    return_error_2 = "";
+    return_message_2 = "";
+    return_target_2 = "";
+
+    if(owned == False):
+        return_error_2 = "You don't have authorisation for that account ";
+        return_message_2 = "please go back and verifiy a social media account.";
+        return_target_2 = "(Twitter ID: "+arguments[0]+")";
+        error_type2 = 'Verification Error';
+        error_2 = True;
+
+    context = {
+    'error_1':error_1,
+    'error_2':error_2,
+    'error_type':error_type,
+    'error_type2':error_type2,
+    'error_info':return_error,
+    'error_message':return_message,
+    'error_target':e_target,
+    'error_info_2':return_error_2,
+    'error_message_2':return_message_2,
+    'error_target_2':return_target_2,
+    'return_url':'/home'
+
+    }
+
+    return render(request, 'sign-up-errors.html', context)
+
+
 
     context = {
     'error_message':return_text
     }
 
+    print("ackkk")
+
+    return render(request, 'sign-up-errors.html', context)
 
 
-    return render(request, 'error-page.html', context)
+def add_facebook_d(request,mainaccount,mainaccount2):
+
+    verifier = UblogVerifier();
+    return_error = "";
+    return_message = "";
+    error_type = "";
+    error_type2 = "";
+    e_target= "";
+    error_1 = False;
+
+    owned = verifier.verifyUserOwnership(mainaccount);
+    limit = verifier.verify1000(mainaccount2);
+
+    if(owned &  limit):
+        return render(request, 'congratulations.html', {})
+
+
+    if(limit == False):
+        return_error = "Sorry, you don't have enough followers on that account:";
+        return_message = "Come back when you have more friends.";
+        error_type = "Friendless Error";
+        e_target = "(Twitter ID: "+mainaccount2+")";
+        error_1 = True;
+
+    return_error_2 = "";
+    return_message_2 = "";
+    return_target_2 = "";
+
+    if(owned == False):
+        return_error_2 = "You don't have authorisation for that account ";
+        return_message_2 = "please go back and verifiy a social media account.";
+        return_target_2 = "(Twitter ID: "+mainaccount+")";
+        error_type2 = 'Verification Error';
+
+    context = {
+    'error_1':error_1,
+    'error_type':error_type,
+    'error_type2':error_type2,
+    'error_info':return_error,
+    'error_message':return_message,
+    'error_target':e_target,
+    'error_info_2':return_error_2,
+    'error_message_2':return_message_2,
+    'error_target_2':return_target_2,
+    'return_url':'/home'
+
+    }
+
+    return render(request, 'sign-up-errors.html', context)
+
+
+
+    context = {
+    'error_message':return_text
+    }
+
+    print("ackkk")
+
+    return render(request, 'sign-up-errors.html', context)
