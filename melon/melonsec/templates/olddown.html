@@ -1,0 +1,196 @@
+{% extends 'opener/melonNavBase.html' %}
+
+{% block downnav %}
+
+{% load static %}
+  
+<style>
+    
+    *,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.ull{
+  position: relative;
+  -webkit-transform: rotate(13deg) skew(17deg, 4deg);
+          transform: rotate(13deg) skew(17deg, 4deg);
+}
+
+.list-itema {
+  background-image:url("{% static 'newback.jpg' %}");
+        background-size:cover;
+  color: #575757;
+  text-align: center;
+  height: 2.5em;
+  width: 4em;
+  vertical-align: middle;
+  line-height: 2.5em;
+  border-bottom: 1px solid #060606;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  
+  transition: all .25s linear;
+}
+    
+    
+.list-itema:hover {
+  background: #40798C;
+  color: #fffcfb;
+  -webkit-transform: translate(0.9em, -0.9em);
+          transform: translate(0.9em, -0.9em);
+  transition: all .25s linear;
+  
+}
+.list-itema:hover:before, .list-item:hover:after {
+  transition: all .25s linear;
+}
+.list-itema:hover:before {
+  background: #274A56;
+  width: 1em;
+  top: .5em;
+  left: -1em;
+}
+.list-itema:hover:after {
+  background: #274A56;
+  width: 1em;
+  bottom: -2.5em;
+  left: 1em;
+  height: 4em;
+}
+.list-itema:before, .list-itema:after {
+  content: '';
+  position: absolute;
+  transition: all .25s linear;
+  width: .5em;
+}
+.list-itema:after {
+  height: 4em;
+  background: #181818;
+  bottom: -2.25em;
+  left: 1.5em;
+  -webkit-transform: rotate(90deg) skew(0, 45deg);
+          transform: rotate(90deg) skew(0, 45deg);
+}
+.list-itema:before {
+  height: 2.5em;
+  background: #121212;
+  top: .25em;
+  left: -.5em;
+  -webkit-transform: skewY(-45deg);
+          transform: skewY(-45deg);
+}
+    
+    .funky-l-hold{
+        position:absolute;
+        z-index:999999999999999999999999999999999999;
+        top:100px;
+        left:10px;
+        display:none;
+    }
+    
+
+    
+    
+
+</style>
+
+
+<div class = "funky-l-hold">
+  <ul class = "ull">
+      <li class = "litem0">
+    <a class='list-itema'>
+      0
+    </a>
+  </li>
+  <li class = "litem1">
+    <a class='list-itema' >
+      1
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem2' >
+      2
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem3' >
+      3
+    
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem4' >
+      4
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem5' >
+     5
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem6' href=''>
+      6
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem7' href=''>
+      7
+    </a>
+  </li>
+  <li>
+    <a class='list-itema litem8' href=''>
+      8 - 15
+    </a>
+  </li>
+  
+  
+</ul>
+    
+    </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+
+  $(".litem0").on("click",function(){
+       
+        goToPageX(1);
+        
+    });
+    $(".litem1").on("click",function(){
+       
+        goToPageX(7);
+        
+    });
+    $(".litem2").on("click",function(){
+       
+        goToPageX(8);
+        
+    });
+   
+   </script>
+
+{% endblock %}
+
+  
+
+
+
+

@@ -38,6 +38,13 @@
             padding-top:1px;
     }
     
+     .slide-in{
+        padding:30px;
+        width:100%;
+         padding-top:0;
+       
+    }
+    
     .blueee{
         color:#40798C;
         font-weight: 900;
@@ -51,6 +58,7 @@
     
     @import url('https://fonts.googleapis.com/css?family=Roboto');
 .bbody {
+    font-family: "jura",sans-serif;
     padding-top:30px;
     position:relative;
     width:100%;
@@ -198,6 +206,9 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
         color:#0E5DC4;
     }
     
+    .italy{
+        font-style: italic;
+    }
     
     
     border-width: 0 0 2px 0;
@@ -351,6 +362,14 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
         
     }
     
+    .sad-awesome-block{
+        
+        width:50%;
+        margin-left:25%;
+        height:200px;
+  padding-top:25px;
+    }
+    
     
     
  
@@ -383,7 +402,7 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
                     
                     
                   <div class="slider">
-                       <h1 class="mincho" style= "position: absolute; margin-top:-80px; margin-left:40px; font-weight:900;"><b>Welcome To The Ublog Web Pen Testing Tutorials</b></h1>
+                       <h2 class="mincho" style= "position: absolute; margin-top:-80px; margin-left:40px; font-weight:900;"><b>Welcome To The Ublog Web Pen Testing Tutorials</b></h2>
 <div class="slider-wrapper flex">
 	<div class="slide flex">
 		<div class="slide-image slider-link prev"><img src="{% static 'photos/ninja.png' %}" style = "width:300px; height:200px; background-size:cover;"><div class="overlay"></div></div>
@@ -401,7 +420,7 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
 			<div class="slide-date">The General Goal</div>
 			
 			<div class="slide-text s110">  
-             Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.<br><br>
+             Ublog is a real world web-application that has been hijacked and is now a playground to demonstrate and test cyber security flaws and exploits.<br><br>
              
              Theoretical attacks are much easier to pictute when given a real world example - this is the exact, rather than generic examples exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand. </div>
 			
@@ -430,17 +449,16 @@ If you want some sites to practice scripting etc:</div>
 	</div>
 		
 </div>
-<div class="arrows">
-<a href="#" title="Previous" class="arrow slider-link prev"></a>
-<a href="#" title="Next" class="arrow slider-link next"></a>
-</div>
+
 </div>
                     
                     </div>
            
-           
-        
-               
+           <div class = "sad-awesome-block">
+          
+        {% block sadawesome %}
+           {% endblock %}
+                </div>
                </div>
     
     
@@ -448,14 +466,14 @@ If you want some sites to practice scripting etc:</div>
     <div class = "ublog-overview-text jura">
         
         <div class= "blue-cov">
-            <h2>Ublog — <span style="font-size: 70%;">where the elite of society go to get away from the grievances <br>that come with using social media alongside commoners. </span></h2>
+            <h2>About The UBlog Platform <span style="font-size: 70%;"></span></h2>
         </div>
             <h4>What Is The Purpose of The Ublog?</h4>
          <p>
              
              Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.
              
-             Theoretical attacks are much easeir to pictute when given a real world example - this is the exact, rather than generic examples exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
+             Theoretical attacks are much easeir to picture when given a real world example - this is the exact, rather than generic examples, exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
              
                </p>
         
@@ -485,17 +503,17 @@ Awards are given depending on how many followers a user has across their social 
 <h4 class = "marged-header">Bypassing Ublog sign up restrictions using HTTP Parameter Pollution</h4>
     </div>
                 </div> 
+            
+            <div class = "slide-in">
 <p>
 
     <br>
     
     Throughout the following tutorials we are going to exploit several common vulnerabilities in order to take control of the majority of the funcitons on the UBlog platform. <br><br>
     
-    An important aspect of these tutorials is having access to a blogger account that we can control.
+    An important aspect of these tutorials is having access to a blogger account that we can control.<br><br>
 
-Fittingly, the first vulnerability is based around exploiting the applications sign up logic in order to allow us to by-pass the websites validation mechanisms so that we can create accounts freely without needing to have the 10 000 followers as the site advertises.<br><br>
-    
-  
+Fittingly, the first vulnerability is based around exploiting the applications sign up logic. Our goal is to by-pass the websites validation mechanisms so that we can create accounts freely without needing to have the 10 000 followers as the site advertises.<br><br>
     
 Lets open up the create a blogger account page in another tab: <a href="#" class="link" id = "open-blog-sign-up"><b>Click Here</b></a> <br> <br>
     
@@ -514,7 +532,7 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
     
 
 </p>
-           
+       </div>    
     </div>
         
         
@@ -529,21 +547,24 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
                 
             </div>
             
-            
-            <p><br>
+             
+            <div class = "slide-in">
+            <br>
                 
                 
-                Firstly, lets see what happens when we try to log on with no accounts linked. We're greeted with an annoying message page displaying both 'Verification' and 'Friendless' Errors.<br><br>
+                Firstly, lets see what happens when we try to log on with no accounts linked. After Hitting 'Verify' We're greeted with an annoying message page displaying both <b>Verification</b> and <b>Friendless</b> Errors.<br><br>
                 
-                Our next goal is to link to a valid social media account with less than the 10 000 required followers, and we'll see how the site responds.<br><br>
+                The next thing we will try is to observe what happens when we link to a valid social media account that has less than the <br>10 000 required followers needed to pass to the next stage, and we'll see how the site responds.<br><br>
+                
+                <h3>Saving Time and Privacy</h3>
                 
                 Creating a 'throw-away account' on Twitter would take a few minutes most people don't have time for, so for that reason you will see a third social media icon, with a nice picture of a melon. If you click on this icon, you will be linked to a Twitter account that has 1 follower.<br><br>
                 
-            This does save us the bother of having to link an actual Twitter account, however the account isnt allowed in by the ublog verification system since we havent got more than the 10 000 follower limit. Lets see what happens when we try to progress by hitting 'verify'<br><br>
+                Lets see what happens when we try to progress by hitting 'verify'<br><br>
             
-            Again we are greeted by a similar screen, but as expected the 'Verification Error' has dissappeared.<br><br>
-            </p>
-                     
+                Again we are greeted by a similar screen, but as expected the 'Verification Error' has dissappeared, since we verified an account.<br><br>
+            
+            </div> 
                 <br class = "Don't worry, To find an exploit here we're not going to use any complicated or fancy analysis techniques."><br>
         
             
@@ -557,18 +578,23 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
                <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
              <div class= "blue-cov">
            <h3> HTTP Parameters. </h3><br><br>
-             </div><br><p>
-            [insert quick definition]
-            
-            might recognise them: <span class= "blueee">ublog/finduser?name=john?age=12.</span> <br><br>
+             </div> 
+            <div class = "slide-in">
+                
+           <br>
+            The sign up form for Ublog runs off the <b>Django</b> framework. Django allows you to build web applications at a considerable pace, and when used appropriately, the framework offers high levels of security. <br><br>
              
-            The sign up form for Ublog runs off the Django framework. The django framework allows, offers high level of security, one of it's strengths, it's high customisability is also a weakness, imprpoer, a we are about to see.
+             Another one of it's strengths is that Django is flexible and highly customisable. This however, is a double edged sword. <br><br>
+
+            Django <span class= "italy">allows</span> multiple types of paramater handling:<br><br>
+               Example 1: <span class= "blueee">ublog/finduser?name=john?age=12.</span> <br>
             
-             Django offers multiple types of paramater handling, in this instance the paramaters are handled seperated by the '/' in the same was as other componentsin the URL and are then unpacked by the back end.<br><br>
-            
-             example: <span class= "blueee">ublog/finduser/john/12 </span><br><br>
+             Example 2: <span class= "blueee">ublog/finduser/john/12 </span><br><br>
              
-            I chose this as it's easier for us to talk about the urls and deconstruct them with the naked eye, but the fundamental concepts are the similar in both cases.<br><br>
+            The sign up form has opted for example 2. In this instance paramaters are seperated by a forward slash '/' in the same way as other componentsin the URL, and are then unpacked by the back end application.<br><br>
+                This as it's easier for us to talk about the urls and deconstruct them with the naked eye, but the fundamental concepts are similar in both cases.<br><br>
+                
+                
              
             We've tried to create a Ublog account twice, lets see at the URLs that were generated:<br><br>
              
@@ -585,7 +611,7 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
              
              
               
-            </p>
+              </div>
               <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
             
         </div>
@@ -595,27 +621,30 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                  <div class= "blue-cov">   
             <h3>HTTP Paramater Manipulation </h3> <br><br>
-             </div><br>
-             <p>
-          
-lets see what happens when we input the Twitter of an account that we don't own.<br><br>
+             </div><br> 
+            <div class = "slide-in">
+        
+          Later we will utilise Integrated Testing suites. But many actions can be controlled using common web browsers such as changing the value of cookies, we can also manipulate a http url as well as the values we pass to the server.<br><br>
+                 
+                 <h3>Constructing Our Own Verification Request</h3>
+                 
+                Lets see what happens when we input the Twitter of an account that we don't own.<br><br>
              
               I've decided to impersonate Ellen Degeneress, as I thought we shared the most physical likeness out of the top 10 followed people on Twitter as of writing.<br><br>
                   
                     
-                    <span style = "text-decoration: line-through;">> <b>Here</b> is a list of some others that have more than 10 000 followers.</span> The UBlog-TwitterAPI is down - you HAVE to be Ellen.
+                    <span style = "text-decoration: line-through;">> <b>Here</b> is a list of some others that have more than 10 000 followers.</span> Due to my inability to maintain an Oauth key, The UBlog-TwitterAPI is down - so you also HAVE to be Ellen.
                     <br><br>
              
-             so lets switch the value of our Twitter ID with Ellen Degeneress', the request becomes:<br><br>
+             lets switch the value of our Twitter ID to match Ellen Degeneress', the request becomes:<br><br>
              
              ublog/addTwitter/melon --> ublog/addTwitter/TheEllenShow<br><br>
              
-    
-..It looks like there is some kind of internal mechanism to check that the account has been previously verified.<br><br>
+                 After requesting the manipulated url, We are once again presented with a rejection page. This time we recieve the 'Verification Error'. It looks like there is some kind of internal mechanism to check that the account has been previously verified.<br><br>
 
-In reality I know this is true, the site holds the values of authenticated social media accounts in a session variable. (We will look at how we could attack this feature more when we come to sessions and server-side controls).
+In reality I know this is true, the site holds the values of authenticated social media accounts in a session variable. (We will look at how we could attack this feature in more depth when we come to sessions and server-side controls).
 
-</p>
+         </div>
 
   <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
 
@@ -626,18 +655,17 @@ In reality I know this is true, the site holds the values of authenticated socia
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                  <div class= "blue-cov">   
             <h3>Recap So Far </h3> <br><br>
-             </div><br>
+             </div><br> 
+            <div class = "slide-in">
              <p>
-         about to see...May be a trivial example, but  you'd be very surprised what kind of shortcuts people are willing to take to make things work, I think people are quite commonly under the impression that if nobody is going to thoroghly review the code they are writing that the problem won't come to the surface, there are many ways to make something work, but this doesnt mean you've made it work well.  <br><br>
+ 
 
-In reality I know this is true, the site has a (session variable) cookie that is passed from the Facebook API. (We will look at how we could attack this feature more when we come to sessions and server-side controls)
-                 
+
                        tried logging in with nothing, then as lonely, then as ellen, but none worked individually.
                     
-                    
-            application developers may make functions that are useful purely during development, such as to retrieve database results quicker or to escalate the privalages of an account for some reason. I am definitely guilty of this. Sometimes the reasoning will be completely mental. maybe the function that processes a users password change is is failing in an unexplainable mannor, it is tempting to copy the code to another function that is working to see if the problem lies in the code or elsewhere, Once the author has seen if the code runs or fails when placed elsewhere she might be so excited or depressed at the outcome that she forgets to remove it.<br><br>
+             <br><br>
 
-</p>
+                </p></div>
 
   <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
 
@@ -647,21 +675,25 @@ In reality I know this is true, the site has a (session variable) cookie that is
               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
                     <div class= "blue-cov">
             <h3>HTTP Paramater Pollution </h3> <br><br>
-                    </div><br>
+                    </div> 
+            <div class = "slide-in"><br>
            [definition....]<br><br>
             
       
                     
                      For example you could try finduser?name=john?age=12?password=newpassword. <br><br>
             
-                    This is a pretty unlikely scenario, but these kind of needless and carelless vulnerabilities are littered all over many web applications. Finding mistakes and weakensses like these can be how you seperate yourself from the many other penetration testers useing standard tools and methadologies to find common bugs.<br><br>
+                    This is a pretty unlikely scenario, but these kind of needless and careless vulnerabilities are littered all over many web applications.<br><br>
             
             We are essentially just trying to get a feel for the website and see what behavhour we can make happen. To see how something behaves we need to stimulate and provoke it in every way possible, in high stakes web applciation bounty hunting, original ideas and out of the box thinking can be how you find a vulnerability that others have not. <br><br>
                     
-                    The mostcommonly used tactic is to repeat the the same variable twice, and hope we can induce some unexpected results from the application. <br><br>
+                    The most commonly used HTTP Parameter Pollution tactic is to repeat the the same variable twice, and hope we can induce some unexpected results from the application. <br><br>
+                
+                       
+            application developers may make functions that are useful purely during development.
             
             
-            
+                    </div>
    
 
   <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
@@ -679,7 +711,8 @@ In reality I know this is true, the site has a (session variable) cookie that is
                     <div class= "blue-cov">
             <h3>HTTP Paramater Pollution Exploit - Part I </h3> 
              </div><br>
-             
+              
+            <div class = "slide-in">
                       
 So lets get to work at brute forcing the signup function.<br><br>
                     
@@ -699,8 +732,7 @@ No Account Found for ID = ‘VinnyD’ — please try resynchronising your socia
                     Interesting, very interesting…
              
             
-                   
- 
+             </div>
 
              
   <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
@@ -712,7 +744,8 @@ No Account Found for ID = ‘VinnyD’ — please try resynchronising your socia
                     <div class= "blue-cov">
             <h3>HTTP Paramater pollution Exploit - Part II </h3> <br><br>
              </div>
-
+ 
+            <div class = "slide-in">
 The UBlog platform verified the account we are using was ours using the first parameter, and it queried Facebook for the number of followers using the second!<br><br>
 
              
@@ -720,7 +753,7 @@ The UBlog platform verified the account we are using was ours using the first pa
              dummy2 = popular account = <b>TheEllenShow</b><br>
 
 
-Using the knowledge that Ublog refers to the first penultimate parameter when checking if we own the account, and then uses the final parameter to actually query facebook, Logically we want the first parameter to be the ID of the account we are linked to (Facebook0) and the second account to be the account ID of who we wished we were linked to! (I used blah blah). You can discard whatever value you chose as your penis.<br><br>
+Using the knowledge that Ublog refers to the paramter following /addTwitter/ when checking if we own the account, and then refers to the final parameter when querying Twitter for the numebr of followers, Logically we want the first parameter to be the ID of the account we are linked to (Facebook0) and the second parameter to be set to the account ID of who we wished we were linked to! (I used blah blah). You can discard whatever value you chose as your penis.<br><br>
 
 The original URL UBlog expected us to use (when we visited said page), and the one used in step 4 was:<br><br>
 
@@ -736,13 +769,13 @@ When we make a request to this URL we are greeted by the page:<br><br>
 
 Congratulations! You a are officially a member.<br><br>
 
-And we didn’t even have to leave the house and make more friends! Score.<br><br>
+And we didn’t even have to leave the house and make more friends! Smashing<br><br>
 
 
 
 
 
-
+             </div>
 
   <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
 
@@ -755,7 +788,8 @@ And we didn’t even have to leave the house and make more friends! Score.<br><b
                     <div class= "blue-cov">
             <h3>HTTP Paramater pollution Exploit Summary </h3> <br><br>
                         
-                          </div>
+                          </div> 
+            <div class = "slide-in">
                         Logged in with no account linked.
                         Logged on with account with 1 follower.
                         Tried to log on as ED.
@@ -763,8 +797,16 @@ And we didn’t even have to leave the house and make more friends! Score.<br><b
                         Switched the dummy values depending on the error messages we saw.
                         
                         show the code that led to it (read from start and end off array).
+                
+                
+                This is a really important concept an we will revisit it later.
+                
+                
+                In cookies, even if encrypted, we can manipulate values.
+                
+                With REACT programmes. (Facebook etc) arbitrary number of child nodes, give example.
                         
-                        
+             </div>
            
              
              
@@ -778,6 +820,13 @@ And we didn’t even have to leave the house and make more friends! Score.<br><b
             <h3>HTTP Paramater pollution Exploit Review </h3> <br><br>
                         
                                </div>
+            
+              
+            <div class = "slide-in">
+             
+            
+             
+             (thats of course great )
                        
 This would be a very silly developer view, 
 <br><br>
@@ -813,28 +862,39 @@ We verified
 Sent it in an url.
 
                         
-                        
-      
+             </div>         
+        <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
              
+        </div>
+        
+         <div class = "first-exploit-episode-text-p4 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+                 {% block secstands-p1 %}
+             {% endblock %}
+             
+                   
         </div>
         
         
         
     </div>
-    <div class = "episode-elipses-holer">
-    <h4>
-    <i class="fas fa-circle ep-slipse ep-slipse-active"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i><i class="fas fa-circle ep-slipse"></i></h4>
-    </div>
+    
     </div>
     
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
+    
+    //$(".orig-nav").css("display","none");
+    
+
     
     pageList = document.getElementsByClassName("page-text-i");
     elipsesList = document.getElementsByClassName("ep-slipse");
     elipIndex = 0;
     
     var contentsFull = true;
+    
+
     
     
     
@@ -951,8 +1011,7 @@ Sent it in an url.
     
     
     
-    
-    
+
     
 </script>
 
@@ -1067,7 +1126,7 @@ $('.overlay').addClass('overlay-blue');
 })(jQuery);
 
 $('.overlay2').addClass('overlay-blue2');
-        
+   
     </script>
 
 

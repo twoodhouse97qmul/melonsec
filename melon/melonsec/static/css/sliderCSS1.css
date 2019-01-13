@@ -56,14 +56,14 @@ a, a:hover {
   box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: all .3s;
-  
+  left: -30px;
 }
 
 .item-bg:hover{
   left: 0;
   top: 0;
   opacity: 1;
-  
+  background-color:red;
 }
 .item-bg.active {
   left: 0;

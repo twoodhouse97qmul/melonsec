@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title> melon</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+    
+    
+    <style>
+    
+   .crop-shapes {
+  width:345px;
+  position:absolute;
+  right:0;
+  left:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+   
+    </style>
+
+
+
+  <canvas class= "canvvas" onclick="kum();"></canvas>
+  
+  
+
+    <script >
+    
+        var canvas = document.getElementsByTagName('canvas')[0];
+var ctx = canvas.getContext('2d');
+var rectank;
+canvas.width=canvas.height=400;
+kum();
+aaa();
+
+function aaa(){
+    var a,b,c,d,e,f,t,rc;
+    ctx.fillStyle="rgb(255,255,255)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    tim=new Date().getTime()/600;
+    rc=rectank;
+  
+    for(a=0;a<rc.length;a++){
+        b=rectank[a];
+        t=b.t;
+        c=Math.sin(tim+a*3333);
+        if(t!=5 && t!=1 && c<0)b=[b[1],b[2],b[3],b[0]];
+        ctx.fillStyle=ctx.strokeStyle="hsl(155,60%,60%)";
+        
+        c=getp(b[0],b[1]);
+        d=getp(b[0],b[3]);
+        
+        ctx.beginPath();
+        ctx.lineTo(b[0][0],b[0][1]);
+        ctx.lineTo(c[0],c[1]);
+        ctx.lineTo(d[0],d[1]);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+        
+        c=getp(b[2],b[1]);
+        d=getp(b[2],b[3]);
+        
+        ctx.beginPath();
+        ctx.lineTo(b[2][0],b[2][1]);
+        ctx.lineTo(c[0],c[1]);
+        ctx.lineTo(d[0],d[1]);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+        
+        c=getp(b[1],b[0]);
+        d=getp(b[3],b[0]);
+        e=getp(b[1],b[2]);
+        f=getp(b[3],b[2]);
+        
+        ctx.beginPath();
+        ctx.lineTo(b[1][0],b[1][1]);
+        ctx.lineTo(e[0],e[1]);
+        ctx.lineTo(f[0],f[1]);
+        ctx.lineTo(b[3][0],b[3][1]);
+        ctx.lineTo(d[0],d[1]);
+        ctx.lineTo(c[0],c[1]);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+    }
+    requestAnimationFrame(aaa);
+}
+
+function getp(p1,p2){
+    var x,y;
+    x=p1[0]+(p2[0]-p1[0])/5;
+    y=p1[1]+(p2[1]-p1[1])/5;
+    return [x,y];
+}
+
+function rand(){return Math.random();}
+
+function kum(){
+    var a,b,c,d,e,f,g,x,y,max,hen,N,gbai,gtx,gty,mm,er;
+    gbai=1;
+    gtx=canvas.width/2;
+    gty=canvas.height/2;
+    
+    N=12;
+    hen=15+15*rand();
+    hen=25;
+    hen*=gbai;
+    
+    for(f=0;f<1200;f++){
+        er=mm=0;
+        e={x:gtx,y:gty,sr:0,er:N,han:0};
+        rectank=[];
+        for(b=0;b<500;b++){
+            e=a=ttt2(e,rectank);
+            a.st=1;
+            max=1000000;
+            for(c=0;c<1000000;c++){
+                if(a.han<max){
+                    max=a.han;
+                    e=a;
+                }
+                a=a.tugi;
+                if(a.st){
+                    a.st=0;
+                    break;
+                }
+            }
+            
+            if(max<mm*0.99){
+                er=1;
+                break;
+            }
+            mm=max;
+        }
+        
+        if(er)continue;
+        
+        e.st=1;
+        for(b=0;b<100000;b++){
+            c=e.tugi;
+            e.mae=0;
+            e.tugi=0;
+            e=c;
+            if(e.st)break;
+        }
+        break;
+    }
+    
+    function ttt2(ob,rc){
+        var a,b,c,d,e,f,p,x,y,bai,p1,p2,o,k,tx,ty,sr,er,z,n2,err1;
+        tx=ob.x;
+        ty=ob.y;
+        sr=ob.sr;
+        er=ob.er;
+        n2=N/2;
+        e=(er-sr)%N;
+        if(e<0)e+=N;
+        b=sr;
+        
+        if(ob.mae && (e%N===0)){
+            a=ob.mae;
+            c=ob.tugi;
+            b=ob.tugi.tugi;
+            a.tugi=b;
+            a.er=(b.sr+n2)%N;
+            b.mae=a;
+            
+            ob.mae=0;
+            ob.tugi=0;
+            c.mae=0;
+            c.tugi=0;
+            
+            return a;
+        }
+        
+        if(e===0)e+=N;
+        
+        if(e>6){
+            p=ranset(e);
+        }else if(e==6){
+            p=[2,1,3];
+        }else if(e==5){
+            p=[5];
+            if(rand()<0.3)p=[2,3];
+        }else{
+            p=[e];
+        }
+        
+        for(z=0;z<100;z++){
+            err1=0;
+            if(ob.mae && p.length>=2){
+                a=ob.mae;
+                a=(a.er-a.sr+24)%12;
+                b=6-p[0];
+                if(a<b){
+                    err1=1;
+                }
+                a=ob.tugi;
+                a=(a.er-a.sr+24)%12;
+                b=6-p[p.length-1];
+                if(a<b){
+                    err1=1;
+                }
+            }
+            if(!err1)break;
+            p=ranset(e);
+        }
+        
+        p1=[];
+        p2=[];
+        bai=Math.PI*2/N;
+        
+        b=sr;
+        for(a=0;a<p.length;a++){
+            x=Math.cos(b*bai)*hen;
+            y=Math.sin(b*bai)*hen;
+            
+            p1.push([x,y]);
+            c=Math.cos(p[a]/2*bai)*hen*2;
+            d=b+p[a]/2;
+            x=Math.cos(d*bai)*c;
+            y=Math.sin(d*bai)*c;
+            p2.push([x,y]);
+            b+=p[a];
+        }
+        
+        x=Math.cos(b*bai)*hen;
+        y=Math.sin(b*bai)*hen;
+        p1.push([x,y]);
+        
+        for(a=0;a<p1.length-1;a++){
+            b=p1[a];
+            c=p2[a];
+            d=p1[a+1];
+            
+            f=[[tx,ty],[b[0]+tx,b[1]+ty],[c[0]+tx,c[1]+ty],[d[0]+tx,d[1]+ty]];
+            if(p[a]==5 || (p[a]!=1 && rand()<0.5))f=[f[1],f[2],f[3],f[0]];
+            f.t=p[a];
+            rc.push(f);
+        }
+        
+        k=[];
+        b=sr;
+        for(a=0;a<p.length;a++){
+            k.push((b+p[a])%N);
+            b+=p[a];
+            k.push((b-p[a]+n2)%N);
+        }
+        
+        o=[];
+        for(a=0;a<p.length*2;a++){
+            if(a%2===0){
+                b=p1[a/2];
+            }else{
+                b=p2[(a/2)|0];
+            }
+            
+            c={
+                x:b[0]+tx,
+                y:b[1]+ty,
+                er:k[a]
+            };
+            x=c.x-gtx;
+            y=c.y-gty;
+            c.han=Math.pow(x*x+y*y,0.5);
+            o.push(c);
+        }
+        
+        for(a=0;a<o.length;a++){
+            c=o[a];
+            if(a){
+                c.mae=o[a-1];
+                c.sr=(o[a-1].er+n2)%N;
+            }
+            if(a<o.length-1)c.tugi=o[a+1];
+        }
+        
+        if(!ob.mae){
+            a=o[0];
+            b=o[o.length-1];
+            a.mae=b;
+            a.sr=(b.er+n2)%N;
+            b.tugi=a;
+        }else{
+            a=o[0];
+            b=o[o.length-1];
+            c=ob.mae.mae;
+            d=ob.tugi;
+            a.mae=c;
+            a.sr=(c.er+n2)%N;
+            c.tugi=a;
+            b.tugi=d;
+            d.mae=b;
+            d.sr=(b.er+n2)%N;
+        }
+        
+        ob.mae=0;
+        ob.tugi=0;
+        return o[0];
+    }
+    
+    function ranset(e){
+        var a,b,c,d,p,n2;
+        
+        n2=N/2;
+        if(e==1){
+            return [1];
+        }else if(e==2){
+            if(rand()<0.5)return [2];
+            return [1,1];
+        }
+        
+        p=[];
+        a=e;
+        for(var zz=0;zz<10000;zz++){
+            b=((rand()*(n2-1))|0)+1;
+            if(b>a)b=a;
+            p.push(b);
+            a-=b;
+            if(a<=0)break;
+        }
+        
+        for(a=0;a<p.length;a++){
+            b=(rand()*p.length)|0;
+            c=p[a];p[a]=p[b];p[b]=c;
+        }
+        return p;
+    }
+}
+        
+    
+    </script>
+
+
+

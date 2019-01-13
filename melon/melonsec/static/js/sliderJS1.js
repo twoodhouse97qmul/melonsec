@@ -1,4 +1,4 @@
-alert(8);
+
 
 var bg = document.querySelector('.item-bg');
 var items = document.querySelectorAll('.news__item');
@@ -13,8 +13,6 @@ if($(window).width() > 800) {
 
         var newsItem = document.querySelectorAll('.news__item');
         newsItem.forEach(function (element, index) {
-        
-        
             element.addEventListener('mouseover', function () {
                 var x = this.getBoundingClientRect().left;
                 var y = this.getBoundingClientRect().top;
@@ -22,7 +20,7 @@ if($(window).width() > 800) {
                 var height = this.getBoundingClientRect().height;
 
                 $('.item-bg').addClass('active');
-                $('.news__item').addClass('active');
+                $('.news__item').removeClass('active');
                 
                 // $('.news__item').removeClass('active');
                 

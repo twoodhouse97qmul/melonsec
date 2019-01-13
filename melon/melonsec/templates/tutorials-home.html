@@ -109,51 +109,52 @@
 {% block slide_2_block %}
 
 
-      <div class="news-slider__item swiper-slide slide-4 how-not-to-slide">
+       <div class="news-slider__item swiper-slide slide-4 how-not-to-slide mincho">
 
 
-<a href="/unavailable/home" class="news__item" id = "abcdff">
+<a href="/overthewire" class="news__item" id = "abcdff">
     
     
-    <div class = "lefty">
+    <div class = "lefty news__txt lefter-text">
         
          <div class="news-date fixed-wid-1">
-            <span class="news-date__title">How Not To Get Hacked</span>
-            <span class="news-date__txt"> (when you are a computer moron) </span>
+            <span class="news-date__title mincho">Over The Wire Walkthrough</span>
+            <span class="news-date__txt mincho"> Solutions to my favourite online wargames. </span>
           </div>
         
        
         
          <div class="news__img fixed-wid-1">
               {% load static %}
-            <img src="{% static 'photos/old-guy-computer.jpg' %}" alt="news">
+            <img src="{% static 'photos/otw.jpg' %}" alt="news">
           </div>
         
       
         <div class = "tutorial-ratings">
-        <h6 >Difficulty: <span style = "color:green;">easy</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">mixed</span></h6>
+        <h6 ><b>Difficulty: </b><span style = "color:green;">easy</span> &nbsp;&nbsp;&nbsp;<b>Pace:</b> <span style = "color:orange;">mixed</span></h6>
         </div>
             
     
     </div>
          
-    
-    
-    
-   
-        
-
-            <h3 class = "righty fixed-wid right-title"> About The Course </h3>
+    <div class="news__txt  right-texter righty">
+            <h3 class = " news__txt righty fixed-wid right-title bld"> About The Course </h3>
 
           <p class = "news__txt righty fixed-wid justy">
-            How do you know if you have a virus?<br>What are the most dangerous things you need to look out for when you browse the web? <br> <span class = "smill">This series answers all of these questions and teaches you how to easily keep you devices safe and secure as well as covering of all the multiple times my computer illiterate girlfriend has succumbed to cyber crime, and how she could have easily prevented it.
-         </span> </p>
-    
-     <div class ="cleario"></div>
+           Over The Wire’ is my favourite brand of online capture-the-flag style wargames, the flags are represented by a password stored somewhere on the current level that can be used to log into the next level.<br><br>
+
+Currently over the wire offers 12 online games, and 4 downloadable games, more than enough to keep a you entertained for a while.<br><br>
+
+The games cover a range topics, from simple things like navigating directories and files on a remote server, to exploiting common web vulnerabilities, Buffer Overflows and much much more.
+     
 
          
          
-        </a>
+       
+    </div>
+    
+    <div class ="cleario"></div>
+     </a>
 
 </div>
 {% endblock %}

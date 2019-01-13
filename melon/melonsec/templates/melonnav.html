@@ -18,11 +18,6 @@
     }
 
 
-    
-    
-
-
-    
     .backing-container{
 
         padding-top:110px;
@@ -56,23 +51,25 @@
     }
     
     
-    .navbar{
+    .navbar2{
         background-image:url("{% static 'newback.jpg' %}");
         background-size:cover;
-       border-color:#e3ab20;
+        border-color:#e3ab20;
         width:100%;
         position:fixed;
         z-index:300;
-        min-height:60px;
-        max-height:60px;
-        border-width:1px;
-          border-left:0;
+        border-left:0;
         border-right:0;
         border-top:0;
-        padding-top:0px;
+        max-height:55px;
+
     }
     
-   
+    
+    .navbar3{
+        position:relative;
+        
+    }
     
       
     
@@ -149,14 +146,12 @@
     .secondary-navver{
         position:fixed;
         top:0;
-        height:90px;
+        height:100px;
         width:100%;
         background-color: #40798C;
         z-index:299;
         border-bottom-width: 2px;
         border-style:solid;
-        padding-top:55px;
-    
     }
     
    
@@ -168,50 +163,6 @@
         background-color: pink;
     }
     
-    .lev-choose-opener{
-        height:45px;
-        width:65px;
-       color:black;
-        border-width:0;
-        
-        border-style:solid;
-        border-color:black;
-        display:none;
-    }
-    
-    .lev-choose-opener-active{
-        border-left-width: 12px;
-        height:60px;
-        color:white;
-        background-image:url("{% static 'newback.jpg' %}");
-        background-size:cover;
-    }
-    
-    .lev-bars{
-      
-        font-size:160%;
-        margin-left:14px;
-        margin-top:7px;
-        
-    }
-    
-    .lev-bars:hover{
-
-        font-size:190%;
-        margin-left:10px;
-        margin-top:5px;
-        
-    }
-    
-    .sub-tit{
-        position:fixed;
-        width:400px;
-        margin-left:60px;
-        text-align: center;
-        font-size:160%;
-        font-weight: 900;
-        margin-top:4px;
-    }
    
     
     
@@ -233,9 +184,7 @@
      <!--navbar - currently regular bootstra stlye.. -->
         <nav class="navbar navbar-default navbar2">
             
-           {% block crop_block %}
-    {% endblock %}
-
+           
             
               
             
@@ -365,7 +314,12 @@
                             </a>
                         </li>
                         
-                           
+                           <li class = "nav-icon">
+                            <a href="/ublog_vuln_1_link">
+                               <h4 class = 'gold'>Trending
+                                   <i class="fa fa-globe-africa" aria-hidden="true"></i></h4>
+                            </a>
+                        </li>
                         
                          <li class = "nav-icon">
                             <a href="#">
@@ -379,7 +333,20 @@
                             </a>
                         </li>
                         
-                       
+                        <li class = "nav-icon">
+                            <a href="#">
+                                <h4 class = 'gold'>
+                               
+                                  
+                                 Archive
+                                
+                                      <i class="fa fa-archive" aria-hidden="true"></i> 
+                                    
+                                </h4>
+                                
+                            </a>
+                        </li>
+                        
                         
                     </ul>
                     
@@ -401,30 +368,200 @@
             </div><!-- /.container-fluid -->
              
         </nav>
- {% if sec_nav %}
 
-<div class = "secondary-navver">
-    
-      <div class = "sub-tit">
-        Over-The-Wire Walkthrough
-    </div>
+
+
+
+ <!--navbar - currently regular bootstra stlye.. -->
+     <!--navbar - currently regular bootstra stlye.. -->
+        <nav class="navbar navbar-default navbar3">
             
-  <div class = "lev-choose-opener">
-      <i class="fas fa-bars lev-bars"></i>
-
-    </div>
-    
-  
            
-</div>
+            
+              
+            
+            <div class="container-fluid">
+                
+               
+                
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded"false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    
+                </div>
+                
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                       <ul class="nav navbar-nav ublog-ovr-nav">
+                        
+                        Ublog Web Exploits - First Vulnerabilty
+                        <li class = "nav-icon">
+                            <a href="/home">
+                                <h4 class = 'gold'>Intro  </h4>
+                                
+                               
+                                <span class="sr-only">
+                                    (current)
+                                </span>
+                            </a>
+                        </li>
+                        
+                     
+                        
+                        <li class = "nav-icon">
+                            <a href="/features">
+                               <h4 class = 'gold'>Testing the Water
+                                   </h4>
+                            </a>
+                        </li>
+                        
+                       
+                        
+                        <li class = "nav-icon">
+                              
+                            <a href="/tutorials">
+                                <h4 class = 'gold'>
+                                
+                                    HTTP Parameters
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                   </h4>
+                            </a>
+                        </li>
+                        
+                           <li class = "nav-icon">
+                            <a href="/ublog_vuln_1_link">
+                               <h4 class = 'gold'> Parameter manipulation
+                                   <i class="fa fa-globe-africa" aria-hidden="true"></i></h4>
+                            </a>
+                        </li>
+                        
+                         <li class = "nav-icon">
+                            <a href="#">
+                                <h4 class = 'gold'>
+                               
+                                   
+                                 Recap
+                                 <i class="fa fa-lightbulb" aria-hidden="true"></i> 
+                                </h4>
+                                
+                            </a>
+                        </li>
+                        
+                        <li class = "nav-icon">
+                            <a href="#">
+                                <h4 class = 'gold'>
+                               
+                                  
+                                 Exploit P1 
+                                
+                                      <i class="fa fa-archive" aria-hidden="true"></i> 
+                                    
+                                </h4>
+                                
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    <ul class="nav navbar-nav foundation-nav orig-nav">
+                        <li class = "nav-icon">
+                            <a href="/home">
+                                <h4 class = 'gold'>Home  <i class="fa fa-home" aria-hidden="true"></i></h4>
+                                
+                               
+                                <span class="sr-only">
+                                    (current)
+                                </span>
+                            </a>
+                        </li>
+                        
+                     
+                        
+                        <li class = "nav-icon">
+                            <a href="/features">
+                               <h4 class = 'gold'>Features
+                                   <i class="fa fa-globe-africa" aria-hidden="true"></i></h4>
+                            </a>
+                        </li>
+                        
+                       
+                        
+                        <li class = "nav-icon">
+                              
+                            <a href="/tutorials">
+                                <h4 class = 'gold'>
+                                
+                                    Tutorials
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                   </h4>
+                            </a>
+                        </li>
+                        
+                           <li class = "nav-icon">
+                            <a href="/ublog_vuln_1_link">
+                               <h4 class = 'gold'>Trending
+                                   <i class="fa fa-globe-africa" aria-hidden="true"></i></h4>
+                            </a>
+                        </li>
+                        
+                         <li class = "nav-icon">
+                            <a href="#">
+                                <h4 class = 'gold'>
+                               
+                                   
+                                 Projects
+                                 <i class="fa fa-lightbulb" aria-hidden="true"></i> 
+                                </h4>
+                                
+                            </a>
+                        </li>
+                        
+                        <li class = "nav-icon">
+                            <a href="#">
+                                <h4 class = 'gold'>
+                               
+                                  
+                                 Archive
+                                
+                                      <i class="fa fa-archive" aria-hidden="true"></i> 
+                                    
+                                </h4>
+                                
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                 
+                    
+                    
+                
+                    
+                    
+                    
+                    
+                    <!-- Right Hand Side Of Navbar: -->
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <h3 id = "MT"> Melon Sec</h3>
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+             
+        </nav>
 
-{% block downnav %}
-    {% endblock %}
-        
-         
-         {% endif %}
 
-           
 
 
 
@@ -452,28 +589,6 @@
 
 
 <script>
-    
-    
-    
-    $(".lev-choose-opener").on("click",function(){
-        $(".lev-choose-opener").addClass("lev-choose-opener-active");
-        $(".funky-l-hold").fadeIn();
-    });
-    
-    $(".funky-l-hold").on("mouseleave",function(){
-        timer = setTimeout(hideLevChoose,600);
-    });
-    
-    function hideLevChoose(){
-         
-        $(".funky-l-hold").fadeOut();
-        timer =setTimeout(function(){
-            $(".lev-choose-opener").removeClass("lev-choose-opener-active");
-        },260);
-        
-       
-        
-    }
     
     //$(".ublog-ovr-nav").css("display","block");
     //$(".orig-nav").css("display","none");

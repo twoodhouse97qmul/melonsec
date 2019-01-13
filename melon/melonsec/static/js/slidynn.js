@@ -1,8 +1,39 @@
-alert(8);
-
+alert(99);
 var bg = document.querySelector('.item-bg');
 var items = document.querySelectorAll('.news__item');
 var item = document.querySelector('.news__item');
+
+var xHold = 0;
+var yHold = 0;
+$(bg).css("background-color","white");
+
+$(suhold).mouseenter(function(){
+
+    $(bg).css("opacity",1);
+     $(bg).show();
+    $('#cont-ND').css("opacity",1);
+     $('#hoper').css("opacity",1);
+     $('#contact-item').css("opacity",1);
+     $('#cont-T1').css("opacity",1);
+          $('#cont-T2').css("opacity",1);
+    
+  
+    //maybe make holds for width anf height too?
+  /*  bg.style.width = 400 + 'px';
+   bg.style.height = 380 + 'px';
+
+   bg.style.transform = 'translateX(' + xHold + 'px ) translateY(' + yhold + 'px)';
+    */    
+    
+    
+});
+
+
+
+
+
+
+
 
 function cLog(content) {
     console.log(content)
@@ -10,32 +41,35 @@ function cLog(content) {
 
 if($(window).width() > 800) {
     $(document).on("mouseover", ".news__item", function (_event, _element) {
-
+    
+    
+        
         var newsItem = document.querySelectorAll('.news__item');
+        
+        
+        
+       
         newsItem.forEach(function (element, index) {
-        
-        
             element.addEventListener('mouseover', function () {
+            
+            
                 var x = this.getBoundingClientRect().left;
                 var y = this.getBoundingClientRect().top;
                 var width = this.getBoundingClientRect().width;
                 var height = this.getBoundingClientRect().height;
 
                 $('.item-bg').addClass('active');
-                $('.news__item').addClass('active');
-                
+                $('.news__item').removeClass('active');
                 // $('.news__item').removeClass('active');
-                
-
+                   
 
                 bg.style.width = width + 'px';
                 bg.style.height = height + 'px';
                 bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
             });
 
-            $('.item-bg').addEventListener('mouseleave', function () {
-            	alert("LEFT");
-            	
+            element.addEventListener('mouseleave', function () {
+               
                 $('.item-bg').removeClass('active');
                 $('.news__item').removeClass('active');
             });
@@ -90,7 +124,7 @@ var swiper = new Swiper('.news-slider', {
             var width = sliderItem.getBoundingClientRect().width;
             var height = sliderItem.getBoundingClientRect().height;
 
-
+ 
             $('.item-bg').addClass('active');
 
             bg.style.width = width + 'px';
@@ -103,10 +137,19 @@ var swiper = new Swiper('.news-slider', {
 swiper.on('touchEnd', function () {
     $('.news__item').removeClass('active');
     $('.swiper-slide-active .news__item').addClass('active');
+    
+          
+    
 });
 
 swiper.on('slideChange', function () {
+   
+
+    
     $('.news__item').removeClass('active');
+    
+    
+    
 });
 
 swiper.on('slideChangeTransitionEnd', function () {
@@ -128,4 +171,20 @@ swiper.on('slideChangeTransitionEnd', function () {
     bg.style.width = width + 'px';
     bg.style.height = height + 'px';
     bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
+    
+    
+    var titlo = $('.swiper-slide-active .news-date__title').html();
+  
+    
+    
+   
+    
+   
+  
+    
+
+    
+   
+     
 });
+alert(9222);

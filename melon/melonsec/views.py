@@ -88,15 +88,22 @@ def floating_melon(request):
 def ublog_home(request):
     print('abcc')
     context = {
-
+'sec_nav' : True
     }
-    return render(request, 'ublog-overview.html', context)
+    return render(request, 'secstands.html', context)
+
+def melon_move(request):
+
+    context = {
+'sec_nav' : False
+    }
+    return render(request, 'melon_move.html', context)
 
 def melonhome(request):
     context = {
 
     }
-    return render(request, 'loadingscreen.html', context)
+    return render(request, 'crop-shapes.html', context)
 
 def sshterm(request):
     context = {
@@ -171,6 +178,7 @@ def b9frame(request):
 
 def otw(request):
     context = {
+    'sec_nav' : True
 
     }
     return render(request, 'overthewire.html', context)
@@ -178,7 +186,7 @@ def otw(request):
 
 def twhome(request):
     context = {
-
+    'sec_nav' : False
     }
     return render(request, 'opener/melonopener.html', context)
 
@@ -332,6 +340,14 @@ def twwdabout(request):
     }
 
     return render(request, 'twwdabout.html', context)
+
+def manterm(request):
+
+    context = {
+
+    }
+
+    return render(request, 'manterminal.html', context)
 
 def makeBaseAccount(request,name,passw):
     email = "neoemail"

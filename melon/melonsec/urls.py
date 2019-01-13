@@ -40,7 +40,9 @@ urlpatterns = [
     path('b7frame/', views.b7frame, name='porthome'),
     path('b8frame/', views.b8frame, name='porthome'),
     path('b9frame/', views.b9frame, name='porthome'),
+    path('mframe/', views.manterm, name='porthome'),
     path('screencreep/', views.creep, name='porthome'),
+    path('melonmove/', views.melon_move, name='porthome'),
     path('landscape/', views.landscape, name='porthome'),
 
 

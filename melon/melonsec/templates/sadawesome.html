@@ -1,0 +1,92 @@
+{% extends 'ublog-overview.html'%}
+{% block sadawesome %}
+
+<style>
+    
+    
+   .sadawesome{
+	background: #222;
+	padding-left: 10px;
+	padding-top: 10px;
+       padding-bottom: 10px;
+	font-family: monospace;
+	font-size: 15px;
+	color: white;
+    border-radius:15px;
+       
+}
+    
+
+#dark {
+	color: #222;
+}
+#num {
+	color: #888;
+}
+#red {
+	color: #F58;
+	font-weight: bold;
+}
+#blue {
+	color: #58F;
+	font-weight: bold;
+}
+#lightBlue {
+	color: #BFF;
+	font-weight: bold;
+}
+#darkGreen {
+	color: #383;
+}
+#green {
+	color: #3A3;
+	font-weight: bold;
+}
+#lightGreen {
+	color: #8F5;
+}
+#orange {
+	color: #F93;
+	font-weight: bold;
+}
+#yellow {
+	color: #DC3;
+}
+#param {
+	color: #88F;
+}
+#class {
+	color: #5FF;
+}
+@media only screen and (max-width: 720px) {
+	.sadawesome{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.sadawesome{
+		font-size: 10px;
+	}
+}
+
+</style>
+
+
+<div class = "sadawesome">
+    
+
+
+
+	
+	<!-- line 1 : packages -->
+<span id = "num">1</span> <span id = "red">if </span>(<span id = "yellow">life</span>.<span id = "lightGreen">isSad</span>(<span id = "yellow">lifeDecisions</span>) == <span id = "orange">true</span>){<br><span id = "num">2</span><br><span id = "num">3</span>
+    <span id = "blue">this</span>.<span id = "lightGreen">stopBeingSad</span>();<br><span id = "num">4</span>
+	<span id = "blue">this</span>.<span id = "lightGreen">beAwesomeInstead</span>();<br><span id = "num">5</span><br><span id = "num">6</span>&nbsp;}
+	
+	
+
+
+
+</div>
+
+{% endblock %}
