@@ -45,6 +45,14 @@ def creep(request):
     }
     return render(request, 'creepy-screen.html', context)
 
+def hallfame(request):
+
+    context = {
+
+    }
+    return render(request, 'hall-of-fame.html', context)
+
+
 
 def landscape(request):
 

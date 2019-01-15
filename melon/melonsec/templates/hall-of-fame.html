@@ -1,0 +1,324 @@
+{% extends 'melon-page.html' %}
+    {% block page_insert %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+
+<style>
+    
+    
+    
+    .content-holding{
+        position:relative;
+        z-index:298;
+        
+        }
+    
+    
+    .person-holder{
+        width:250px;
+        height:275px;
+        border-style:solid;
+        border-width:0 3px 0 0;
+        padding-top:5px;
+        margin-bottom:35px;
+        border-bottom-right-radius :0px;
+         border-top-right-radius :0px;
+        
+   
+    }
+    
+    .person-holder:hover{
+      opacity: 0.6;
+        cursor:pointer;
+        
+   
+    }
+    
+    .hof-photo{
+        width:200px;
+        margin-left:25px;
+        height:200px;
+     
+       
+    }
+    
+    .minchy{
+        font-family: "jura",sans-serif;
+    }
+    
+    .hof-name{
+        text-align: center;
+        font-weight: 900;
+        padding-bottom:10px;
+    }
+    
+    .hof-punch{
+        text-align: center;
+    }
+    
+    .ada-photo{
+           background-image:url("{% static 'photos/lovelace.png' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    
+     .vig-photo{
+           background-image:url("{% static 'photos/vig.png' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+     .mitnick-photo{
+            background-image:url("{% static 'photos/mitnick.jpg' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+          width:140px;
+         height:200px;
+           border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+         margin:0 auto;
+    
+    }
+    
+    
+      .morris-photo{
+            background-image:url("{% static 'photos/morris-jnr.png' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+          width:140px;
+         height:200px;
+           border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+         margin:0 auto;
+      
+          
+    
+    }
+    
+     .morris-snr-photo{
+            background-image:url("{% static 'photos/morris-snr.jpg' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+          width:140px;
+         height:200px;
+           border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+         margin:0 auto;
+      
+          
+    
+    }
+    
+     .jiggits-photo{
+            background-image:url("{% static 'photos/jiggetts.jpg' %}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+          width:140px;
+         height:200px;
+           border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+         margin:0 auto;
+      
+          
+    
+    }
+    
+     
+    
+   
+    
+    
+   
+    
+    .hof-pair{
+        width:500px;
+        
+        background-color: red;
+        height:300px;
+    }
+     .lefty{
+        float:left;
+    }
+    
+    .righty{
+        float:right;
+    }
+    
+    .hof-row{
+        width:1000px;
+    }
+
+</style>
+
+<div class = "minchy">
+    
+    
+    <div class = "hof-row">
+    
+    
+    <div class = "lefty">
+        
+        
+         <div class = "lefty">
+    <div class = "person-holder">
+    <div class = "hof-name">Ada Lovelace</div>
+<div class= "hof-photo ada-photo">
+</div>
+    <div class = "hof-punch">
+        Computer Science Visionary
+    </div>
+</div>
+         </div>
+        
+        <div class = "righty">
+            <div class = "person-holder">
+    <div class = "hof-name">Kevin Mitnick</div>
+<div class= "hof-photo mitnick-photo">
+</div>
+    <div class = "hof-punch">
+        King of Cyber Deception
+    </div>
+</div>
+         </div>
+   
+    </div>
+    
+    <div class = "righty">
+        
+        
+         <div class = "righty">
+            <div class = "person-holder">
+    <div class = "hof-name">Blaise de Vigenere</div>
+<div class= "hof-photo vig-photo">
+</div>
+    <div class = "hof-punch">
+        Historical Crpytologist
+    </div>
+</div>
+         </div>
+        
+        <div class = "lefty">
+            
+             <div class = "person-holder">
+    <div class = "hof-name">Robert Morris Jr</div>
+<div class= "hof-photo morris-photo">
+</div>
+    <div class = "hof-punch">
+        Cyber Warfare Pioneer
+    </div>
+    
+         </div>
+            
+        </div>
+        </div>
+    </div>
+    
+    <div class = "hof-row">
+    
+    
+    <div class = "lefty">
+        
+        
+         <div class = "lefty">
+    <div class = "person-holder">
+    <div class = "hof-name">Ada Lovelace</div>
+<div class= "hof-photo ada-photo">
+</div>
+    <div class = "hof-punch">
+        Computer Science Visionary
+    </div>
+</div>
+         </div>
+        
+        <div class = "righty">
+            <div class = "person-holder">
+    <div class = "hof-name">Lisa Jiggetts</div>
+<div class= "hof-photo jiggits-photo">
+</div>
+    <div class = "hof-punch">
+        Women In Cyber Security Advocate
+    </div>
+</div>
+         </div>
+   
+    </div>
+    
+    <div class = "righty">
+        
+        
+         <div class = "righty">
+            <div class = "person-holder">
+    <div class = "hof-name">Blaise de Vigenere</div>
+<div class= "hof-photo vig-photo">
+</div>
+    <div class = "hof-punch">
+        Historical Crpytologist
+    </div>
+</div>
+         </div>
+        
+        <div class = "lefty">
+            
+             <div class = "person-holder">
+    <div class = "hof-name">Robert Morris Sr</div>
+<div class= "hof-photo morris-snr-photo">
+</div>
+    <div class = "hof-punch">
+        Cyber Security Pioneer
+    </div>
+    
+         </div>
+            
+        </div>
+        </div>
+    </div>
+    
+
+    
+
+
+
+    
+    
+   
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrhasdjfkhglkrh
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrhasdjfkhglkrh
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrhasdjfkhglkrh
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrhasdjfkhglkrh
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrhasdjfkhglkrh
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+asdjfkhglkrh
+    
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% endblock %}

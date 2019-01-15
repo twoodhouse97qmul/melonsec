@@ -370,6 +370,34 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
   padding-top:25px;
     }
     
+    .fail-photo-1{
+        
+        margin: 20px auto;
+        
+        border-radius:5px;
+        background-size: contain;
+        background-image:url("{% static 'photos/fail1.png' %}");
+        width:500px;
+        height:320px;
+        
+        
+    }
+    
+    .fail-photo-2{
+        
+        margin: 0 15px 0 20px;
+        
+        border-radius:5px;
+        background-size: contain;
+        background-image:url("{% static 'photos/fail2.png' %}");
+        width:330px;
+        height:211px;
+        float:right;
+        
+        
+        
+    }
+    
     
     
  
@@ -382,9 +410,9 @@ div.overlay-blue2:hover {background-color: rgba(13, 27, 43, 0.5);}
     
     <div class="content-viewer-a">
     <div class = "episode-contents-item contents-active" id = "ublog-intro"><h4 class = "contents-active-text">1. Introduction</h4></div>
-     <div class = "episode-contents-item" id = "ublog-overview"><h4>2. Ublog Overview</h4></div>
+     <div class = "episode-contents-item NY" id = "ublog-overview"><h4>2. Ublog Overview</h4></div>
     <div class = "episode-contents-item" id = "ublog-first"><h4>3. First Exploit.</h4><h6>Exploiting Authentication Control Logic</h6></div>
-     <div class = "episode-contents-item nY"><h4>4. Virtual Defacement</h4><h6>HTML Parameter Pollution</h6></div>
+     <div class = "episode-contents-item NY"><h4>4. Virtual Defacement</h4><h6>HTML Parameter Pollution</h6></div>
     <div class = "episode-contents-item NY"><h4>5. Cross-Site Scripting</h4><h6>Exploiting Access Control Logic</h6></div>
     <div class = "episode-contents-item NY"><h4>6. XS Request Forgery</h4><h6>Exploiting Access Control Logic</h6></div>
     <div class = "episode-contents-item NY"><h4>7. Parameter Pollution</h4><h6>tet text tet</h6></div>
@@ -471,10 +499,9 @@ If you want some sites to practice scripting etc:</div>
             <h4>What Is The Purpose of The Ublog?</h4>
          <p>
              
-             Ublog is a real world web-application that has been hikacked and is now a playground to demonstrate and test cyber security flaws and exploits.
+             Ublog is a real world web-application that has been hijacked and is now a playground to demonstrate and test cyber security flaws and exploits.<br><br>
              
-             Theoretical attacks are much easeir to picture when given a real world example - this is the exact, rather than generic examples, exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand.
-             
+             Once you have conducted an attack yourself, you are far more likely to remember the proccess behind it. Theoretical attacks are much easier to understand when given a real world example - this is the main purpose of the UBlog tutorials, rather than generic examples, exploits will be demonstrated in relevant environments where the consequences and actions are much easier to see and understand. 
                </p>
         
          
@@ -515,18 +542,7 @@ Awards are given depending on how many followers a user has across their social 
 
 Fittingly, the first vulnerability is based around exploiting the applications sign up logic. Our goal is to by-pass the websites validation mechanisms so that we can create accounts freely without needing to have the 10 000 followers as the site advertises.<br><br>
     
-Lets open up the create a blogger account page in another tab: <a href="#" class="link" id = "open-blog-sign-up"><b>Click Here</b></a> <br> <br>
-    
-    
-    Fill out the first page with basic information. <br><br>If you’re embarrassed by your own name and don’t want to use it then don’t worry, dummy values are fine. <b>Just make sure you remember your username and password.<br><br></b>
 
-
-
-  
-
-Hopefully you’ve progressed nicely to the second stage in creating a UBlog Blogging account.
-
-This is where we are expected to link to an account with 10 000 followers.<br><br>
 
     <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
     
@@ -534,6 +550,45 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
 </p>
        </div>    
     </div>
+        
+        <div class = "first-exploit-episode-text-p2 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            <div class= "blue-cov">
+            
+           
+            
+            <h3>UBlog Sign Up Form</h3>
+                
+            </div>
+            
+             
+            <div class = "slide-in">
+            <br>
+                
+                
+               Lets open up the create a blogger account page in another tab: <a href="#" class="link" id = "open-blog-sign-up"><b>Click Here</b></a> <br> <br> You should be sent to a page looking somewhat like this:
+                
+                
+    
+    
+    Fill out the first page with basic information. <br><br>If you’re embarrassed by your own name and don’t want to use it then don’t worry, dummy values are fine. <b>Just make sure you remember your username and password.<br><br></b> Once You're done, hit next.
+
+
+
+  
+
+
+                
+                
+            </div> 
+                <br class = "Don't worry, To find an exploit here we're not going to use any complicated or fancy analysis techniques."><br>
+        
+            
+
+            
+             <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
         
         
         
@@ -550,17 +605,54 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
              
             <div class = "slide-in">
             <br>
+                Hopefully you’ve progressed nicely to the second stage in creating a UBlog Blogging account.
+
+This is where we are expected to link to an account with 10 000 followers.<br><br>
+                
+                Lets see what happens when we try to log on with no accounts linked. We're going to hit button marked 'verify' and see how the site responds.
+                
+                <div class = "fail-photo-1">
+                
+                </div>
+                
+               We're greeted with an annoying message page displaying both <b>Verification</b> and <b>Friendless</b> Errors.<br><br>
                 
                 
-                Firstly, lets see what happens when we try to log on with no accounts linked. After Hitting 'Verify' We're greeted with an annoying message page displaying both <b>Verification</b> and <b>Friendless</b> Errors.<br><br>
                 
-                The next thing we will try is to observe what happens when we link to a valid social media account that has less than the <br>10 000 required followers needed to pass to the next stage, and we'll see how the site responds.<br><br>
+            </div> 
+                <br class = "Don't worry, To find an exploit here we're not going to use any complicated or fancy analysis techniques."><br>
+        
+            
+
+            
+             <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
+        
+          <div class = "first-exploit-episode-text-p2 page-text-f">
+              <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+            <div class= "blue-cov">
+            
+           
+            
+            <h3>Testing The Water - Part II</h3>
                 
+            </div>
+            
+             
+            <div class = "slide-in">
+            <br>
+                 The next thing we will try is to observe what happens when we link to a valid social media account that has less than the 10&nbsp;000 required followers needed to pass to the next stage, and we'll see how the site responds.<br><br>
+                
+               
                 <h3>Saving Time and Privacy</h3>
                 
                 Creating a 'throw-away account' on Twitter would take a few minutes most people don't have time for, so for that reason you will see a third social media icon, with a nice picture of a melon. If you click on this icon, you will be linked to a Twitter account that has 1 follower.<br><br>
                 
-                Lets see what happens when we try to progress by hitting 'verify'<br><br>
+                <div class = "fail-photo-2"></div>
+    
+                <b>Lets see what happens when we try to progress by hitting 'verify':</b><br><br>
+                
             
                 Again we are greeted by a similar screen, but as expected the 'Verification Error' has dissappeared, since we verified an account.<br><br>
             
@@ -594,7 +686,25 @@ This is where we are expected to link to an account with 10 000 followers.<br><b
             The sign up form has opted for example 2. In this instance paramaters are seperated by a forward slash '/' in the same way as other componentsin the URL, and are then unpacked by the back end application.<br><br>
                 This as it's easier for us to talk about the urls and deconstruct them with the naked eye, but the fundamental concepts are similar in both cases.<br><br>
                 
+         
+             
+             
+             
+             
+              
+              </div>
+              <i class = "fas fa-arrow-alt-circle-right next-page-arrow"></i>
+            
+        </div>
+        
+         <div class = "first-exploit-episode-text-p3 page-text-f">
+               <i class = "fas fa-arrow-alt-circle-left last-page-arrow"></i>
+             <div class= "blue-cov">
+           <h3> HTTP Parameters on the Ublog Platform </h3><br><br>
+             </div> 
+            <div class = "slide-in">
                 
+          
              
             We've tried to create a Ublog account twice, lets see at the URLs that were generated:<br><br>
              
